@@ -1,2 +1,6 @@
+streamlit
+numpy
 pandas
-random
+scikit-learn
+xgboost
+matplotlib
