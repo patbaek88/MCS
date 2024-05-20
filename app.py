@@ -87,9 +87,20 @@ st.write('Random Forest Accuracy:', rf_acc)
 st.write('XGBoost Accuracy:', xgb_acc)
 
 
-model = st.selectbox('Please select a model', models)
-st.write('You selected:', model)
+select = st.selectbox('Please select a model', models)
+st.write('You selected:', select)
 
+if select == 'Logistic Regression':
+    model = lr
+elif select == 'Support Vector Machine':
+    model = svc
+elif select == 'Decision Tree':
+    model = dt
+elif select == 'Random Forest':
+    model = rf
+elif select == 'XGBoost':
+    model = xgb_model
+    
 
 # 모델에서 각 독립변수의 중요도 추출
 importance = model.feature_importances_
