@@ -128,33 +128,33 @@ API_content_f = float(API_content)
 
 Excipient_df = df[(df['Function']!='API')]
 Excipient_list = Excipient_df.index.to_list()
-Excipient_1_name = st.selectbox(
+Excipient1_name = st.selectbox(
     'Select Excipient_1',
     Excipient_list)
 
-Excipient_1_content = st.text_input('Excipient_1_content (%)')
-Excipient_1_content_f = float(Excipient_1_content)
+Excipient1_content = st.text_input('Excipient_1_content (%)')
+Excipient1_content_f = float(Excipient_1_content)
 
-Excipient_2_name = st.selectbox(
+Excipient2_name = st.selectbox(
     'Select Excipient_2',
     Excipient_list)
 
-Excipient_2_content = st.text_input('Excipient_2_content (%)')
-Excipient_2_content_f = float(Excipient_2_content)
+Excipient2_content = st.text_input('Excipient_2_content (%)')
+Excipient2_content_f = float(Excipient_2_content)
 
-Excipient_3_name = st.selectbox(
+Excipient3_name = st.selectbox(
     'Select Excipient_3',
     Excipient_list)
 
-Excipient_3_content = st.text_input('Excipient_3_content (%)')
-Excipient_3_content_f = float(Excipient_3_content)
+Excipient3_content = st.text_input('Excipient_3_content (%)')
+Excipient3_content_f = float(Excipient_3_content)
 
-Excipient_4_name = st.selectbox(
+Excipient4_name = st.selectbox(
     'Select Excipient_4',
     Excipient_list)
 
-Excipient_4_content = st.text_input('Excipient_4_content (%)')
-Excipient_4_content_f = float(Excipient_4_content)
+Excipient4_content = st.text_input('Excipient_4_content (%)')
+Excipient4_content_f = float(Excipient_4_content)
 
 ## Buttons
 if st.button("Predict"):
