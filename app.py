@@ -132,29 +132,29 @@ Excipient1_name = st.selectbox(
     'Select Excipient_1',
     Excipient_list)
 
-Excipient1_content = st.text_input('Excipient_1_content (%)')
-Excipient1_content_f = float(Excipient_1_content)
+Excipient1_content = st.text_input('Excipient1_content (%)')
+Excipient1_content_f = float(Excipient1_content)
 
 Excipient2_name = st.selectbox(
     'Select Excipient_2',
     Excipient_list)
 
-Excipient2_content = st.text_input('Excipient_2_content (%)')
-Excipient2_content_f = float(Excipient_2_content)
+Excipient2_content = st.text_input('Excipient2_content (%)')
+Excipient2_content_f = float(Excipient2_content)
 
 Excipient3_name = st.selectbox(
     'Select Excipient_3',
     Excipient_list)
 
-Excipient3_content = st.text_input('Excipient_3_content (%)')
-Excipient3_content_f = float(Excipient_3_content)
+Excipient3_content = st.text_input('Excipient3_content (%)')
+Excipient3_content_f = float(Excipient3_content)
 
 Excipient4_name = st.selectbox(
     'Select Excipient_4',
     Excipient_list)
 
-Excipient4_content = st.text_input('Excipient_4_content (%)')
-Excipient4_content_f = float(Excipient_4_content)
+Excipient4_content = st.text_input('Excipient4_content (%)')
+Excipient4_content_f = float(Excipient4_content)
 
 ## Buttons
 if st.button("Predict"):
