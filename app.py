@@ -124,7 +124,7 @@ API_list = API_df.index.to_list()
 API_name = st.selectbox('Select API', API_list)
 
 API_content = st.text_input('API_content (%)')
-API_content_f = float(API_content)
+
 
 Excipient_df = df[(df['Function']!='API')]
 Excipient_list = Excipient_df.index.to_list()
@@ -133,31 +133,36 @@ Excipient1_name = st.selectbox(
     Excipient_list)
 
 Excipient1_content = st.text_input('Excipient1_content (%)')
-Excipient1_content_f = float(Excipient1_content)
+
 
 Excipient2_name = st.selectbox(
     'Select Excipient_2',
     Excipient_list)
 
 Excipient2_content = st.text_input('Excipient2_content (%)')
-Excipient2_content_f = float(Excipient2_content)
+
 
 Excipient3_name = st.selectbox(
     'Select Excipient_3',
     Excipient_list)
 
 Excipient3_content = st.text_input('Excipient3_content (%)')
-Excipient3_content_f = float(Excipient3_content)
+
 
 Excipient4_name = st.selectbox(
     'Select Excipient_4',
     Excipient_list)
 
 Excipient4_content = st.text_input('Excipient4_content (%)')
-Excipient4_content_f = float(Excipient4_content)
+
 
 ## Buttons
 if st.button("Predict"):
+    API_content_f = float(API_content)
+    Excipient1_content_f = float(Excipient1_content)
+    Excipient2_content_f = float(Excipient2_content)
+    Excipient3_content_f = float(Excipient3_content)
+    Excipient4_content_f = float(Excipient4_content)
     mixture_data = z1.loc[API_name]*API_content_f/100 + z1.loc[Excipient1_name]*Excipient1_content_f/100 + z1.loc[Excipient2_name]*Excipient2_content_f/100 + z1.loc[Excipient3_name]*Excipient3_content_f/100 + z1.loc[Excipient4_name]*Excipient4_content_f/100
     mixture_df = mixture_data.to_frame()
     mixture_df = mixture_df.transpose()	#행 열 전환
