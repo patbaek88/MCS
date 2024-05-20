@@ -101,24 +101,21 @@ elif select == 'Random Forest':
 elif select == 'XGBoost':
     model = xgb_model
     
-
-# 모델에서 각 독립변수의 중요도 추출
-importance = model.feature_importances_
-
-# 중요도를 데이터프레임으로 변환
-df_importance = pd.DataFrame({'feature': data.columns[:-1], 'importance': importance})
-
-# 중요도를 내림차순으로 정렬
-df_importance = df_importance.sort_values('importance', ascending=False)
-
-# 중요도 시각화
-fig2=plt.figure()
-plt.bar(df_importance['feature'], df_importance['importance'])
-plt.xticks(rotation=45)
-plt.xlabel('Features')
-plt.ylabel('Importance')
-plt.title('Feature Importance')
-st.pyplot(fig2)
+if (model == dt or model == rf or model == xgb_model):
+    # 모델에서 각 독립변수의 중요도 추출
+    importance = model.feature_importances_
+    # 중요도를 데이터프레임으로 변환
+    df_importance = pd.DataFrame({'feature': data.columns[:-1], 'importance': importance})
+    # 중요도를 내림차순으로 정렬
+    df_importance = df_importance.sort_values('importance', ascending=False)
+    # 중요도 시각화
+    fig2=plt.figure()
+    plt.bar(df_importance['feature'], df_importance['importance'])
+    plt.xticks(rotation=45)
+    plt.xlabel('Features')
+    plt.ylabel('Importance')
+    plt.title('Feature Importance')
+    st.pyplot(fig2)
 
 
 
@@ -154,12 +151,11 @@ Excipient_4_name = st.selectbox(
 
 Excipient_4_content = st.text_input('Excipient_4_content (%)')
 
-mixture_data = z1.loc[API_name]*API_content/100 + z1.loc[Excipient1_name]*Excipient1_content/100 + z1.loc[Excipient2_name]*Excipient2_content/100 + z1.loc[Excipient3_name]*Excipient3_content/100 + z1.loc[Excipient4_name]*Excipient4_content/100
-mixture_df = mixture_data.to_frame()
-mixture_df = mixture_df.transpose()	#행 열 전환
-
 ## Buttons
 if st.button("Predict"):
+    mixture_data = z1.loc[API_name]*API_content/100 + z1.loc[Excipient1_name]*Excipient1_content/100 + z1.loc[Excipient2_name]*Excipient2_content/100 + z1.loc[Excipient3_name]*Excipient3_content/100 + z1.loc[Excipient4_name]*Excipient4_content/100
+    mixture_df = mixture_data.to_frame()
+    mixture_df = mixture_df.transpose()	#행 열 전환
     #Best model로 예측하기
     pred = model.predict(mixture_df)+1
     st.write("Mixture Class = " + str(pred[0]))   
