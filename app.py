@@ -71,12 +71,6 @@ xgb_model.fit(X_train, y_train)
 xgb_pred = xgb_model.predict(X_test)
 xgb_acc = accuracy_score(y_test, xgb_pred)
 
-print('Logistic Regression Accuracy:', lr_acc)
-print('Support Vector Machine:', svc_acc)
-print('Decision Tree Accuracy:', dt_acc)
-print('Random Forest Accuracy:', rf_acc)
-print('XGBoost Accuracy:', xgb_acc)
-
 models = ['Logistic Regression', 'Support Vector Machine', 'Decision Tree', 'Random Forest', 'XGBoost']
 accuracies = [lr_acc, svc_acc, dt_acc, rf_acc, xgb_acc]
 
@@ -86,6 +80,11 @@ plt.ylim([0, 1])
 plt.ylabel('Accuracy')
 plt.xticks(rotation=45)
 st.pyplot(fig1)
+st.write('Logistic Regression Accuracy:', lr_acc)
+st.write('Support Vector Machine:', svc_acc)
+st.write('Decision Tree Accuracy:', dt_acc)
+st.write('Random Forest Accuracy:', rf_acc)
+st.write('XGBoost Accuracy:', xgb_acc)
 
 
 model = st.selectbox('Please select a model', models)
