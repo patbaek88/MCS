@@ -43,7 +43,7 @@ X = data.iloc[:, :-1]
 y = data.iloc[:, -1] -1
 
 # train, test 데이터셋 나누기
-rs = st.number_input('머신러닝을 위한 무작위 숫자 입력', 1030)
+rs = st.number_input('머신러닝을 위한 무작위 숫자 입력', 1)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state = rs)
 
 lr = LogisticRegression()
