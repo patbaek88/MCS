@@ -124,6 +124,7 @@ API_list = API_df.index.to_list()
 API_name = st.selectbox('Select API', API_list)
 
 API_content = st.text_input('API_content (%)')
+API_content_f = float(API_content)
 
 Excipient_df = df[(df['Function']!='API')]
 Excipient_list = Excipient_df.index.to_list()
@@ -132,28 +133,32 @@ Excipient_1_name = st.selectbox(
     Excipient_list)
 
 Excipient_1_content = st.text_input('Excipient_1_content (%)')
+Excipient_1_content_f = float(Excipient_1_content)
 
 Excipient_2_name = st.selectbox(
     'Select Excipient_2',
     Excipient_list)
 
 Excipient_2_content = st.text_input('Excipient_2_content (%)')
+Excipient_2_content_f = float(Excipient_2_content)
 
 Excipient_3_name = st.selectbox(
     'Select Excipient_3',
     Excipient_list)
 
 Excipient_3_content = st.text_input('Excipient_3_content (%)')
+Excipient_3_content_f = float(Excipient_3_content)
 
 Excipient_4_name = st.selectbox(
     'Select Excipient_4',
     Excipient_list)
 
 Excipient_4_content = st.text_input('Excipient_4_content (%)')
+Excipient_4_content_f = float(Excipient_4_content)
 
 ## Buttons
 if st.button("Predict"):
-    mixture_data = z1.loc[API_name]*API_content/100 + z1.loc[Excipient1_name]*Excipient1_content/100 + z1.loc[Excipient2_name]*Excipient2_content/100 + z1.loc[Excipient3_name]*Excipient3_content/100 + z1.loc[Excipient4_name]*Excipient4_content/100
+    mixture_data = z1.loc[API_name]*API_content_f/100 + z1.loc[Excipient1_name]*Excipient1_content_f/100 + z1.loc[Excipient2_name]*Excipient2_content_f/100 + z1.loc[Excipient3_name]*Excipient3_content_f/100 + z1.loc[Excipient4_name]*Excipient4_content_f/100
     mixture_df = mixture_data.to_frame()
     mixture_df = mixture_df.transpose()	#행 열 전환
     #Best model로 예측하기
