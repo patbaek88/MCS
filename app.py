@@ -122,12 +122,8 @@ plt.ylim([0, 1])
 plt.ylabel('Accuracy')
 plt.xticks(rotation=45)
 st.pyplot(fig1)
-st.write('Logistic Regression Accuracy:', lr_acc)
-st.write('Support Vector Machine Accuracy:', svc_acc)
-#st.write('Decision Tree Accuracy:', dt_acc)
-st.write('Random Forest Accuracy:', rf_acc)
-st.write('XGBoost Accuracy:', xgb_acc)
-
+model_acc = pd.DataFrame(data = accuracies, index = models, columns = ['Accuracy'])
+st.write(model_acc)
 
 select = st.selectbox('Please select a model', models)
 
