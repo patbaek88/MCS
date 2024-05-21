@@ -34,13 +34,55 @@ x1 = StandardScaler().fit_transform(x1)  # x객체에 x를 표준화한 데이�
 features = df1.columns
 z1 = pd.DataFrame(x1, columns=features, index=df1.index)
 
+#n= x1.shape[1]
+#for i in range(1,n):
+#    pca = PCA(n_components=i)
+#    pca.fit_transform(x1)
+#    print(sum(pca.explained_variance_ratio_))
+
+
+pca = PCA(n_components=9) # 주성분을 몇개로 할지 결정
+principalComponents = pca.fit_transform(x1)
+col_pc = ['pc1', 'pc2', 'pc3', 'pc4', 'pc5', 'pc6', 'pc7', 'pc8', 'pc9']
+principalDf = pd.DataFrame(data=principalComponents, columns = col_pc, index=df1.index)
 
 # 데이터 불러오기
-data = pd.read_csv('MCS_dataset_std_240503_FT4_rawdata.csv')
+tt = pd.read_csv('train_test_set_template.csv')
+
+# tt 파일에서 material 이름과 함량 추출하기
+materials = tt.iloc[:, [0, 2, 4, 6, 8]].values
+amounts = tt.iloc[:, [1, 3, 5, 7, 9]].astype(float).values
+
+# tt 파일에서 Class 값 추출하기
+classes = tt.iloc[:, -1].values
+
+# 각 material에 대해 feature값과 함량을 곱한 뒤 더하기
+features = []
+for i in range(len(materials)):
+    feature = np.zeros(9)
+    for j in range(5):
+        if pd.notnull(materials[i][j]):
+            material_name = materials[i][j]
+            amount = amounts[i][j]
+            material_features = principalDf.loc[principalDf.index == material_name].iloc[:, :].values
+            if len(material_features) > 0:
+                material_feature = material_features[0]
+                feature += material_feature * amount
+            else:
+                pass
+            
+    features.append(feature)
+
+tt2 = pd.DataFrame(data = features, columns = col_pc)
+tt2["Class"] = tt["Class"]
+
+
+# 데이터 불러오기
+#data = pd.read_csv('MCS_dataset_std_240503_FT4_rawdata.csv')
 
 # feature와 target 나누기
-X = data.iloc[:, :-1]
-y = data.iloc[:, -1] -1
+X = tt2.iloc[:, :-1]
+y = tt2.iloc[:, -1] -1
 
 # train, test 데이터셋 나누기
 rs = st.number_input('머신러닝을 위한 무작위 숫자 입력', 1)
@@ -56,10 +98,10 @@ svc.fit(X_train, y_train)
 svc_pred = svc.predict(X_test)
 svc_acc = accuracy_score(y_test, svc_pred)
 
-dt = DecisionTreeClassifier()
-dt.fit(X_train, y_train)
-dt_pred = dt.predict(X_test)
-dt_acc = accuracy_score(y_test, dt_pred)
+#dt = DecisionTreeClassifier()
+#dt.fit(X_train, y_train)
+#dt_pred = dt.predict(X_test)
+#dt_acc = accuracy_score(y_test, dt_pred)
 
 rf = RandomForestClassifier()
 rf.fit(X_train, y_train)
@@ -71,8 +113,8 @@ xgb_model.fit(X_train, y_train)
 xgb_pred = xgb_model.predict(X_test)
 xgb_acc = accuracy_score(y_test, xgb_pred)
 
-models = ['Logistic Regression', 'Support Vector Machine', 'Decision Tree', 'Random Forest', 'XGBoost']
-accuracies = [lr_acc, svc_acc, dt_acc, rf_acc, xgb_acc]
+models = ['Logistic Regression', 'Support Vector Machine', 'Random Forest', 'XGBoost']  #'Decision Tree'
+accuracies = [lr_acc, svc_acc, rf_acc, xgb_acc]  #dt_acc
 
 fig1=plt.figure()
 plt.bar(models, accuracies)
@@ -82,40 +124,39 @@ plt.xticks(rotation=45)
 st.pyplot(fig1)
 st.write('Logistic Regression Accuracy:', lr_acc)
 st.write('Support Vector Machine Accuracy:', svc_acc)
-st.write('Decision Tree Accuracy:', dt_acc)
+#st.write('Decision Tree Accuracy:', dt_acc)
 st.write('Random Forest Accuracy:', rf_acc)
 st.write('XGBoost Accuracy:', xgb_acc)
 
 
 select = st.selectbox('Please select a model', models)
-st.write('You selected:', select)
 
 if select == 'Logistic Regression':
     model = lr
 elif select == 'Support Vector Machine':
     model = svc
-elif select == 'Decision Tree':
-    model = dt
+#elif select == 'Decision Tree':
+#    model = dt
 elif select == 'Random Forest':
     model = rf
 elif select == 'XGBoost':
     model = xgb_model
     
-if (model == dt or model == rf or model == xgb_model):
-    # 모델에서 각 독립변수의 중요도 추출
-    importance = model.feature_importances_
-    # 중요도를 데이터프레임으로 변환
-    df_importance = pd.DataFrame({'feature': data.columns[:-1], 'importance': importance})
-    # 중요도를 내림차순으로 정렬
-    df_importance = df_importance.sort_values('importance', ascending=False)
-    # 중요도 시각화
-    fig2=plt.figure()
-    plt.bar(df_importance['feature'], df_importance['importance'])
-    plt.xticks(rotation=45)
-    plt.xlabel('Features')
-    plt.ylabel('Importance')
-    plt.title('Feature Importance')
-    st.pyplot(fig2)
+#if (model == dt or model == rf or model == xgb_model):
+#    # 모델에서 각 독립변수의 중요도 추출
+#    importance = model.feature_importances_
+#    # 중요도를 데이터프레임으로 변환
+#    df_importance = pd.DataFrame({'feature': data.columns[:-1], 'importance': importance})
+#    # 중요도를 내림차순으로 정렬
+#    df_importance = df_importance.sort_values('importance', ascending=False)
+#    # 중요도 시각화
+#    fig2=plt.figure()
+#    plt.bar(df_importance['feature'], df_importance['importance'])
+#    plt.xticks(rotation=45)
+#    plt.xlabel('Features')
+#    plt.ylabel('Importance')
+#    plt.title('Feature Importance')
+#    st.pyplot(fig2)
 
 
 
