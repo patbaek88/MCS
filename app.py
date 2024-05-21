@@ -93,68 +93,6 @@ lr.fit(X_train, y_train)
 lr_pred = lr.predict(X_test)
 lr_acc = accuracy_score(y_test, lr_pred)
 
-svc = SVC()
-svc.fit(X_train, y_train)
-svc_pred = svc.predict(X_test)
-svc_acc = accuracy_score(y_test, svc_pred)
-
-#dt = DecisionTreeClassifier()
-#dt.fit(X_train, y_train)
-#dt_pred = dt.predict(X_test)
-#dt_acc = accuracy_score(y_test, dt_pred)
-
-rf = RandomForestClassifier()
-rf.fit(X_train, y_train)
-rf_pred = rf.predict(X_test)
-rf_acc = accuracy_score(y_test, rf_pred)
-
-xgb_model = xgb.XGBClassifier()
-xgb_model.fit(X_train, y_train)
-xgb_pred = xgb_model.predict(X_test)
-xgb_acc = accuracy_score(y_test, xgb_pred)
-
-models = ['Logistic Regression', 'Support Vector Machine', 'Random Forest', 'XGBoost']  #'Decision Tree'
-accuracies = [lr_acc, svc_acc, rf_acc, xgb_acc]  #dt_acc
-
-fig1=plt.figure()
-plt.bar(models, accuracies)
-plt.ylim([0, 1])
-plt.ylabel('Accuracy')
-plt.xticks(rotation=45)
-st.pyplot(fig1)
-model_acc = pd.DataFrame(data = accuracies, index = models, columns = ['Accuracy'])
-st.write(model_acc)
-
-select = st.selectbox('Please select a model', models)
-
-if select == 'Logistic Regression':
-    model = lr
-elif select == 'Support Vector Machine':
-    model = svc
-#elif select == 'Decision Tree':
-#    model = dt
-elif select == 'Random Forest':
-    model = rf
-elif select == 'XGBoost':
-    model = xgb_model
-    
-#if (model == dt or model == rf or model == xgb_model):
-#    # 모델에서 각 독립변수의 중요도 추출
-#    importance = model.feature_importances_
-#    # 중요도를 데이터프레임으로 변환
-#    df_importance = pd.DataFrame({'feature': data.columns[:-1], 'importance': importance})
-#    # 중요도를 내림차순으로 정렬
-#    df_importance = df_importance.sort_values('importance', ascending=False)
-#    # 중요도 시각화
-#    fig2=plt.figure()
-#    plt.bar(df_importance['feature'], df_importance['importance'])
-#    plt.xticks(rotation=45)
-#    plt.xlabel('Features')
-#    plt.ylabel('Importance')
-#    plt.title('Feature Importance')
-#    st.pyplot(fig2)
-
-
 
 API_df = df[(df['Function']=='API')]
 API_list = API_df.index.to_list()
@@ -192,9 +130,71 @@ Excipient4_name = st.selectbox(
 
 Excipient4_content = st.text_input('Excipient4_content (%)')
 
+models = ['Logistic Regression', 'Support Vector Machine', 'Random Forest', 'XGBoost']  #'Decision Tree'
+select = st.selectbox('Please select a model', models)
 
 ## Buttons
 if st.button("Predict"):
+    svc = SVC()
+    svc.fit(X_train, y_train)
+    svc_pred = svc.predict(X_test)
+    svc_acc = accuracy_score(y_test, svc_pred)
+
+    #dt = DecisionTreeClassifier()
+    #dt.fit(X_train, y_train)
+    #dt_pred = dt.predict(X_test)
+    #dt_acc = accuracy_score(y_test, dt_pred)
+
+    rf = RandomForestClassifier()
+    rf.fit(X_train, y_train)
+    rf_pred = rf.predict(X_test)
+    rf_acc = accuracy_score(y_test, rf_pred)
+
+    xgb_model = xgb.XGBClassifier()
+    xgb_model.fit(X_train, y_train)
+    xgb_pred = xgb_model.predict(X_test)
+    xgb_acc = accuracy_score(y_test, xgb_pred)
+    
+    accuracies = [lr_acc, svc_acc, rf_acc, xgb_acc]  #dt_acc
+
+    fig1=plt.figure()
+    plt.bar(models, accuracies)
+    plt.ylim([0, 1])
+    plt.ylabel('Accuracy')
+    plt.xticks(rotation=45)
+    st.pyplot(fig1)
+    model_acc = pd.DataFrame(data = accuracies, index = models, columns = ['Accuracy'])
+    st.write(model_acc)
+
+
+
+    if select == 'Logistic Regression':
+        model = lr
+    elif select == 'Support Vector Machine':
+        model = svc
+    #elif select == 'Decision Tree':
+    #    model = dt
+    elif select == 'Random Forest':
+        model = rf
+    elif select == 'XGBoost':
+        model = xgb_model
+    
+    #if (model == dt or model == rf or model == xgb_model):
+    #    # 모델에서 각 독립변수의 중요도 추출
+    #    importance = model.feature_importances_
+    #    # 중요도를 데이터프레임으로 변환
+    #    df_importance = pd.DataFrame({'feature': data.columns[:-1], 'importance': importance})
+    #    # 중요도를 내림차순으로 정렬
+    #    df_importance = df_importance.sort_values('importance', ascending=False)
+    #    # 중요도 시각화
+    #    fig2=plt.figure()
+    #    plt.bar(df_importance['feature'], df_importance['importance'])
+    #    plt.xticks(rotation=45)
+    #    plt.xlabel('Features')
+    #    plt.ylabel('Importance')
+    #    plt.title('Feature Importance')
+    #    st.pyplot(fig2)
+
     API_content_f = float(API_content)
     Excipient1_content_f = float(Excipient1_content)
     Excipient2_content_f = float(Excipient2_content)
