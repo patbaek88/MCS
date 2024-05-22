@@ -76,24 +76,6 @@ for i in range(len(materials)):
 tt2 = pd.DataFrame(data = features, columns = col_pc)
 tt2["Class"] = tt["Class"]
 
-
-# 데이터 불러오기
-#data = pd.read_csv('MCS_dataset_std_240503_FT4_rawdata.csv')
-
-# feature와 target 나누기
-X = tt2.iloc[:, :-1]
-y = tt2.iloc[:, -1] -1
-
-# train, test 데이터셋 나누기
-rs = st.number_input('머신러닝을 위한 무작위 숫자 입력', 1)
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state = rs)
-
-lr = LogisticRegression()
-lr.fit(X_train, y_train)
-lr_pred = lr.predict(X_test)
-lr_acc = accuracy_score(y_test, lr_pred)
-
-
 API_df = df[(df['Function']=='API')]
 API_list = API_df.index.to_list()
 API_name = st.selectbox('Select API', API_list)
@@ -130,11 +112,29 @@ Excipient4_name = st.selectbox(
 
 Excipient4_content = st.text_input('Excipient4_content (%)')
 
+
+
+# 데이터 불러오기
+#data = pd.read_csv('MCS_dataset_std_240503_FT4_rawdata.csv')
+
+# feature와 target 나누기
+X = tt2.iloc[:, :-1]
+y = tt2.iloc[:, -1] -1
+
+# train, test 데이터셋 나누기
+rs = st.number_input('머신러닝을 위한 무작위 숫자 입력', 1)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state = rs)
+
 models = ['Logistic Regression', 'Support Vector Machine', 'Random Forest', 'XGBoost']  #'Decision Tree'
 select = st.selectbox('Please select a model', models)
 
 ## Buttons
 if st.button("Predict"):
+    lr = LogisticRegression()
+    lr.fit(X_train, y_train)
+    lr_pred = lr.predict(X_test)
+    lr_acc = accuracy_score(y_test, lr_pred)
+    
     svc = SVC()
     svc.fit(X_train, y_train)
     svc_pred = svc.predict(X_test)
