@@ -200,7 +200,7 @@ if st.button("Predict"):
     Excipient2_content_f = float(Excipient2_content)
     Excipient3_content_f = float(Excipient3_content)
     Excipient4_content_f = float(Excipient4_content)
-    mixture_data = z1.loc[API_name]*API_content_f/100 + z1.loc[Excipient1_name]*Excipient1_content_f/100 + z1.loc[Excipient2_name]*Excipient2_content_f/100 + z1.loc[Excipient3_name]*Excipient3_content_f/100 + z1.loc[Excipient4_name]*Excipient4_content_f/100
+    mixture_data = principalDf.loc[API_name]*API_content_f/100 + principalDf.loc[Excipient1_name]*Excipient1_content_f/100 + principalDf.loc[Excipient2_name]*Excipient2_content_f/100 + principalDf.loc[Excipient3_name]*Excipient3_content_f/100 + principalDf.loc[Excipient4_name]*Excipient4_content_f/100
     mixture_df = mixture_data.to_frame()
     mixture_df = mixture_df.transpose()	#행 열 전환
     #Best model로 예측하기
