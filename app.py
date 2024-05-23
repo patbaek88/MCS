@@ -39,7 +39,7 @@ st.subheader('Formulation Design')
 
 API_df = df[(df['Function']=='API')]
 API_list = API_df.index.to_list()
-API_name = st.selectbox('Select API', API_list, index = 55)
+API_name = st.selectbox('Select API', API_list, index = 52)
 
 API_content = st.number_input('API_content (%)', 0, 100, value = 30)
 
@@ -55,14 +55,14 @@ Disintegrant_list = Disintegrant_df.index.to_list()
 
 Excipient1_name = st.selectbox(
     'Select Filler 1',
-    Filler_list)
+    Filler_list, index = 22)
 
 Excipient1_content = st.number_input('Filler 1 content (%)',0, 100, value = 30 )
 
 
 Excipient2_name = st.selectbox(
     'Select Filler 2',
-    Filler_list)
+    Filler_list,index = 22)
 
 Excipient2_content = st.number_input('Filler 2 content (%)',0, 100, value = 30 )
 
