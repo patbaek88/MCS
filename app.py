@@ -88,8 +88,6 @@ n_components = pd.DataFrame(data= comp, columns = ["n_components"])
 evr = pd.concat([explained_vraiance_ratio, n_components], axis = 1)
 evr = evr.set_index('n_components')
 
-st.write(evr)
-
 num_pc = st.number_input('주성분 개수설정', 1, 21, value = 9) 
 pca = PCA(n_components=num_pc) # 주성분을 몇개로 할지 결정
 principalComponents = pca.fit_transform(x1)
@@ -99,6 +97,9 @@ for i in range(1,num_pc+1):
     col_pc.append("pc"+str(i))
     
 principalDf = pd.DataFrame(data=principalComponents, columns = col_pc, index=df1.index)
+
+with st.expander('주성분수 vs 설명력'):
+      st.write(evr)
 
 # 데이터 불러오기
 tt = pd.read_csv('train_test_set_template.csv')
