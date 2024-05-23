@@ -62,21 +62,21 @@ Excipient1_content = st.number_input('Filler 1 content (%)',0, 100, value = 30 )
 
 Excipient2_name = st.selectbox(
     'Select Filler 2',
-    Filler_list,index = 22)
+    Filler_list,index = 23)
 
 Excipient2_content = st.number_input('Filler 2 content (%)',0, 100, value = 30 )
 
 
 Excipient3_name = st.selectbox(
     'Select Binder',
-    Binder_list)
+    Binder_list, index = 2)
 
 Excipient3_content = st.number_input('Binder content (%)',0, 100, value = 5)
 
 
 Excipient4_name = st.selectbox(
     'Select Disintegrant',
-    Disintegrant_list)
+    Disintegrant_list, index = 3)
 
 Excipient4_content = st.number_input('Disintegrant content (%)',0, 100, value = 5)
 
