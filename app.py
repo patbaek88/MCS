@@ -247,7 +247,7 @@ if st.button("Predict"):
     mixture_df = mixture_df.transpose()	#행 열 전환
     #Best model로 예측하기
     pred = model.predict(mixture_df)+1
-    st.write("Mixture Class = " + str(pred[0]))
+    st.write("Recommended Manfacturing Class = " + "Class " + str(pred[0]))
     st.write("Model Accuracy : " + str(model_acc))
     st.write("Class 1 : Direct Compression")
     st.write("Class 2 : Dry Granulation")
