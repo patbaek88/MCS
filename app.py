@@ -86,11 +86,11 @@ for i in range(1,n+1):
 explained_vraiance_ratio = pd.DataFrame(data= exp_vr, columns = ["Explained Variance Ratio of PCA"])
 n_components = pd.DataFrame(data= comp, columns = ["n_components"])
 evr = pd.concat([explained_vraiance_ratio, n_components], axis = 1)
-evr.set_index('n_components')
+evr = evr.set_index('n_components')
 
 st.write(evr)
 
-num_pc = st.number_input('1이상 21이하 숫자 입력', 1, 21, value = 9) 
+num_pc = st.number_input('주성분 개수설정', 1, 21, value = 9) 
 pca = PCA(n_components=num_pc) # 주성분을 몇개로 할지 결정
 principalComponents = pca.fit_transform(x1)
 
