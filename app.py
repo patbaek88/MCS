@@ -215,7 +215,7 @@ if st.button("Predict"):
 
     model.fit(X_train, y_train)
     model_pred = model.predict(X_test)
-    model_acc = round(accuracy_score(y_test, model_pred), 2)
+    model_acc = round(accuracy_score(y_test, model_pred), 4)
     
 
 
