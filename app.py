@@ -72,19 +72,32 @@ Excipient4_name = st.selectbox(
 
 Excipient4_content = st.text_input('Excipient4_content (%)')
 
+n= x1.shape[1]
 
-#n= x1.shape[1]
-#for i in range(1,n):
-#    pca = PCA(n_components=i)
-#    pca.fit_transform(x1)
-#    print(sum(pca.explained_variance_ratio_))
+exp_vr = []
+comp = []
 
+for i in range(1,n+1):
+    pca = PCA(n_components=i)
+    pca.fit_transform(x1)
+    exp_vr.append(sum(pca.explained_variance_ratio_))
+    comp.append(str(i))
 
-#num_pc = st.number_input('숫자 입력', 1, 21, value = 9) 
+explained_vraiance_ratio = pd.DataFrame(data= exp_vr, columns = ["Explained Variance Ratio of PCA"])
+n_components = pd.DataFrame(data= comp, columns = ["n_components"])
+evr = pd.concat([explained_vraiance_ratio, n_components], axis = 1)
+evr.set_index('n_components')
 
-pca = PCA(n_components=9) # 주성분을 몇개로 할지 결정
+st.write(evr)
+
+num_pc = st.number_input('1이상 21이하 숫자 입력', 1, 21, value = 9) 
+pca = PCA(n_components=num_pc) # 주성분을 몇개로 할지 결정
 principalComponents = pca.fit_transform(x1)
-col_pc = ['pc1', 'pc2', 'pc3', 'pc4', 'pc5', 'pc6', 'pc7', 'pc8', 'pc9']
+
+col_pc = []
+for i in range(1,num_pc+1):
+    col_pc.append("pc"+str(i))
+    
 principalDf = pd.DataFrame(data=principalComponents, columns = col_pc, index=df1.index)
 
 # 데이터 불러오기
