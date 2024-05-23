@@ -78,7 +78,7 @@ Excipient4_name = st.selectbox(
     'Select Disintegrant',
     Disintegrant_list)
 
-Excipient4_content = st.text_input('Disintegrant content (%)' value = 5)
+Excipient4_content = st.text_input('Disintegrant content (%)', value = 5)
 
 
 st.subheader(" ")
