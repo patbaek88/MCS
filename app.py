@@ -34,47 +34,7 @@ x1 = StandardScaler().fit_transform(x1)  # x객체에 x를 표준화한 데이�
 features = df1.columns
 z1 = pd.DataFrame(x1, columns=features, index=df1.index)
 
-#n= x1.shape[1]
-#for i in range(1,n):
-#    pca = PCA(n_components=i)
-#    pca.fit_transform(x1)
-#    print(sum(pca.explained_variance_ratio_))
 
-
-pca = PCA(n_components=9) # 주성분을 몇개로 할지 결정
-principalComponents = pca.fit_transform(x1)
-col_pc = ['pc1', 'pc2', 'pc3', 'pc4', 'pc5', 'pc6', 'pc7', 'pc8', 'pc9']
-principalDf = pd.DataFrame(data=principalComponents, columns = col_pc, index=df1.index)
-
-# 데이터 불러오기
-tt = pd.read_csv('train_test_set_template.csv')
-
-# tt 파일에서 material 이름과 함량 추출하기
-materials = tt.iloc[:, [0, 2, 4, 6, 8]].values
-amounts = tt.iloc[:, [1, 3, 5, 7, 9]].astype(float).values
-
-# tt 파일에서 Class 값 추출하기
-classes = tt.iloc[:, -1].values
-
-# 각 material에 대해 feature값과 함량을 곱한 뒤 더하기
-features = []
-for i in range(len(materials)):
-    feature = np.zeros(9)
-    for j in range(5):
-        if pd.notnull(materials[i][j]):
-            material_name = materials[i][j]
-            amount = amounts[i][j]
-            material_features = principalDf.loc[principalDf.index == material_name].iloc[:, :].values
-            if len(material_features) > 0:
-                material_feature = material_features[0]
-                feature += material_feature * amount
-            else:
-                pass
-            
-    features.append(feature)
-
-tt2 = pd.DataFrame(data = features, columns = col_pc)
-tt2["Class"] = tt["Class"]
 
 API_df = df[(df['Function']=='API')]
 API_list = API_df.index.to_list()
@@ -111,6 +71,52 @@ Excipient4_name = st.selectbox(
     Excipient_list)
 
 Excipient4_content = st.text_input('Excipient4_content (%)')
+
+
+#n= x1.shape[1]
+#for i in range(1,n):
+#    pca = PCA(n_components=i)
+#    pca.fit_transform(x1)
+#    print(sum(pca.explained_variance_ratio_))
+
+
+#num_pc = st.number_input('숫자 입력', 1, 21, value = 9) 
+
+pca = PCA(n_components=9) # 주성분을 몇개로 할지 결정
+principalComponents = pca.fit_transform(x1)
+col_pc = ['pc1', 'pc2', 'pc3', 'pc4', 'pc5', 'pc6', 'pc7', 'pc8', 'pc9']
+principalDf = pd.DataFrame(data=principalComponents, columns = col_pc, index=df1.index)
+
+# 데이터 불러오기
+tt = pd.read_csv('train_test_set_template.csv')
+
+# tt 파일에서 material 이름과 함량 추출하기
+materials = tt.iloc[:, [0, 2, 4, 6, 8]].values
+amounts = tt.iloc[:, [1, 3, 5, 7, 9]].astype(float).values
+
+# tt 파일에서 Class 값 추출하기
+classes = tt.iloc[:, -1].values
+
+# 각 material에 대해 feature값과 함량을 곱한 뒤 더하기
+features = []
+for i in range(len(materials)):
+    feature = np.zeros(9)
+    for j in range(5):
+        if pd.notnull(materials[i][j]):
+            material_name = materials[i][j]
+            amount = amounts[i][j]
+            material_features = principalDf.loc[principalDf.index == material_name].iloc[:, :].values
+            if len(material_features) > 0:
+                material_feature = material_features[0]
+                feature += material_feature * amount
+            else:
+                pass
+            
+    features.append(feature)
+
+tt2 = pd.DataFrame(data = features, columns = col_pc)
+tt2["Class"] = tt["Class"]
+
 
 
 
