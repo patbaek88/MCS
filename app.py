@@ -41,7 +41,7 @@ API_df = df[(df['Function']=='API')]
 API_list = API_df.index.to_list()
 API_name = st.selectbox('Select API', API_list)
 
-API_content = st.text_input('API_content (%)', value = 30)
+API_content = st.number_input('API_content (%)', value = 30)
 
 
 Filler_df =  df[df['Function'].isin(['Filler_DC', 'Filler_WG'])]
@@ -57,28 +57,28 @@ Excipient1_name = st.selectbox(
     'Select Filler 1',
     Filler_list)
 
-Excipient1_content = st.text_input('Filler 1 content (%)', value = 30 )
+Excipient1_content = st.number_input('Filler 1 content (%)', value = 30 )
 
 
 Excipient2_name = st.selectbox(
     'Select Filler 2',
     Filler_list)
 
-Excipient2_content = st.text_input('Filler 2 content (%)', value = 30 )
+Excipient2_content = st.number_input('Filler 2 content (%)', value = 30 )
 
 
 Excipient3_name = st.selectbox(
     'Select Binder',
     Binder_list)
 
-Excipient3_content = st.text_input('Binder content (%)', value = 5)
+Excipient3_content = st.number_input('Binder content (%)', value = 5)
 
 
 Excipient4_name = st.selectbox(
     'Select Disintegrant',
     Disintegrant_list)
 
-Excipient4_content = st.text_input('Disintegrant content (%)', value = 5)
+Excipient4_content = st.number_input('Disintegrant content (%)', value = 5)
 
 
 st.subheader(" ")
