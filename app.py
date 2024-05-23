@@ -16,7 +16,7 @@ from sklearn.decomposition import PCA
 from sklearn.metrics import classification_report
 
 
-st.title('Manufacturing Classification System')  # 타이틀명 지정
+st.subheader('Manufacturing Classification System')  # 타이틀명 지정
 
 
 
@@ -128,46 +128,47 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 models = ['Logistic Regression', 'Support Vector Machine', 'Random Forest', 'XGBoost']  #'Decision Tree'
 select = st.selectbox('Please select a model', models)
 
+lr = LogisticRegression()
+#lr.fit(X_train, y_train)
+#lr_pred = lr.predict(X_test)
+#lr_acc = accuracy_score(y_test, lr_pred)
+    
+svc = SVC()
+#svc.fit(X_train, y_train)
+#svc_pred = svc.predict(X_test)
+#svc_acc = accuracy_score(y_test, svc_pred)
+
+#dt = DecisionTreeClassifier()
+#dt.fit(X_train, y_train)
+#dt_pred = dt.predict(X_test)
+#dt_acc = accuracy_score(y_test, dt_pred)
+
+rf = RandomForestClassifier()
+#rf.fit(X_train, y_train)
+#rf_pred = rf.predict(X_test)
+#rf_acc = accuracy_score(y_test, rf_pred)
+
+xgb_model = xgb.XGBClassifier()
+#xgb_model.fit(X_train, y_train)
+#xgb_pred = xgb_model.predict(X_test)
+#xgb_acc = accuracy_score(y_test, xgb_pred)
+    
+#accuracies = [lr_acc, svc_acc, rf_acc, xgb_acc]  #dt_acc
+
+#fig1=plt.figure()
+#plt.bar(models, accuracies)
+#plt.ylim([0, 1])
+#plt.ylabel('Accuracy')
+#plt.xticks(rotation=45)
+#st.pyplot(fig1)
+#model_acc = pd.DataFrame(data = accuracies, index = models, columns = ['Accuracy'])
+#st.write(model_acc)
+
+
+
+
 ## Buttons
 if st.button("Predict"):
-    lr = LogisticRegression()
-    lr.fit(X_train, y_train)
-    lr_pred = lr.predict(X_test)
-    lr_acc = accuracy_score(y_test, lr_pred)
-    
-    svc = SVC()
-    svc.fit(X_train, y_train)
-    svc_pred = svc.predict(X_test)
-    svc_acc = accuracy_score(y_test, svc_pred)
-
-    #dt = DecisionTreeClassifier()
-    #dt.fit(X_train, y_train)
-    #dt_pred = dt.predict(X_test)
-    #dt_acc = accuracy_score(y_test, dt_pred)
-
-    rf = RandomForestClassifier()
-    rf.fit(X_train, y_train)
-    rf_pred = rf.predict(X_test)
-    rf_acc = accuracy_score(y_test, rf_pred)
-
-    xgb_model = xgb.XGBClassifier()
-    xgb_model.fit(X_train, y_train)
-    xgb_pred = xgb_model.predict(X_test)
-    xgb_acc = accuracy_score(y_test, xgb_pred)
-    
-    accuracies = [lr_acc, svc_acc, rf_acc, xgb_acc]  #dt_acc
-
-    fig1=plt.figure()
-    plt.bar(models, accuracies)
-    plt.ylim([0, 1])
-    plt.ylabel('Accuracy')
-    plt.xticks(rotation=45)
-    st.pyplot(fig1)
-    model_acc = pd.DataFrame(data = accuracies, index = models, columns = ['Accuracy'])
-    st.write(model_acc)
-
-
-
     if select == 'Logistic Regression':
         model = lr
     elif select == 'Support Vector Machine':
@@ -178,6 +179,14 @@ if st.button("Predict"):
         model = rf
     elif select == 'XGBoost':
         model = xgb_model
+
+    model.fit(X_train, y_train)
+    model_pred = model.predict(X_test)
+    model_acc = accuracy_score(y_test, model_pred)
+    
+
+
+
     
     #if (model == dt or model == rf or model == xgb_model):
     #    # 모델에서 각 독립변수의 중요도 추출
@@ -205,7 +214,8 @@ if st.button("Predict"):
     mixture_df = mixture_df.transpose()	#행 열 전환
     #Best model로 예측하기
     pred = model.predict(mixture_df)+1
-    st.write("Mixture Class = " + str(pred[0]))   
+    st.write("Mixture Class = " + str(pred[0]))
+    st.write("Model Accuracy : " + str(model_acc))
     st.write("Class 1 : Direct Compression")
     st.write("Class 2 : Dry Granulation")
     st.write("Class 3 : Wet Granulation")
