@@ -16,7 +16,7 @@ from sklearn.decomposition import PCA
 from sklearn.metrics import classification_report
 
 
-st.subheader('Manufacturing Classification System')  # 타이틀명 지정
+st.header('Manufacturing Classification System')  # 타이틀명 지정
 
 
 
@@ -34,7 +34,8 @@ x1 = StandardScaler().fit_transform(x1)  # x객체에 x를 표준화한 데이�
 features = df1.columns
 z1 = pd.DataFrame(x1, columns=features, index=df1.index)
 
-
+st.subheader(" ")
+st.subheader('Formulation Design')
 
 API_df = df[(df['Function']=='API')]
 API_list = API_df.index.to_list()
@@ -72,6 +73,10 @@ Excipient4_name = st.selectbox(
 
 Excipient4_content = st.text_input('Excipient4_content (%)')
 
+
+st.subheader(" ")
+st.subheader('Analysis Condition')
+
 n= x1.shape[1]
 
 exp_vr = []
@@ -87,6 +92,7 @@ explained_vraiance_ratio = pd.DataFrame(data= exp_vr, columns = ["Explained Vari
 n_components = pd.DataFrame(data= comp, columns = ["n_components"])
 evr = pd.concat([explained_vraiance_ratio, n_components], axis = 1)
 evr = evr.set_index('n_components')
+
 
 num_pc = st.number_input('주성분 개수설정', 1, 21, value = 9) 
 pca = PCA(n_components=num_pc) # 주성분을 몇개로 할지 결정
