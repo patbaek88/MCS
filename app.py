@@ -39,7 +39,7 @@ st.subheader('Formulation Design')
 
 API_df = df[(df['Function']=='API')]
 API_list = API_df.index.to_list()
-API_name = st.selectbox('Select API', API_list)
+API_name = st.selectbox('Select API', API_list, index = API_list['GDB20003'])
 
 API_content = st.number_input('API_content (%)', 0, 100, value = 30)
 
