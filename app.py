@@ -148,8 +148,7 @@ X = tt2.iloc[:, :-1]
 y = tt2.iloc[:, -1] -1
 
 # train, test 데이터셋 나누기
-#rs = st.number_input('Input a randome seed for machine leraning', 1)
-rs = 1030
+rs = st.number_input('Input a randome seed for machine leraning', 1)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state = rs)
 
 models = ['Logistic Regression', 'Support Vector Machine', 'Random Forest', 'XGBoost']  #'Decision Tree'
@@ -193,7 +192,7 @@ xgb_model = xgb.XGBClassifier()
 
 
 
-
+st.subheader(" ")
 ## Buttons
 if st.button("Predict"):
     if select == 'Logistic Regression':
