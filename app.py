@@ -367,8 +367,8 @@ if st.button("Predict"):
         plt.text(xm_f, ym_f, f'({xm_f}, {ym_f})', color='black')
 
 
-        ax.set_xlabel('pc1')
-        ax.set_ylabel('pc2')
+        plt.set_xlabel('pc1')
+        plt.set_ylabel('pc2')
     
         
 
