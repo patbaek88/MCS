@@ -246,9 +246,11 @@ if st.button("Predict"):
     mixture_data = principalDf.loc[API_name]*API_content_f/100 + principalDf.loc[Excipient1_name]*Excipient1_content_f/100 + principalDf.loc[Excipient2_name]*Excipient2_content_f/100 + principalDf.loc[Excipient3_name]*Excipient3_content_f/100 + principalDf.loc[Excipient4_name]*Excipient4_content_f/100
     mixture_df = mixture_data.to_frame()
     mixture_df = mixture_df.transpose()	#행 열 전환
+    
     #Best model로 예측하기
     pred = model.predict(mixture_df)+1
-    st.write("Recommended Manfacturing Class = " + str(pred[0]))
+    
+    st.write("Predicted Manfacturing Class = " + str(pred[0]))
     st.write("Model Accuracy : " + str(model_acc))
     st.write("Class 1 : Direct Compression")
     st.write("Class 2 : Dry Granulation")
@@ -334,9 +336,44 @@ if st.button("Predict"):
         ax_zx.set_zlabel('pc3')
         ax_zx.view_init(0,100)
         
-        plt.legend()
+
+
+    elif num_pc == 2:
+        fig = plt.figure(constrained_layout=True, figsize=(12,9))
+                      
+        x1 = tt2[tt2["Class"] == 1]["pc1"]
+        y1 = tt2[tt2["Class"] == 1]["pc2"]
         
-        plt.show()
+        x2 = tt2[tt2["Class"] == 2]["pc1"]
+        y2 = tt2[tt2["Class"] == 2]["pc2"]
+       
+        x3 = tt2[tt2["Class"] == 3]["pc1"]
+        y3 = tt2[tt2["Class"] == 3]["pc2"]
+       
+        x4 = tt2[tt2["Class"] == 4]["pc1"]
+        y4 = tt2[tt2["Class"] == 4]["pc2"]
         
-        st.set_option('deprecation.showPyplotGlobalUse', False)
-        st.pyplot()
+        xm = mixture_df["pc1"]
+        ym = mixture_df["pc2"]
+       
+        xm_f = round(float(xm), 1)
+        ym_f = round(float(ym), 1)
+        
+        plt.scatter(x1, y1, color = 'b', alpha = 0.5, label = 'Class 1')
+        plt.scatter(x2, y2, color = 'g', alpha = 0.5, label = 'Class 2')
+        plt.scatter(x3, y3, color = 'r', alpha = 0.5, label = 'Class 3')
+        plt.scatter(x4, y4, color = 'gray', alpha = 0.5, label = 'Class 4')
+        plt.scatter(xm, ym, s=100, color = 'black', alpha = 0.5, marker='*', label = 'Mixture')
+        plt.text(xm_f, ym_f, f'({xm_f}, {ym_f})', color='black')
+
+
+        ax.set_xlabel('pc1')
+        ax.set_ylabel('pc2')
+    
+        
+
+    plt.legend()
+        
+    plt.show()
+    st.set_option('deprecation.showPyplotGlobalUse', False)
+    st.pyplot()
