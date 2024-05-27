@@ -276,9 +276,9 @@ if st.button("Predict"):
         xm = mixture_df["pc1"]
         ym = mixture_df["pc2"]
         zm = mixture_df["pc3"]
-        xm_f = float(xm)
-        ym_f = float(ym)
-        zm_f = float(zm)
+        xm_f = float(xm, 1)
+        ym_f = float(ym), 1
+        zm_f = float(zm, 1)
 
         
         ax.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
@@ -299,5 +299,3 @@ if st.button("Predict"):
         
         st.set_option('deprecation.showPyplotGlobalUse', False)
         st.pyplot()
-        st.write(xm_f)
-
