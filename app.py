@@ -115,6 +115,14 @@ principalDf = pd.DataFrame(data=principalComponents, columns = col_pc, index=df1
 with st.expander('num_PC vs Explained Variance Ratio'):
       st.write(evr)
 
+fig = plt.figure(constrained_layout=True, figsize=(6,4))
+
+#plt.plot(comp, exp_vr, color = 'b')
+plt.plot(comp, exp_vr, c = 'blue', linestyle = '--', marker = 'o', markersize = 5)
+plt.xlabel('number of PC(Princial Component)')
+plt.ylabel('Explained Variance Ratio')
+st.pyplot()
+
 # 데이터 불러오기
 tt = pd.read_csv('train_test_set_template.csv')
 
@@ -370,29 +378,7 @@ if st.button("Predict"):
         plt.xlabel('pc1')
         plt.ylabel('pc2')
         
-    elif num_pc == 1:
-        fig = plt.figure(constrained_layout=True, figsize=(12,9))
-                      
-        x1 = tt2[tt2["Class"] == 1]["pc1"]               
-        x2 = tt2[tt2["Class"] == 2]["pc1"]              
-        x3 = tt2[tt2["Class"] == 3]["pc1"]              
-        x4 = tt2[tt2["Class"] == 4]["pc1"]
-               
-        xm = mixture_df["pc1"]
-              
-        xm_f = round(float(xm), 1)
-               
-        plt.scatter(tt2[tt2["Class"] == 1].index, x1, color = 'b', alpha = 0.5, label = 'Class 1')
-        plt.scatter(tt2[tt2["Class"] == 2].index, x2, color = 'g', alpha = 0.5, label = 'Class 2')
-        plt.scatter(tt2[tt2["Class"] == 3].index, x3, color = 'r', alpha = 0.5, label = 'Class 3')
-        plt.scatter(tt2[tt2["Class"] == 4].index, x4, color = 'gray', alpha = 0.5, label = 'Class 4')
-        plt.scatter(0, xm_f, s=100, color = 'black', alpha = 0.5, marker='*', label = 'Mixture')
-        #plt.text(0, xm_f, f'({xm_f})', color='black')
-
-
-        plt.xlabel('pc1')        
-        
-
+   
     plt.legend()
         
     plt.show()
