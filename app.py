@@ -117,10 +117,10 @@ with st.expander('num_PC vs Explained Variance Ratio'):
 
 fig = plt.figure(constrained_layout=True, figsize=(6,4))
 
-#plt.plot(comp, exp_vr, color = 'b')
 plt.plot(comp, exp_vr, c = 'blue', linestyle = '--', marker = 'o', markersize = 5)
 plt.xlabel('number of PC(Princial Component)')
 plt.ylabel('Explained Variance Ratio')
+plt.grid()
 st.pyplot()
 
 # 데이터 불러오기
