@@ -318,9 +318,22 @@ if st.button("Predict"):
         ax.set_ylabel('pc2')
         ax.set_zlabel('pc3')
         ax.view_init(20,60)
+        
+        ax_xy.set_xlabel('pc1')
+        ax_xy.set_ylabel('pc2')
+        ax_xy.set_zlabel('pc3')
         ax_xy.view_init(100,0)
+
+        ax_yz.set_xlabel('pc1')
+        ax_yz.set_ylabel('pc2')
+        ax_yz.set_zlabel('pc3')
         ax_yz.view_init(0,0)
+
+        ax_zx.set_xlabel('pc1')
+        ax_zx.set_ylabel('pc2')
+        ax_zx.set_zlabel('pc3')
         ax_zx.view_init(0,100)
+        
         plt.legend()
         
         plt.show()
