@@ -256,7 +256,7 @@ if st.button("Predict"):
     st.write("Class 4 : Other Technology")
     if num_pc >= 3:
         fig = plt.figure()
-        ax = fig.add_subplot( projection='3d')
+        ax = fig.add_subplot( projection='3d', figsize=(10,3))
         x1 = tt2[tt2["Class"] == 1]["pc1"]
         y1 = tt2[tt2["Class"] == 1]["pc2"]
         z1 = tt2[tt2["Class"] == 1]["pc3"]
@@ -291,5 +291,7 @@ if st.button("Predict"):
         ax.view_init(20,60)
         plt.legend()
         plt.show()
+        
+        st.set_option('deprecation.showPyplotGlobalUse', False)
         st.pyplot()
 
