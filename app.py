@@ -257,6 +257,10 @@ if st.button("Predict"):
     if num_pc >= 3:
         fig = plt.figure(constrained_layout=True, figsize=(10,8))
         ax = fig.add_subplot( projection='3d')
+        ax_xy = fig.add_subplot(222, projection='3d')
+        ax_yz= fig.add_subplot(223, projection='3d')
+        ax_zx = fig.add_subplot(224, projection='3d')
+        
         x1 = tt2[tt2["Class"] == 1]["pc1"]
         y1 = tt2[tt2["Class"] == 1]["pc2"]
         z1 = tt2[tt2["Class"] == 1]["pc3"]
@@ -289,10 +293,34 @@ if st.button("Predict"):
         ax.text(xm_f, ym_f, zm_f, f'({xm_f}, {ym_f}, {zm_f})', color='black')
 
 
+        ax_xy.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
+        ax_xy.scatter(x2, y2, z2, color = 'g', alpha = 0.5, label = 'Class 2')
+        ax_xy.scatter(x3, y3, z3, color = 'r', alpha = 0.5, label = 'Class 3')
+        ax_xy.scatter(x4, y4, z4, color = 'gray', alpha = 0.5, label = 'Class 4')
+        ax_xy.scatter(xm, ym, zm , s=50, color = 'black', alpha = 0.5, marker='*', label = 'Mixture')
+        ax_xy.text(xm_f, ym_f, zm_f, f'({xm_f}, {ym_f}, {zm_f})', color='black')
+
+        ax_yz.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
+        ax_yz.scatter(x2, y2, z2, color = 'g', alpha = 0.5, label = 'Class 2')
+        ax_yz.scatter(x3, y3, z3, color = 'r', alpha = 0.5, label = 'Class 3')
+        ax_yz.scatter(x4, y4, z4, color = 'gray', alpha = 0.5, label = 'Class 4')
+        ax_yz.scatter(xm, ym, zm , s=50, color = 'black', alpha = 0.5, marker='*', label = 'Mixture')
+        ax_yz.text(xm_f, ym_f, zm_f, f'({xm_f}, {ym_f}, {zm_f})', color='black')
+
+        ax_zx.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
+        ax_zx.scatter(x2, y2, z2, color = 'g', alpha = 0.5, label = 'Class 2')
+        ax_zx.scatter(x3, y3, z3, color = 'r', alpha = 0.5, label = 'Class 3')
+        ax_zx.scatter(x4, y4, z4, color = 'gray', alpha = 0.5, label = 'Class 4')
+        ax_zx.scatter(xm, ym, zm , s=50, color = 'black', alpha = 0.5, marker='*', label = 'Mixture')
+        ax_zx.text(xm_f, ym_f, zm_f, f'({xm_f}, {ym_f}, {zm_f})', color='black')
+
         ax.set_xlabel('pc1')
         ax.set_ylabel('pc2')
         ax.set_zlabel('pc3')
         ax.view_init(20,60)
+        ax_xy.view_init(100,0)
+        ax_yz.view_init(0,0)
+        ax_zx.view_init(0,100)
         plt.legend()
         
         plt.show()
