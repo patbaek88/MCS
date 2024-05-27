@@ -382,12 +382,12 @@ if st.button("Predict"):
               
         xm_f = round(float(xm), 1)
                
-        plt.scatter(0, x1, color = 'b', alpha = 0.5, label = 'Class 1')
-        plt.scatter(0, x2, color = 'g', alpha = 0.5, label = 'Class 2')
-        plt.scatter(0, x3, color = 'r', alpha = 0.5, label = 'Class 3')
-        plt.scatter(0, x4, color = 'gray', alpha = 0.5, label = 'Class 4')
-        plt.scatter(0, xm, s=100, color = 'black', alpha = 0.5, marker='*', label = 'Mixture')
-        plt.text(0, xm_f, f'({xm_f})', color='black')
+        plt.scatter(tt2.index, x1, color = 'b', alpha = 0.5, label = 'Class 1')
+        plt.scatter(tt2.index, x2, color = 'g', alpha = 0.5, label = 'Class 2')
+        plt.scatter(tt2.index, x3, color = 'r', alpha = 0.5, label = 'Class 3')
+        plt.scatter(tt2.index, x4, color = 'gray', alpha = 0.5, label = 'Class 4')
+        plt.scatter(tt2.index, xm, s=100, color = 'black', alpha = 0.5, marker='*', label = 'Mixture')
+        #plt.text(, xm_f, f'({xm_f})', color='black')
 
 
         plt.xlabel('pc1')        
