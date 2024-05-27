@@ -453,7 +453,7 @@ if st.button("Predict"):
         plt.scatter(x_ex3, y_ex3, color = 'black', alpha = 0.5, label = 'Selected Material')
         plt.scatter(x_ex4, y_ex4, color = 'black', alpha = 0.5, label = 'Selected Material')
         plt.scatter(xm, ym, s=100, color = 'black', alpha = 0.5, marker='*', label = 'Mixture')
-        plt.text(xm_f, ym_f, f'Mixture({xm_f}, {ym_f}, {zm_f})', color='black')
+        plt.text(xm_f, ym_f, f'Mixture({xm_f}, {ym_f})', color='black')
         plt.text(x_ex1, y_ex1, 'Filler 1', color='black')
         plt.text(x_ex2, y_ex2, 'Filler 2', color='black')
         plt.text(x_ex3, y_ex3, 'Binder', color='black')
