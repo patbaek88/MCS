@@ -369,7 +369,28 @@ if st.button("Predict"):
 
         plt.xlabel('pc1')
         plt.ylabel('pc2')
-    
+        
+    elif num_pc == 1:
+        fig = plt.figure(constrained_layout=True, figsize=(12,9))
+                      
+        x1 = tt2[tt2["Class"] == 1]["pc1"]               
+        x2 = tt2[tt2["Class"] == 2]["pc1"]              
+        x3 = tt2[tt2["Class"] == 3]["pc1"]              
+        x4 = tt2[tt2["Class"] == 4]["pc1"]
+               
+        xm = mixture_df["pc1"]
+              
+        xm_f = round(float(xm), 1)
+               
+        plt.scatter(x1, color = 'b', alpha = 0.5, label = 'Class 1')
+        plt.scatter(x2, color = 'g', alpha = 0.5, label = 'Class 2')
+        plt.scatter(x3, color = 'r', alpha = 0.5, label = 'Class 3')
+        plt.scatter(x4, color = 'gray', alpha = 0.5, label = 'Class 4')
+        plt.scatter(xm, s=100, color = 'black', alpha = 0.5, marker='*', label = 'Mixture')
+        plt.text(xm_f, f'({xm_f})', color='black')
+
+
+        plt.xlabel('pc1')        
         
 
     plt.legend()
