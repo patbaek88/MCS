@@ -291,6 +291,26 @@ if st.button("Predict"):
         y4 = tt2[tt2["Class"] == 4]["pc2"]
         z4 = tt2[tt2["Class"] == 4]["pc3"]
 
+        x_api = principalDf.loc[API_name]["pc1"]
+        y_api = principalDf.loc[API_name]["pc2"]
+        z_api = principalDf.loc[API_name]["pc3"]
+
+        x_ex1 = principalDf.loc[Excipient1_name]["pc1"]
+        y_ex1 = principalDf.loc[Excipient1_name]["pc2"]
+        z_ex1 = principalDf.loc[Excipient1_name]["pc3"]
+
+        x_ex2 = principalDf.loc[Excipient2_name]["pc1"]
+        y_ex2 = principalDf.loc[Excipient2_name]["pc2"]
+        z_ex2 = principalDf.loc[Excipient2_name]["pc3"]        
+
+        x_ex3 = principalDf.loc[Excipient3_name]["pc1"]
+        y_ex3 = principalDf.loc[Excipient3_name]["pc2"]
+        z_ex3 = principalDf.loc[Excipient3_name]["pc3"]      
+
+        x_ex4 = principalDf.loc[Excipient4_name]["pc1"]
+        y_ex4 = principalDf.loc[Excipient4_name]["pc2"]
+        z_ex4 = principalDf.loc[Excipient4_name]["pc3"]            
+        
         xm = mixture_df["pc1"]
         ym = mixture_df["pc2"]
         zm = mixture_df["pc3"]
@@ -303,6 +323,11 @@ if st.button("Predict"):
         ax.scatter(x2, y2, z2, color = 'g', alpha = 0.5, label = 'Class 2')
         ax.scatter(x3, y3, z3, color = 'r', alpha = 0.5, label = 'Class 3')
         ax.scatter(x4, y4, z4, color = 'gray', alpha = 0.5, label = 'Class 4')
+        ax.scatter(x_api, y_api, z_api, color = 'black', alpha = 0.5, label = 'Selected API')
+        ax.scatter(x_ex1, y_ex1, z_ex1, color = 'black', alpha = 0.5, label = 'Selected Filler 1')
+        ax.scatter(x_ex2, y_ex2, z_ex2, color = 'black', alpha = 0.5, label = 'Selected Filler 2')
+        ax.scatter(x_ex3, y_ex3, z_ex3, color = 'black', alpha = 0.5, label = 'Selected Binder')
+        ax.scatter(x_ex4, y_ex4, z_ex4, color = 'black', alpha = 0.5, label = 'Selected Disintegrant')
         ax.scatter(xm, ym, zm , s=100, color = 'black', alpha = 0.5, marker='*', label = 'Mixture')
         ax.text(xm_f, ym_f, zm_f, f'({xm_f}, {ym_f}, {zm_f})', color='black')
 
@@ -311,6 +336,11 @@ if st.button("Predict"):
         ax_xy.scatter(x2, y2, z2, color = 'g', alpha = 0.5, label = 'Class 2')
         ax_xy.scatter(x3, y3, z3, color = 'r', alpha = 0.5, label = 'Class 3')
         ax_xy.scatter(x4, y4, z4, color = 'gray', alpha = 0.5, label = 'Class 4')
+        ax_xy.scatter(x_api, y_api, z_api, color = 'black', alpha = 0.5, label = 'Selected API')
+        ax_xy.scatter(x_ex1, y_ex1, z_ex1, color = 'black', alpha = 0.5, label = 'Selected Filler 1')
+        ax_xy.scatter(x_ex2, y_ex2, z_ex2, color = 'black', alpha = 0.5, label = 'Selected Filler 2')
+        ax_xy.scatter(x_ex3, y_ex3, z_ex3, color = 'black', alpha = 0.5, label = 'Selected Binder')
+        ax_xy.scatter(x_ex4, y_ex4, z_ex4, color = 'black', alpha = 0.5, label = 'Selected Disintegrant')
         ax_xy.scatter(xm, ym, zm , s=100, color = 'black', alpha = 0.5, marker='*', label = 'Mixture')
         ax_xy.text(xm_f, ym_f, zm_f, f'({xm_f}, {ym_f}, {zm_f})', color='black')
 
@@ -318,6 +348,11 @@ if st.button("Predict"):
         ax_yz.scatter(x2, y2, z2, color = 'g', alpha = 0.5, label = 'Class 2')
         ax_yz.scatter(x3, y3, z3, color = 'r', alpha = 0.5, label = 'Class 3')
         ax_yz.scatter(x4, y4, z4, color = 'gray', alpha = 0.5, label = 'Class 4')
+        ax_yz.scatter(x_api, y_api, z_api, color = 'black', alpha = 0.5, label = 'Selected API')
+        ax_yz.scatter(x_ex1, y_ex1, z_ex1, color = 'black', alpha = 0.5, label = 'Selected Filler 1')
+        ax_yz.scatter(x_ex2, y_ex2, z_ex2, color = 'black', alpha = 0.5, label = 'Selected Filler 2')
+        ax_yz.scatter(x_ex3, y_ex3, z_ex3, color = 'black', alpha = 0.5, label = 'Selected Binder')
+        ax_yz.scatter(x_ex4, y_ex4, z_ex4, color = 'black', alpha = 0.5, label = 'Selected Disintegrant')
         ax_yz.scatter(xm, ym, zm , s=100, color = 'black', alpha = 0.5, marker='*', label = 'Mixture')
         ax_yz.text(xm_f, ym_f, zm_f, f'({xm_f}, {ym_f}, {zm_f})', color='black')
 
@@ -325,6 +360,11 @@ if st.button("Predict"):
         ax_zx.scatter(x2, y2, z2, color = 'g', alpha = 0.5, label = 'Class 2')
         ax_zx.scatter(x3, y3, z3, color = 'r', alpha = 0.5, label = 'Class 3')
         ax_zx.scatter(x4, y4, z4, color = 'gray', alpha = 0.5, label = 'Class 4')
+        ax_zx.scatter(x_api, y_api, z_api, color = 'black', alpha = 0.5, label = 'Selected API')
+        ax_zx.scatter(x_ex1, y_ex1, z_ex1, color = 'black', alpha = 0.5, label = 'Selected Filler 1')
+        ax_zx.scatter(x_ex2, y_ex2, z_ex2, color = 'black', alpha = 0.5, label = 'Selected Filler 2')
+        ax_zx.scatter(x_ex3, y_ex3, z_ex3, color = 'black', alpha = 0.5, label = 'Selected Binder')
+        ax_zx.scatter(x_ex4, y_ex4, z_ex4, color = 'black', alpha = 0.5, label = 'Selected Disintegrant')
         ax_zx.scatter(xm, ym, zm , s=100, color = 'black', alpha = 0.5, marker='*', label = 'Mixture')
         ax_zx.text(xm_f, ym_f, zm_f, f'({xm_f}, {ym_f}, {zm_f})', color='black')
 
@@ -364,6 +404,21 @@ if st.button("Predict"):
        
         x4 = tt2[tt2["Class"] == 4]["pc1"]
         y4 = tt2[tt2["Class"] == 4]["pc2"]
+
+        x_api = principalDf.loc[API_name]["pc1"]
+        y_api = principalDf.loc[API_name]["pc2"]
+        
+        x_ex1 = principalDf.loc[Excipient1_name]["pc1"]
+        y_ex1 = principalDf.loc[Excipient1_name]["pc2"]
+        
+        x_ex2 = principalDf.loc[Excipient2_name]["pc1"]
+        y_ex2 = principalDf.loc[Excipient2_name]["pc2"]
+        
+        x_ex3 = principalDf.loc[Excipient3_name]["pc1"]
+        y_ex3 = principalDf.loc[Excipient3_name]["pc2"]    
+
+        x_ex4 = principalDf.loc[Excipient4_name]["pc1"]
+        y_ex4 = principalDf.loc[Excipient4_name]["pc2"]        
         
         xm = mixture_df["pc1"]
         ym = mixture_df["pc2"]
@@ -375,6 +430,11 @@ if st.button("Predict"):
         plt.scatter(x2, y2, color = 'g', alpha = 0.5, label = 'Class 2')
         plt.scatter(x3, y3, color = 'r', alpha = 0.5, label = 'Class 3')
         plt.scatter(x4, y4, color = 'gray', alpha = 0.5, label = 'Class 4')
+        plt.scatter(x_api, y_api, color = 'black', alpha = 0.5, label = 'Selected API')
+        plt.scatter(x_ex1, y_ex1, color = 'black', alpha = 0.5, label = 'Selected Filler 1')
+        plt.scatter(x_ex2, y_ex2, color = 'black', alpha = 0.5, label = 'Selected Filler 2')
+        plt.scatter(x_ex3, y_ex3, color = 'black', alpha = 0.5, label = 'Selected Binder')
+        plt.scatter(x_ex4, y_ex4, color = 'black', alpha = 0.5, label = 'Selected Disintegrant')
         plt.scatter(xm, ym, s=100, color = 'black', alpha = 0.5, marker='*', label = 'Mixture')
         plt.text(xm_f, ym_f, f'({xm_f}, {ym_f})', color='black')
 
