@@ -328,7 +328,7 @@ if st.button("Predict"):
         ax.scatter(x_ex2, y_ex2, z_ex2, color = 'orange', alpha = 1)
         ax.scatter(x_ex3, y_ex3, z_ex3, color = 'orange', alpha = 1)
         ax.scatter(x_ex4, y_ex4, z_ex4,color = 'orange', alpha = 1)
-        ax.scatter(xm, ym, zm , s=100, color = 'orange', alpha = 1)
+        ax.scatter(xm, ym, zm , s=100, color = 'orange', alpha = 1,  marker='*', label = 'Mixture')
         ax.text(xm_f, ym_f, zm_f, f'Mixture({xm_f}, {ym_f}, {zm_f})', color='black')
         ax.text(x_ex1, y_ex1, z_ex1, 'Filler 1', color='black')
         ax.text(x_ex2, y_ex2, z_ex2, 'Filler 2', color='black')
