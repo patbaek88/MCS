@@ -256,7 +256,7 @@ if st.button("Predict"):
     st.write("Class 4 : Other Technology")
     if num_pc >= 3:
         fig = plt.figure(constrained_layout=True, figsize=(10,8))
-        ax = fig.add_subplot( projection='3d')
+        ax = fig.add_subplot(221, projection='3d')
         ax_xy = fig.add_subplot(222, projection='3d')
         ax_yz= fig.add_subplot(223, projection='3d')
         ax_zx = fig.add_subplot(224, projection='3d')
