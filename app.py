@@ -164,7 +164,7 @@ X = tt2.iloc[:, :-1]
 y = tt2.iloc[:, -1] -1
 
 # train, test 데이터셋 나누기
-rs = st.number_input('Input a random seed for machine learning', 1)
+rs = st.number_input('Set a seed for machine learning', 1)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state = rs)
 
 models = ['Logistic Regression', 'Support Vector Machine', 'Random Forest', 'XGBoost']  #'Decision Tree'
