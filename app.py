@@ -329,7 +329,11 @@ if st.button("Predict"):
         ax.scatter(x_ex3, y_ex3, z_ex3, color = 'black', alpha = 0.5, label = 'Selected Binder')
         ax.scatter(x_ex4, y_ex4, z_ex4, color = 'black', alpha = 0.5, label = 'Selected Disintegrant')
         ax.scatter(xm, ym, zm , s=100, color = 'black', alpha = 0.5, marker='*', label = 'Mixture')
-        ax.text(xm_f, ym_f, zm_f, f'({xm_f}, {ym_f}, {zm_f})', color='black')
+        ax.text(xm_f, ym_f, zm_f, f'Mixture({xm_f}, {ym_f}, {zm_f})', color='black')
+        ax.text(x_ex1, y_ex1, z_ex1, 'Filler 1', color='black')
+        ax.text(x_ex2, y_ex2, z_ex2, 'Filler 2', color='black')
+        ax.text(x_ex3, y_ex3, z_ex3, 'Binder', color='black')
+        ax.text(x_ex4, y_ex4, z_ex4, 'Disintegrant', color='black')
 
 
         ax_xy.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
@@ -342,7 +346,12 @@ if st.button("Predict"):
         ax_xy.scatter(x_ex3, y_ex3, z_ex3, color = 'orange', alpha = 1, marker='^', label = 'Selected Binder')
         ax_xy.scatter(x_ex4, y_ex4, z_ex4, color = 'orange', alpha = 1, marker='^', label = 'Selected Disintegrant')
         ax_xy.scatter(xm, ym, zm , s=100, color = 'orange', alpha = 1, marker='*', label = 'Mixture')
-        ax_xy.text(xm_f, ym_f, zm_f, f'({xm_f}, {ym_f}, {zm_f})', color='black')
+        ax_xy.text(xm_f, ym_f, zm_f, f'Mixture({xm_f}, {ym_f}, {zm_f})', color='black')
+        ax_xy.text(x_ex1, y_ex1, z_ex1, 'Filler 1', color='black')
+        ax_xy.text(x_ex2, y_ex2, z_ex2, 'Filler 2', color='black')
+        ax_xy.text(x_ex3, y_ex3, z_ex3, 'Binder', color='black')
+        ax_xy.text(x_ex4, y_ex4, z_ex4, 'Disintegrant', color='black')
+        
 
         ax_yz.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
         ax_yz.scatter(x2, y2, z2, color = 'g', alpha = 0.5, label = 'Class 2')
@@ -354,7 +363,11 @@ if st.button("Predict"):
         ax_yz.scatter(x_ex3, y_ex3, z_ex3, color = 'orange', alpha = 1, marker='^', label = 'Selected Binder')
         ax_yz.scatter(x_ex4, y_ex4, z_ex4, color = 'orange', alpha = 1, marker='^', label = 'Selected Disintegrant')
         ax_yz.scatter(xm, ym, zm , s=100, color = 'orange', alpha = 1, marker='*', label = 'Mixture')
-        ax_yz.text(xm_f, ym_f, zm_f, f'({xm_f}, {ym_f}, {zm_f})', color='black')
+        ax_yz.text(xm_f, ym_f, zm_f, f'Mixture({xm_f}, {ym_f}, {zm_f})', color='black')
+        ax_yz.text(x_ex1, y_ex1, z_ex1, 'Filler 1', color='black')
+        ax_yz.text(x_ex2, y_ex2, z_ex2, 'Filler 2', color='black')
+        ax_yz.text(x_ex3, y_ex3, z_ex3, 'Binder', color='black')
+        ax_yz.text(x_ex4, y_ex4, z_ex4, 'Disintegrant', color='black')
 
         ax_zx.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
         ax_zx.scatter(x2, y2, z2, color = 'g', alpha = 0.5, label = 'Class 2')
@@ -367,6 +380,10 @@ if st.button("Predict"):
         ax_zx.scatter(x_ex4, y_ex4, z_ex4, color = 'orange', alpha = 1, marker='^',label = 'Selected Disintegrant')
         ax_zx.scatter(xm, ym, zm , s=100, color = 'orange', alpha = 1, marker='*', label = 'Mixture')
         ax_zx.text(xm_f, ym_f, zm_f, f'Mixture({xm_f}, {ym_f}, {zm_f})', color='black')
+        ax_zx.text(x_ex1, y_ex1, z_ex1, 'Filler 1', color='black')
+        ax_zx.text(x_ex2, y_ex2, z_ex2, 'Filler 2', color='black')
+        ax_zx.text(x_ex3, y_ex3, z_ex3, 'Binder', color='black')
+        ax_zx.text(x_ex4, y_ex4, z_ex4, 'Disintegrant', color='black')
 
         ax.set_xlabel('pc1')
         ax.set_ylabel('pc2')
