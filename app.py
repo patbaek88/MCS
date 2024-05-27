@@ -290,9 +290,10 @@ if st.button("Predict"):
         ax.set_zlabel('pc3')
         ax.view_init(20,60)
         plt.legend()
-        ax.text(xm, ym, zm, f'({xm}, {ym}, {zm})', color='black')
+        #ax.text(xm, ym, zm, f'({xm}, {ym}, {zm})', color='black')
         plt.show()
         
         st.set_option('deprecation.showPyplotGlobalUse', False)
         st.pyplot()
+        st.write(xm)
 
