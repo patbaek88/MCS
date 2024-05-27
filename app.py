@@ -341,7 +341,7 @@ if st.button("Predict"):
         ax_xy.scatter(x_ex2, y_ex2, z_ex2, color = 'orange', alpha = 1, marker='^', label = 'Selected Filler 2')
         ax_xy.scatter(x_ex3, y_ex3, z_ex3, color = 'orange', alpha = 1, marker='^', label = 'Selected Binder')
         ax_xy.scatter(x_ex4, y_ex4, z_ex4, color = 'orange', alpha = 1, marker='^', label = 'Selected Disintegrant')
-        ax_xy.scatter(xm, ym, zm , s=100, color = 'orange', alpha = 1, marker='^', marker='*', label = 'Mixture')
+        ax_xy.scatter(xm, ym, zm , s=100, color = 'orange', alpha = 1, marker='*', label = 'Mixture')
         ax_xy.text(xm_f, ym_f, zm_f, f'({xm_f}, {ym_f}, {zm_f})', color='black')
 
         ax_yz.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
