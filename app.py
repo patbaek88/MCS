@@ -282,7 +282,7 @@ if st.button("Predict"):
         ax.scatter(x2, y2, z2, color = 'g', alpha = 0.5, label = 'Class 2')
         ax.scatter(x3, y3, z3, color = 'r', alpha = 0.5, label = 'Class 3')
         ax.scatter(x4, y4, z4, color = 'gray', alpha = 0.5, label = 'Class 4')
-        ax.scatter(xm, ym, zm , s=20 color = 'black', alpha = 0.5, marker='*', label = 'Mixture')
+        ax.scatter(xm, ym, zm , s=20, color = 'black', alpha = 0.5, marker='*', label = 'Mixture')
 
 
         ax.set_xlabel('pc1')
