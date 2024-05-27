@@ -255,8 +255,8 @@ if st.button("Predict"):
     st.write("Class 3 : Wet Granulation")
     st.write("Class 4 : Other Technology")
     if num_pc >= 3:
-        fig = plt.figure()
-        ax = fig.add_subplot( projection='3d', figsize=(10,3))
+        fig = plt.figure(constrained_layout=True)
+        ax = fig.add_subplot( projection='3d')
         x1 = tt2[tt2["Class"] == 1]["pc1"]
         y1 = tt2[tt2["Class"] == 1]["pc2"]
         z1 = tt2[tt2["Class"] == 1]["pc3"]
