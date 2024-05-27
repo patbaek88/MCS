@@ -106,7 +106,7 @@ evr = pd.concat([explained_vraiance_ratio, n_components], axis = 1)
 evr = evr.set_index('n_components')
 
 
-num_pc = st.number_input('Set the number of princial components', 1, 21, value = 9) 
+num_pc = st.number_input('Set the number of princial components', 1, 21, value = 6) 
 pca = PCA(n_components=num_pc) # 주성분을 몇개로 할지 결정
 principalComponents = pca.fit_transform(x1)
 
