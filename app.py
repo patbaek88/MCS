@@ -276,13 +276,17 @@ if st.button("Predict"):
         xm = mixture_df["pc1"]
         ym = mixture_df["pc2"]
         zm = mixture_df["pc3"]
+        xm_f = float(xm)
+        ym_f = float(ym)
+        zm_f = float(zm)
+
         
         ax.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
         ax.scatter(x2, y2, z2, color = 'g', alpha = 0.5, label = 'Class 2')
         ax.scatter(x3, y3, z3, color = 'r', alpha = 0.5, label = 'Class 3')
         ax.scatter(x4, y4, z4, color = 'gray', alpha = 0.5, label = 'Class 4')
         ax.scatter(xm, ym, zm , s=50, color = 'black', alpha = 0.5, marker='*', label = 'Mixture')
-        
+        ax.text(xm_f, ym_f, zm_F, f'({xm_f}, {ym_f}, {zm_f})', color='black')
 
 
         ax.set_xlabel('pc1')
@@ -290,10 +294,10 @@ if st.button("Predict"):
         ax.set_zlabel('pc3')
         ax.view_init(20,60)
         plt.legend()
-        #ax.text(xm, ym, zm, f'({xm}, {ym}, {zm})', color='black')
+        
         plt.show()
         
         st.set_option('deprecation.showPyplotGlobalUse', False)
         st.pyplot()
-        st.write(xm)
+        st.write(xm_f)
 
