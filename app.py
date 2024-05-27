@@ -43,7 +43,7 @@ API_list = API_df.index.to_list()
 API_name = st.selectbox('API', API_list, index = 52)
 
 API_content = st.number_input('API_content (%)', 0, 100, value = 30, label_visibility = "collapsed")
-
+st.write("")
 
 Filler_df =  df[df['Function'].isin(['Filler_DC', 'Filler_WG'])]
 Filler_list = Filler_df.index.to_list()
@@ -59,6 +59,7 @@ Excipient1_name = st.selectbox(
     Filler_list, index = 22)
 
 Excipient1_content = st.number_input('Filler 1 content (%)',0, 100, value = 30, label_visibility = "collapsed" )
+st.write("")
 
 
 Excipient2_name = st.selectbox(
@@ -66,6 +67,7 @@ Excipient2_name = st.selectbox(
     Filler_list,index = 23)
 
 Excipient2_content = st.number_input('Filler 2 content (%)',0, 100, value = 30, label_visibility = "collapsed" )
+st.write("")
 
 
 Excipient3_name = st.selectbox(
@@ -73,6 +75,7 @@ Excipient3_name = st.selectbox(
     Binder_list, index = 2)
 
 Excipient3_content = st.number_input('Binder content (%)',0, 100, value = 5, label_visibility = "collapsed")
+st.write("")
 
 
 Excipient4_name = st.selectbox(
@@ -80,6 +83,7 @@ Excipient4_name = st.selectbox(
     Disintegrant_list, index = 3)
 
 Excipient4_content = st.number_input('Disintegrant content (%)',0, 100, value = 5, label_visibility = "collapsed")
+st.write("")
 
 
 st.subheader(" ")
