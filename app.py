@@ -276,6 +276,7 @@ if st.button("Predict"):
         xm = mixture_df["pc1"]
         ym = mixture_df["pc2"]
         zm = mixture_df["pc3"]
+        m_list=[xm, ym, zm]
 
 
         ax.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
@@ -283,6 +284,7 @@ if st.button("Predict"):
         ax.scatter(x3, y3, z3, color = 'r', alpha = 0.5, label = 'Class 3')
         ax.scatter(x4, y4, z4, color = 'gray', alpha = 0.5, label = 'Class 4')
         ax.scatter(xm, ym, zm , s=50, color = 'black', alpha = 0.5, marker='*', label = 'Mixture')
+        plt.text(xm, ym, zm, m_list)
 
 
         ax.set_xlabel('pc1')
