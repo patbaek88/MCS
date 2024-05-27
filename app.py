@@ -14,6 +14,7 @@ import xgboost as xgb
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 from sklearn.metrics import classification_report
+from mpl_toolkits.mplot3d import axes3d
 
 
 st.header('Manufacturing Classification System')  # 타이틀명 지정
@@ -253,3 +254,42 @@ if st.button("Predict"):
     st.write("Class 2 : Dry Granulation")
     st.write("Class 3 : Wet Granulation")
     st.write("Class 4 : Other Technology")
+    if num_pc >= 3:
+        fig = plt.figure()
+        ax = fig.add_subplot( projection='3d')
+        x1 = tt2[tt2["Class"] == 1]["pc1"]
+        y1 = tt2[tt2["Class"] == 1]["pc2"]
+        z1 = tt2[tt2["Class"] == 1]["pc3"]
+
+        x2 = tt2[tt2["Class"] == 2]["pc1"]
+        y2 = tt2[tt2["Class"] == 2]["pc2"]
+        z2 = tt2[tt2["Class"] == 2]["pc3"]
+
+        x3 = tt2[tt2["Class"] == 3]["pc1"]
+        y3 = tt2[tt2["Class"] == 3]["pc2"]
+        z3 = tt2[tt2["Class"] == 3]["pc3"]
+
+        x4 = tt2[tt2["Class"] == 4]["pc1"]
+        y4 = tt2[tt2["Class"] == 4]["pc2"]
+        z4 = tt2[tt2["Class"] == 4]["pc3"]
+
+        xm = mixture_df["pc1"]
+        ym = mixture_df["pc2"]
+        zm = mixture_df["pc3"]
+
+
+        ax.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
+        ax.scatter(x2, y2, z2, color = 'g', alpha = 0.5, label = 'Class 2')
+        ax.scatter(x3, y3, z3, color = 'r', alpha = 0.5, label = 'Class 3')
+        ax.scatter(x4, y4, z4, color = 'gray', alpha = 0.5, label = 'Class 4')
+        ax.scatter(xm, ym, zm , color = 'cyan', alpha = 0.5, label = 'Mixture')
+
+
+        ax.set_xlabel('pc1')
+        ax.set_ylabel('pc2')
+        ax.set_zlabel('pc3')
+        ax.view_init(20,60)
+        plt.legend()
+        plt.show()
+        st.pyplot()
+
