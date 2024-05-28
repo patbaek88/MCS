@@ -125,6 +125,7 @@ plt.plot(comp, exp_vr, c = 'blue', linestyle = '-', marker = 'o', markersize = 5
 plt.xlabel('Number of PC (Princial Component)')
 plt.ylabel('Explained Variance Ratio')
 plt.grid()
+st.set_option('deprecation.showPyplotGlobalUse', False)
 st.pyplot()
 
 # 데이터 불러오기
