@@ -129,7 +129,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 st.pyplot()
 
 # 데이터 불러오기
-tt = pd.read_csv('train_test_set_template.csv')
+tt = pd.read_csv('train_test_set_template_raw.csv')
 
 # tt 파일에서 material 이름과 함량 추출하기
 materials = tt.iloc[:, [0, 2, 4, 6, 8]].values
