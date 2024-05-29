@@ -1,0 +1,45 @@
+﻿API_name,API_content,Excipient1_name,Excipient1_content,Excipient2_name,Excipient2_content,Excipient3_name,Excipient3_content,Excipient4_name,Excipient4_content,Class
+GDB20001,0.4545,Heweten 102_mean,0.5014,Kollidon CL (Crospovidone)_mean,0.0441,,,,,1
+GDB20002,0.4545,Heweten 102_mean,0.5014,Kollidon CL (Crospovidone)_mean,0.0441,,,,,1
+GDB20003,0.4545,Heweten 102_mean,0.5014,Kollidon CL (Crospovidone)_mean,0.0441,,,,,1
+DIN-juyeol91-094,0.374,Kollidon CL (Crospovidone)_mean,0.374,Heweten 101_mean,0.252,,,,,4
+21DT70-1,0.374,Kollidon CL (Crospovidone)_mean,0.374,Heweten 101_mean,0.252,,,,,4
+Gemig_B201217124,0.2615,Vivapur 12_mean,0.6904,Vivasol_mean,0.048,,,,,1
+Gemig_B201217128,0.2615,Vivapur 12_mean,0.6904,Vivasol_mean,0.048,,,,,1
+Gemig_B201217125,0.2615,Vivapur 12_mean,0.6904,Vivasol_mean,0.048,,,,,1
+Gemig_B210112096,0.2615,Vivapur 12_mean,0.6904,Vivasol_mean,0.048,,,,,1
+Gemig_A211220029,0.2615,Vivapur 12_mean,0.6904,Vivasol_mean,0.048,,,,,1
+Gemig_A211217014,0.2615,Vivapur 12_mean,0.6904,Vivasol_mean,0.048,,,,,1
+Gemig_A211223004,0.2615,Vivapur 12_mean,0.6904,Vivasol_mean,0.048,,,,,1
+Gemig_A211222018,0.2615,Vivapur 12_mean,0.6904,Vivasol_mean,0.048,,,,,1
+Gemig_A211206027,0.2615,Vivapur 12_mean,0.6904,Vivasol_mean,0.048,,,,,1
+Gemig_A211227003,0.2615,Vivapur 12_mean,0.6904,Vivasol_mean,0.048,,,,,1
+Gemig_B201217124,0.5224,Heweten 101_mean,0.088,Heweten 102_mean,0.3392,Vivasol_mean,0.0504,,,1
+Gemig_B201217128,0.5224,Heweten 101_mean,0.088,Heweten 102_mean,0.3392,Vivasol_mean,0.0504,,,1
+Gemig_B201217125,0.5224,Heweten 101_mean,0.088,Heweten 102_mean,0.3392,Vivasol_mean,0.0504,,,1
+Gemig_B210112096,0.5224,Heweten 101_mean,0.088,Heweten 102_mean,0.3392,Vivasol_mean,0.0504,,,1
+Gemig_A211220029,0.5224,Heweten 101_mean,0.088,Heweten 102_mean,0.3392,Vivasol_mean,0.0504,,,1
+Gemig_A211217014,0.5224,Heweten 101_mean,0.088,Heweten 102_mean,0.3392,Vivasol_mean,0.0504,,,1
+Gemig_A211223004,0.5224,Heweten 101_mean,0.088,Heweten 102_mean,0.3392,Vivasol_mean,0.0504,,,1
+Gemig_A211222018,0.5224,Heweten 101_mean,0.088,Heweten 102_mean,0.3392,Vivasol_mean,0.0504,,,1
+Gemig_A211206027,0.5224,Heweten 101_mean,0.088,Heweten 102_mean,0.3392,Vivasol_mean,0.0504,,,1
+Gemig_A211227003,0.5224,Heweten 101_mean,0.088,Heweten 102_mean,0.3392,Vivasol_mean,0.0504,,,1
+MCR004-jinokham-108,0.2715,Prosolv SMCC HD90,0.495,Lactose monohydrate (Tablettose 80)_mean,0.2035,Vivasol_mean,0.03,,,1
+MCR004-jinokham-162,0.2715,Prosolv SMCC HD90,0.495,Lactose monohydrate (Tablettose 80)_mean,0.2035,Vivasol_mean,0.03,,,1
+23MC72-1,0.2715,Prosolv SMCC HD90,0.495,Lactose monohydrate (Tablettose 80)_mean,0.2035,Vivasol_mean,0.03,,,1
+23MC72-2,0.2715,Prosolv SMCC HD90,0.495,Lactose monohydrate (Tablettose 80)_mean,0.2035,Vivasol_mean,0.03,,,1
+GPR-LSE-108,0.641,HPMC E5LV (Hypromellose 2910),0.0385,Heweten 101_mean,0.3205,,,,,4
+GPR-LSE-144,0.641,HPMC E5LV (Hypromellose 2910),0.0385,Heweten 101_mean,0.3205,,,,,4
+22GQ72-1,0.641,HPMC E5LV (Hypromellose 2910),0.0385,Heweten 101_mean,0.3205,,,,,4
+Val_B201013042,0.5694,Heweten 101_mean,0.274,EXPLOSOL,0.0712,Hydroxypropylcellulose (L FINE),0.0854,,,3
+Val_B201217126,0.5694,Heweten 101_mean,0.274,EXPLOSOL,0.0712,Hydroxypropylcellulose (L FINE),0.0854,,,3
+Val_B201013041,0.5694,Heweten 101_mean,0.274,EXPLOSOL,0.0712,Hydroxypropylcellulose (L FINE),0.0854,,,3
+Met_Y201127004,0.5618,Heweten 101_mean,0.0562,Starch 1500 (Partially pregelatinized maize starch)_mean,0.3371,Kollidon 30 (Povidone),0.0449,,,3
+Met_Y201127011,0.5618,Heweten 101_mean,0.0562,Starch 1500 (Partially pregelatinized maize starch)_mean,0.3371,Kollidon 30 (Povidone),0.0449,,,3
+Met_Y201127010,0.5618,Heweten 101_mean,0.0562,Starch 1500 (Partially pregelatinized maize starch)_mean,0.3371,Kollidon 30 (Povidone),0.0449,,,3
+Met_Y201127008,0.5618,Heweten 101_mean,0.0562,Starch 1500 (Partially pregelatinized maize starch)_mean,0.3371,Kollidon 30 (Povidone),0.0449,,,3
+Met_Y201109027,0.5618,Heweten 101_mean,0.0562,Starch 1500 (Partially pregelatinized maize starch)_mean,0.3371,Kollidon 30 (Povidone),0.0449,,,3
+Met_Y201109028,0.5618,Heweten 101_mean,0.0562,Starch 1500 (Partially pregelatinized maize starch)_mean,0.3371,Kollidon 30 (Povidone),0.0449,,,3
+Met_Y201109026,0.5618,Heweten 101_mean,0.0562,Starch 1500 (Partially pregelatinized maize starch)_mean,0.3371,Kollidon 30 (Povidone),0.0449,,,3
+Met_A211109009,0.5618,Heweten 101_mean,0.0562,Starch 1500 (Partially pregelatinized maize starch)_mean,0.3371,Kollidon 30 (Povidone),0.0449,,,3
+Met_A211204008,0.5618,Heweten 101_mean,0.0562,Starch 1500 (Partially pregelatinized maize starch)_mean,0.3371,Kollidon 30 (Povidone),0.0449,,,3
