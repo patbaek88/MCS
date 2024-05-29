@@ -161,9 +161,6 @@ tt2["Class"] = tt["Class"]
 
 
 
-# 데이터 불러오기
-#data = pd.read_csv('MCS_dataset_std_240503_FT4_rawdata.csv')
-
 # feature와 target 나누기
 X = tt2.iloc[:, :-1]
 y = tt2.iloc[:, -1] -1
@@ -261,7 +258,7 @@ if st.button("Predict"):
     mixture_df = mixture_df.transpose()	#행 열 전환
     
     #Best model로 예측하기
-    pred = model.predict(mixture_df)+1
+    pred = model.predict(mixture_df)
     
     st.write("Predicted Manfacturing Class = " + str(pred[0]))
     st.write("Model Accuracy : " + str(model_acc))
