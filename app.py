@@ -264,8 +264,10 @@ if st.button("Predict"):
     st.write("Model Accuracy : " + str(model_acc))
     st.write("Class 1 : Direct Compression")
     st.write("Class 2 : Dry Granulation")
-    st.write("Class 3a : Wet Granulation (Fluid Bed Granulation)")
-    st.write("Class 3b : Wet Granulation (High Shear Granulation")
+    st.write("Class 3.1 : Wet Granulation (Fluid Bed Granulation)")
+    st.write("Class 3.2 : Wet Granulation (Low Shear Granulation)")
+    st.write("Class 3.3 : Wet Granulation (High Shear Granulation)")
+    st.write("Class 3.4 : Wet Granulation (Melt Granulation)")
     st.write("Class 4 : Other Technology")
     if num_pc >= 3:
         fig = plt.figure(constrained_layout=True, figsize=(12,9))
@@ -282,14 +284,22 @@ if st.button("Predict"):
         y2 = tt2[tt2["Class"] == "2"]["pc2"]
         z2 = tt2[tt2["Class"] == "2"]["pc3"]
 
-        x3a = tt2[tt2["Class"] == "3a"]["pc1"]
-        y3a = tt2[tt2["Class"] == "3a"]["pc2"]
-        z3a = tt2[tt2["Class"] == "3a"]["pc3"]
+        x31 = tt2[tt2["Class"] == "3.1"]["pc1"]
+        y31 = tt2[tt2["Class"] == "3.1"]["pc2"]
+        z31 = tt2[tt2["Class"] == "3.1"]["pc3"]
 
-        x3b = tt2[tt2["Class"] == "3b"]["pc1"]
-        y3b = tt2[tt2["Class"] == "3b"]["pc2"]
-        z3b = tt2[tt2["Class"] == "3b"]["pc3"]
+        x32 = tt2[tt2["Class"] == "3.2"]["pc1"]
+        y32 = tt2[tt2["Class"] == "3.2"]["pc2"]
+        z32 = tt2[tt2["Class"] == "3.2"]["pc3"]
 
+        x33 = tt2[tt2["Class"] == "3.3"]["pc1"]
+        y33 = tt2[tt2["Class"] == "3.3"]["pc2"]
+        z33 = tt2[tt2["Class"] == "3.3"]["pc3"]
+
+        x34 = tt2[tt2["Class"] == "3.4"]["pc1"]
+        y34 = tt2[tt2["Class"] == "3.4"]["pc2"]
+        z34 = tt2[tt2["Class"] == "3.4"]["pc3"]        
+        
         x4 = tt2[tt2["Class"] == "4"]["pc1"]
         y4 = tt2[tt2["Class"] == "4"]["pc2"]
         z4 = tt2[tt2["Class"] == "4"]["pc3"]
@@ -324,8 +334,10 @@ if st.button("Predict"):
         
         ax.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
         ax.scatter(x2, y2, z2, color = 'g', alpha = 0.5, label = 'Class 2')
-        ax.scatter(x3a, y3a, z3a, color = 'orange', alpha = 0.5, label = 'Class 3a')
-        ax.scatter(x3b, y3b, z3b, color = 'red', alpha = 0.5, label = 'Class 3b')
+        ax.scatter(x31, y31, z31, color = 'orange', alpha = 0.5, label = 'Class 3.1')
+        ax.scatter(x32, y32, z32, color = 'salmon', alpha = 0.5, label = 'Class 3.2')
+        ax.scatter(x33, y33, z33, color = 'red', alpha = 0.5, label = 'Class 3.3')
+        ax.scatter(x34, y34, z34, color = 'firebrick', alpha = 0.5, label = 'Class 3.4')
         ax.scatter(x4, y4, z4, color = 'purple', alpha = 0.5, label = 'Class 4')
         ax.scatter(x_api, y_api, z_api, color = 'black', alpha = 1 ,  marker='^' )
         ax.scatter(x_ex1, y_ex1, z_ex1,color = 'black', alpha = 1, marker='^')
@@ -343,8 +355,10 @@ if st.button("Predict"):
 
         ax_xy.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
         ax_xy.scatter(x2, y2, z2, color = 'g', alpha = 0.5, label = 'Class 2')
-        ax_xy.scatter(x3a, y3a, z3a, color = 'orange', alpha = 0.5, label = 'Class 3a')
-        ax_xy.scatter(x3b, y3b, z3b, color = 'red', alpha = 0.5, label = 'Class 3b')
+        ax_xy.scatter(x31, y31, z31, color = 'orange', alpha = 0.5, label = 'Class 3.1')
+        ax_Xy.scatter(x32, y32, z32, color = 'salmon', alpha = 0.5, label = 'Class 3.2')
+        ax_Xy.scatter(x33, y33, z33, color = 'red', alpha = 0.5, label = 'Class 3.3')
+        ax_Xy.scatter(x34, y34, z34, color = 'firebrick', alpha = 0.5, label = 'Class 3.4')
         ax_xy.scatter(x4, y4, z4, color = 'purple', alpha = 0.5, label = 'Class 4')
         ax_xy.scatter(x_api, y_api, z_api, color = 'black', alpha = 1, marker='^')
         ax_xy.scatter(x_ex1, y_ex1, z_ex1, color = 'black', alpha = 1, marker='^')
@@ -362,8 +376,10 @@ if st.button("Predict"):
 
         ax_yz.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
         ax_yz.scatter(x2, y2, z2, color = 'g', alpha = 0.5, label = 'Class 2')
-        ax_yz.scatter(x3a, y3a, z3a, color = 'orange', alpha = 0.5, label = 'Class 3a')
-        ax_yz.scatter(x3b, y3b, z3b, color = 'red', alpha = 0.5, label = 'Class 3b')
+        ax_yz.scatter(x31, y31, z31, color = 'orange', alpha = 0.5, label = 'Class 3.1')
+        ax_yz.scatter(x32, y32, z32, color = 'salmon', alpha = 0.5, label = 'Class 3.2')
+        ax_Yz.scatter(x33, y33, z33, color = 'red', alpha = 0.5, label = 'Class 3.3')
+        ax_Yz.scatter(x34, y34, z34, color = 'firebrick', alpha = 0.5, label = 'Class 3.4')
         ax_yz.scatter(x4, y4, z4, color = 'purple', alpha = 0.5, label = 'Class 4')
         ax_yz.scatter(x_api, y_api, z_api, color = 'black', alpha = 1, marker='^')
         ax_yz.scatter(x_ex1, y_ex1, z_ex1, color = 'black', alpha = 1, marker='^')
@@ -380,8 +396,10 @@ if st.button("Predict"):
 
         ax_zx.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
         ax_zx.scatter(x2, y2, z2, color = 'g', alpha = 0.5, label = 'Class 2')
-        ax_zx.scatter(x3a, y3a, z3a, color = 'orange', alpha = 0.5, label = 'Class 3a')
-        ax_zx.scatter(x3b, y3b, z3b, color = 'red', alpha = 0.5, label = 'Class 3b')
+        ax_zx.scatter(x31, y31, z31, color = 'orange', alpha = 0.5, label = 'Class 3.1')
+        ax_zx.scatter(x32, y32, z32, color = 'salmon', alpha = 0.5, label = 'Class 3.2')
+        ax_zx.scatter(x33, y33, z33, color = 'red', alpha = 0.5, label = 'Class 3.3')
+        ax_zx.scatter(x34, y34, z34, color = 'firebrick', alpha = 0.5, label = 'Class 3.4')
         ax_zx.scatter(x4, y4, z4, color = 'purple', alpha = 0.5, label = 'Class 4')
         ax_zx.scatter(x_api, y_api, z_api, color = 'black', alpha = 1, marker='^',label = 'Selected Material')
         ax_zx.scatter(x_ex1, y_ex1, z_ex1, color = 'black', alpha = 1, marker='^')
@@ -427,11 +445,17 @@ if st.button("Predict"):
         x2 = tt2[tt2["Class"] == "2"]["pc1"]
         y2 = tt2[tt2["Class"] == "2"]["pc2"]
        
-        x3a = tt2[tt2["Class"] == "3a"]["pc1"]
-        y3a = tt2[tt2["Class"] == "3a"]["pc2"]
+        x31 = tt2[tt2["Class"] == "3.1"]["pc1"]
+        y31 = tt2[tt2["Class"] == "3a"]["pc2"]
 
-        x3b = tt2[tt2["Class"] == "3b"]["pc1"]
-        y3b = tt2[tt2["Class"] == "3b"]["pc2"]
+        x32 = tt2[tt2["Class"] == "3.2"]["pc1"]
+        y32 = tt2[tt2["Class"] == "3.2"]["pc2"]
+
+        x33 = tt2[tt2["Class"] == "3.3"]["pc1"]
+        y33 = tt2[tt2["Class"] == "3.3"]["pc2"]
+
+        x34 = tt2[tt2["Class"] == "3.4"]["pc1"]
+        y34 = tt2[tt2["Class"] == "3.4"]["pc2"]
        
         x4 = tt2[tt2["Class"] == 4]["pc1"]
         y4 = tt2[tt2["Class"] == 4]["pc2"]
@@ -459,8 +483,10 @@ if st.button("Predict"):
         
         plt.scatter(x1, y1, color = 'b', alpha = 0.5, label = 'Class 1')
         plt.scatter(x2, y2, color = 'g', alpha = 0.5, label = 'Class 2')
-        plt.scatter(x3a, y3a, z3a, color = 'orange', alpha = 0.5, label = 'Class 3a')
-        plt.scatter(x3b, y3b, z3b, color = 'red', alpha = 0.5, label = 'Class 3b')
+        plt.scatter(x31, y31, z31, color = 'orange', alpha = 0.5, label = 'Class 3.1')
+        plt.scatter(x32, y32, z32, color = 'salmon', alpha = 0.5, label = 'Class 3.2')
+        plt.scatter(x33, y33, z33, color = 'red', alpha = 0.5, label = 'Class 3.3')
+        plt.scatter(x34, y34, z34, color = 'firebrick', alpha = 0.5, label = 'Class 3.4')
         plt.scatter(x4, y4, z4, color = 'purple', alpha = 0.5, label = 'Class 4')
         plt.scatter(x_api, y_api, color = 'black', marker='^', alpha = 1)
         plt.scatter(x_ex1, y_ex1, color = 'black',  marker='^', alpha = 1)
