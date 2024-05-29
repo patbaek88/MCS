@@ -163,7 +163,7 @@ tt2["Class"] = tt["Class"]
 
 # feature와 target 나누기
 X = tt2.iloc[:, :-1]
-y = tt2.iloc[:, -1] -1
+y = tt2.iloc[:, -1]
 
 # train, test 데이터셋 나누기
 rs = st.number_input('Set a seed for machine learning', 1)
