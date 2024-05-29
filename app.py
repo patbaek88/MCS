@@ -276,21 +276,25 @@ if st.button("Predict"):
         ax_yz= fig.add_subplot(223, projection='3d')
         ax_zx = fig.add_subplot(224, projection='3d')
         
-        x1 = tt2[tt2["Class"] == 1]["pc1"]
-        y1 = tt2[tt2["Class"] == 1]["pc2"]
-        z1 = tt2[tt2["Class"] == 1]["pc3"]
+        x1 = tt2[tt2["Class"] == "1"]["pc1"]
+        y1 = tt2[tt2["Class"] == "1"]["pc2"]
+        z1 = tt2[tt2["Class"] == "1"]["pc3"]
 
-        x2 = tt2[tt2["Class"] == 2]["pc1"]
-        y2 = tt2[tt2["Class"] == 2]["pc2"]
-        z2 = tt2[tt2["Class"] == 2]["pc3"]
+        x2 = tt2[tt2["Class"] == "2"]["pc1"]
+        y2 = tt2[tt2["Class"] == "2"]["pc2"]
+        z2 = tt2[tt2["Class"] == "2"]["pc3"]
 
-        x3 = tt2[tt2["Class"] == 3]["pc1"]
-        y3 = tt2[tt2["Class"] == 3]["pc2"]
-        z3 = tt2[tt2["Class"] == 3]["pc3"]
+        x3a = tt2[tt2["Class"] == "3a"]["pc1"]
+        y3a = tt2[tt2["Class"] == "3a"]["pc2"]
+        z3a = tt2[tt2["Class"] == "3a"]["pc3"]
 
-        x4 = tt2[tt2["Class"] == 4]["pc1"]
-        y4 = tt2[tt2["Class"] == 4]["pc2"]
-        z4 = tt2[tt2["Class"] == 4]["pc3"]
+        x3b = tt2[tt2["Class"] == "3b"]["pc1"]
+        y3b = tt2[tt2["Class"] == "3b"]["pc2"]
+        z3b = tt2[tt2["Class"] == "3b"]["pc3"]
+
+        x4 = tt2[tt2["Class"] == "4"]["pc1"]
+        y4 = tt2[tt2["Class"] == "4"]["pc2"]
+        z4 = tt2[tt2["Class"] == "4"]["pc3"]
 
         x_api = principalDf.loc[API_name]["pc1"]
         y_api = principalDf.loc[API_name]["pc2"]
@@ -322,8 +326,8 @@ if st.button("Predict"):
         
         ax.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
         ax.scatter(x2, y2, z2, color = 'g', alpha = 0.5, label = 'Class 2')
-        ax.scatter(x3, y3, z3, color = 'orange', alpha = 0.5, label = 'Class 3a')
-        ax.scatter(x3, y3, z3, color = 'red', alpha = 0.5, label = 'Class 3b')
+        ax.scatter(x3a, y3a, z3a, color = 'orange', alpha = 0.5, label = 'Class 3a')
+        ax.scatter(x3b, y3b, z3b, color = 'red', alpha = 0.5, label = 'Class 3b')
         ax.scatter(x4, y4, z4, color = 'purple', alpha = 0.5, label = 'Class 4')
         ax.scatter(x_api, y_api, z_api, color = 'black', alpha = 1 ,  marker='^' )
         ax.scatter(x_ex1, y_ex1, z_ex1,color = 'black', alpha = 1, marker='^')
@@ -341,8 +345,8 @@ if st.button("Predict"):
 
         ax_xy.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
         ax_xy.scatter(x2, y2, z2, color = 'g', alpha = 0.5, label = 'Class 2')
-        ax_xy.scatter(x3, y3, z3, color = 'orange', alpha = 0.5, label = 'Class 3a')
-        ax_xy.scatter(x3, y3, z3, color = 'red', alpha = 0.5, label = 'Class 3b')
+        ax_xy.scatter(x3a, y3a, z3a, color = 'orange', alpha = 0.5, label = 'Class 3a')
+        ax_xy.scatter(x3b, y3b, z3b, color = 'red', alpha = 0.5, label = 'Class 3b')
         ax_xy.scatter(x4, y4, z4, color = 'purple', alpha = 0.5, label = 'Class 4')
         ax_xy.scatter(x_api, y_api, z_api, color = 'black', alpha = 1, marker='^')
         ax_xy.scatter(x_ex1, y_ex1, z_ex1, color = 'black', alpha = 1, marker='^')
@@ -360,8 +364,8 @@ if st.button("Predict"):
 
         ax_yz.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
         ax_yz.scatter(x2, y2, z2, color = 'g', alpha = 0.5, label = 'Class 2')
-        ax_yz.scatter(x3, y3, z3, color = 'orange', alpha = 0.5, label = 'Class 3a')
-        ax_yz.scatter(x3, y3, z3, color = 'red', alpha = 0.5, label = 'Class 3b')
+        ax_yz.scatter(x3a, y3a, z3a, color = 'orange', alpha = 0.5, label = 'Class 3a')
+        ax_yz.scatter(x3b, y3b, z3b, color = 'red', alpha = 0.5, label = 'Class 3b')
         ax_yz.scatter(x4, y4, z4, color = 'purple', alpha = 0.5, label = 'Class 4')
         ax_yz.scatter(x_api, y_api, z_api, color = 'black', alpha = 1, marker='^')
         ax_yz.scatter(x_ex1, y_ex1, z_ex1, color = 'black', alpha = 1, marker='^')
@@ -378,8 +382,8 @@ if st.button("Predict"):
 
         ax_zx.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
         ax_zx.scatter(x2, y2, z2, color = 'g', alpha = 0.5, label = 'Class 2')
-        ax_zx.scatter(x3, y3, z3, color = 'orange', alpha = 0.5, label = 'Class 3a')
-        ax_zx.scatter(x3, y3, z3, color = 'red', alpha = 0.5, label = 'Class 3b')
+        ax_zx.scatter(x3a, y3a, z3a, color = 'orange', alpha = 0.5, label = 'Class 3a')
+        ax_zx.scatter(x3b, y3b, z3b, color = 'red', alpha = 0.5, label = 'Class 3b')
         ax_zx.scatter(x4, y4, z4, color = 'purple', alpha = 0.5, label = 'Class 4')
         ax_zx.scatter(x_api, y_api, z_api, color = 'black', alpha = 1, marker='^',label = 'Selected Material')
         ax_zx.scatter(x_ex1, y_ex1, z_ex1, color = 'black', alpha = 1, marker='^')
@@ -419,14 +423,17 @@ if st.button("Predict"):
     elif num_pc == 2:
         fig = plt.figure(constrained_layout=True, figsize=(12,9))
                       
-        x1 = tt2[tt2["Class"] == 1]["pc1"]
-        y1 = tt2[tt2["Class"] == 1]["pc2"]
+        x1 = tt2[tt2["Class"] == "1"]["pc1"]
+        y1 = tt2[tt2["Class"] == "1"]["pc2"]
         
-        x2 = tt2[tt2["Class"] == 2]["pc1"]
-        y2 = tt2[tt2["Class"] == 2]["pc2"]
+        x2 = tt2[tt2["Class"] == "2"]["pc1"]
+        y2 = tt2[tt2["Class"] == "2"]["pc2"]
        
-        x3 = tt2[tt2["Class"] == 3]["pc1"]
-        y3 = tt2[tt2["Class"] == 3]["pc2"]
+        x3a = tt2[tt2["Class"] == "3a"]["pc1"]
+        y3a = tt2[tt2["Class"] == "3a"]["pc2"]
+
+        x3b = tt2[tt2["Class"] == "3b"]["pc1"]
+        y3b = tt2[tt2["Class"] == "3b"]["pc2"]
        
         x4 = tt2[tt2["Class"] == 4]["pc1"]
         y4 = tt2[tt2["Class"] == 4]["pc2"]
@@ -454,8 +461,8 @@ if st.button("Predict"):
         
         plt.scatter(x1, y1, color = 'b', alpha = 0.5, label = 'Class 1')
         plt.scatter(x2, y2, color = 'g', alpha = 0.5, label = 'Class 2')
-        plt.scatter(x3, y3, z3, color = 'orange', alpha = 0.5, label = 'Class 3a')
-        plt.scatter(x3, y3, z3, color = 'red', alpha = 0.5, label = 'Class 3b')
+        plt.scatter(x3a, y3a, z3a, color = 'orange', alpha = 0.5, label = 'Class 3a')
+        plt.scatter(x3b, y3b, z3b, color = 'red', alpha = 0.5, label = 'Class 3b')
         plt.scatter(x4, y4, z4, color = 'purple', alpha = 0.5, label = 'Class 4')
         plt.scatter(x_api, y_api, color = 'black', marker='^', alpha = 1)
         plt.scatter(x_ex1, y_ex1, color = 'black',  marker='^', alpha = 1)
