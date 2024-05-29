@@ -264,7 +264,8 @@ if st.button("Predict"):
     st.write("Model Accuracy : " + str(model_acc))
     st.write("Class 1 : Direct Compression")
     st.write("Class 2 : Dry Granulation")
-    st.write("Class 3 : Wet Granulation")
+    st.write("Class 3a : Wet Granulation (Fluid Bed Granulation)")
+    st.write("Class 3b : Wet Granulation (High Shear Granulation")
     st.write("Class 4 : Other Technology")
     if num_pc >= 3:
         fig = plt.figure(constrained_layout=True, figsize=(12,9))
