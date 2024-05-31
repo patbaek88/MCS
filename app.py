@@ -109,6 +109,7 @@ API_content = st.number_input('API_content (%)', 0, 100, value = 30, label_visib
 API_content_f = float(API_content)
 st.write("")
 
+
 Filler_df =  df[df['Function'].isin(['Filler_DC', 'Filler_WG'])]
 Filler_list = Filler_df.index.to_list()
 
@@ -118,36 +119,57 @@ Binder_list = Binder_df.index.to_list()
 Disintegrant_df =  df[(df['Function']=='Disintegrant')]
 Disintegrant_list = Disintegrant_df.index.to_list()
 
+
+#sample formulations
+sample_f =st.radio(label = 'Select a preset formulation', options = ['Class1 Formulation 1', 'Class1 Formulation 2'])
+if sample_f == 'Class 1 Formulation 1':   
+    index_ex1 = 22
+    value_ex1 = 0
+    index_ex2 = 23
+    index_ex3 = 2
+    value_ex3 = 0
+    index_ex4 = 1
+    value_ex4 = 5
+elif smaple_f =='Class 1 Formulation 2':
+    index_ex1 = 4
+    value_ex1 = 20
+    index_ex2 = 33
+    index_ex3 = 2
+    value_ex3 = 0
+    index_ex4 = 4
+    value_ex4 = 3
+
+
 Excipient3_name = st.selectbox(
     'Binder',
-    Binder_list, index = 2)
+    Binder_list, index = index_ex3)
 
-Excipient3_content = st.number_input('Binder content (%)',0, 100, value = 5, label_visibility = "collapsed" )
+Excipient3_content = st.number_input('Binder content (%)',0, 100, value = value_ex3, label_visibility = "collapsed" )
 Excipient3_content_f = float(Excipient3_content)
 st.write("")
 
 Excipient4_name = st.selectbox(
     'Disintegrant',
-    Disintegrant_list, index = 1)
+    Disintegrant_list, index = index_ex4)
 
-Excipient4_content = st.number_input('Disintegrant content (%)',0, 100, value = 5, label_visibility = "collapsed" )
+Excipient4_content = st.number_input('Disintegrant content (%)',0, 100, value = value_ex4, label_visibility = "collapsed" )
 Excipient4_content_f = float(Excipient4_content)
 st.write("")
 
 Excipient1_name = st.selectbox(
-    'Extra Excipient',
-    Filler_list, index = 22)
+    'Filler 1',
+    Filler_list, index = index_ex1)
 
-Excipient1_content = st.number_input('Filler 1 content (%)',0, 100, value = 0, label_visibility = "collapsed" )
+Excipient1_content = st.number_input('Filler 1 content (%)',0, 100, value = value_ex1, label_visibility = "collapsed" )
 Excipient1_content_f = float(Excipient1_content)
 st.write("")
 
 
 Excipient2_name = st.selectbox(
-    'Filler',
-    Filler_list, index = 23)
+    'Filler 2',
+    Filler_list, index = index_ex2)
 
-#Excipient2_content = st.number_input('Filler 2 content (%)',0, 100, value = 30, label_visibility = "collapsed" )
+#Excipient2_content = st.number_input('Filler 2 content (%)',0, 100, value = value_ex3, label_visibility = "collapsed" )
 Excipient2_content_f = 100 -API_content_f -Excipient1_content_f -Excipient3_content_f -Excipient4_content_f
 Excipient2_content = str(Excipient2_content_f)
 st.write("Filler content: "+Excipient2_content)
