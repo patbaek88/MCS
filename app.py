@@ -217,7 +217,7 @@ for i in range(1,n+1):
     exp_vr.append(sum(pca.explained_variance_ratio_))
     comp.append(str(i))
 
-explained_vraiance_ratio = pd.DataFrame(data= exp_vr, columns = ["Explained Variance Ratio of PCA"])
+explained_vraiance_ratio = pd.DataFrame(data= exp_vr, columns = ["Explained Variance Ratio"])
 n_components = pd.DataFrame(data= comp, columns = ["n_components"])
 evr = pd.concat([explained_vraiance_ratio, n_components], axis = 1)
 evr = evr.set_index('n_components')
@@ -236,14 +236,14 @@ principalDf = pd.DataFrame(data=principalComponents, columns = col_pc, index=df1
 with st.expander('num_PC vs Explained Variance Ratio'):
       st.write(evr)
 
-fig = plt.figure(constrained_layout=True, figsize=(6,4))
+#fig = plt.figure(constrained_layout=True, figsize=(6,4))
 
-plt.plot(comp, exp_vr, c = 'blue', linestyle = '-', marker = 'o', markersize = 5)
-plt.xlabel('Number of PC (Princial Component)')
-plt.ylabel('Explained Variance Ratio')
-plt.grid()
-st.set_option('deprecation.showPyplotGlobalUse', False)
-st.pyplot()
+#plt.plot(comp, exp_vr, c = 'blue', linestyle = '-', marker = 'o', markersize = 5)
+#plt.xlabel('Number of PC (Princial Component)')
+#plt.ylabel('Explained Variance Ratio')
+#plt.grid()
+#st.set_option('deprecation.showPyplotGlobalUse', False)
+#st.pyplot()
 
 # 데이터 불러오기
 tt = pd.read_csv('train_test_set_template_raw.csv', dtype={"Class":object})
