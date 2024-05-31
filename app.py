@@ -281,7 +281,7 @@ xgb_model = xgb.XGBClassifier()
 
 st.subheader(" ")
 ## Buttons
-#if st.button("Predict"):
+if st.button("Predict"):
 #    if select == 'Logistic Regression':
 #        model = lr
 #    elif select == 'Support Vector Machine':
