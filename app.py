@@ -197,7 +197,7 @@ Excipient2_content_f = 100 -API_content_f -Excipient1_content_f -Excipient3_cont
 Excipient2_content = str(Excipient2_content_f)
 st.write("Filler content: "+Excipient2_content)
 if float(Excipient2_content) <0:
-    st.write("red[Error: Please adjust contents]")
+    st.write(":red[Error: Please adjust contents]")
     st.write("This is :blue[test]")
 
 st.write("")
