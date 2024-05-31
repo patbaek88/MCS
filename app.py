@@ -11,6 +11,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix
 import xgboost as xgb
+from sklearn.linear_model import Ridge, Lasso
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 from sklearn.metrics import classification_report
@@ -239,14 +240,14 @@ models = ['Random Forest', 'Logistic Regression', 'Support Vector Machine', 'XGB
 select = st.selectbox('Please select a model', models)
 
 lr = LogisticRegression()
-#lr.fit(X_train, y_train)
-#lr_pred = lr.predict(X_test)
-#lr_acc = accuracy_score(y_test, lr_pred)
+lr.fit(X_train, y_train)
+lr_pred = lr.predict(X_test)
+lr_acc = accuracy_score(y_test, lr_pred)
     
 svc = SVC()
-#svc.fit(X_train, y_train)
-#svc_pred = svc.predict(X_test)
-#svc_acc = accuracy_score(y_test, svc_pred)
+svc.fit(X_train, y_train)
+svc_pred = svc.predict(X_test)
+svc_acc = accuracy_score(y_test, svc_pred)
 
 #dt = DecisionTreeClassifier()
 #dt.fit(X_train, y_train)
@@ -254,9 +255,21 @@ svc = SVC()
 #dt_acc = accuracy_score(y_test, dt_pred)
 
 rf = RandomForestClassifier()
-#rf.fit(X_train, y_train)
-#rf_pred = rf.predict(X_test)
-#rf_acc = accuracy_score(y_test, rf_pred)
+rf.fit(X_train, y_train)
+rf_pred = rf.predict(X_test)
+rf_acc = accuracy_score(y_test, rf_pred)
+
+ridge = Ridge()
+ridge.fit(X_train, y_train)
+ridge_pred = ridge.predict(X_test)
+ridge_acc = accuracy_score(y_test, rigde_pred)
+
+lasso = Lasso()
+lasso.fit(X_train, y_train)
+lasso_pred = ridge.predict(X_test)
+lasso_acc = accuracy_score(y_test, lasso_pred)
+
+
 
 xgb_model = xgb.XGBClassifier()
 #xgb_model.fit(X_train, y_train)
@@ -265,34 +278,24 @@ xgb_model = xgb.XGBClassifier()
     
 #accuracies = [lr_acc, svc_acc, rf_acc, xgb_acc]  #dt_acc
 
-#fig1=plt.figure()
-#plt.bar(models, accuracies)
-#plt.ylim([0, 1])
-#plt.ylabel('Accuracy')
-#plt.xticks(rotation=45)
-#st.pyplot(fig1)
-#model_acc = pd.DataFrame(data = accuracies, index = models, columns = ['Accuracy'])
-#st.write(model_acc)
-
-
 
 st.subheader(" ")
 ## Buttons
-if st.button("Predict"):
-    if select == 'Logistic Regression':
-        model = lr
-    elif select == 'Support Vector Machine':
-        model = svc
-    #elif select == 'Decision Tree':
-    #    model = dt
-    elif select == 'Random Forest':
-        model = rf
-    elif select == 'XGBoost':
-        model = xgb_model
+#if st.button("Predict"):
+#    if select == 'Logistic Regression':
+#        model = lr
+#    elif select == 'Support Vector Machine':
+#        model = svc
+#    #elif select == 'Decision Tree':
+#    #    model = dt
+#    elif select == 'Random Forest':
+#        model = rf
+#    elif select == 'XGBoost':
+#        model = xgb_model
 
-    model.fit(X_train, y_train)
-    model_pred = model.predict(X_test)
-    model_acc = round(accuracy_score(y_test, model_pred), 4)
+#    model.fit(X_train, y_train)
+#    model_pred = model.predict(X_test)
+#    model_acc = round(accuracy_score(y_test, model_pred), 4)
     
 
 
