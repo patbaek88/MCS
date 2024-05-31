@@ -132,10 +132,10 @@ Excipient4_content_f = float(Excipient4_content)
 st.write("")
 
 Excipient1_name = st.selectbox(
-    'Filler 1',
+    'Extra Excipient',
     Filler_list, index = 22)
 
-Excipient1_content = st.number_input('Filler 1 content (%)',0, 100, value = 30, label_visibility = "collapsed" )
+Excipient1_content = st.number_input('Filler 1 content (%)',0, 100, value = 0, label_visibility = "collapsed" )
 Excipient1_content_f = float(Excipient1_content)
 st.write("")
 
