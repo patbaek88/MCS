@@ -104,9 +104,10 @@ API_name = st.selectbox('API', API_list, index = 52)
 API_pc = principalDf_1.loc[principalDf_1.index == API_name].iloc[:, :].values
 API_class = rf_1.predict(API_pc)
 st.write("API only : Class "+API_class[0])
-
-API_content = st.number_input('API_content (%)', 0, 100, value = 30, label_visibility = "collapsed")
-API_content_f = float(API_content)
+strength = st.number_input('Strength (mg)', 1, 1000, value = 100, label_visibility="collapsed")
+tablet_wt = st.number_input('Tablet weight (mg)', 50, 1000, value = 200, label_visibility="collapsed")
+API_content = strength/tablet_weight*100
+st.write("API content: "+API_content)
 st.write("")
 
 
