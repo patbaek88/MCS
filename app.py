@@ -114,7 +114,19 @@ Binder_list = Binder_df.index.to_list()
 Disintegrant_df =  df[(df['Function']=='Disintegrant')]
 Disintegrant_list = Disintegrant_df.index.to_list()
 
+Excipient3_name = st.selectbox(
+    'Binder',
+    Binder_list, index = 22)
 
+Excipient3_content = st.number_input('Binder content (%)',0, 100, value = 5, label_visibility = "collapsed" )
+st.write("")
+
+Excipient4_name = st.selectbox(
+    'Disintegrant',
+    Disintegrant_list, index = 22)
+
+Excipient4_content = st.number_input('Disintegrant content (%)',0, 100, value = 5, label_visibility = "collapsed" )
+st.write("")
 
 Excipient1_name = st.selectbox(
     'Filler 1',
