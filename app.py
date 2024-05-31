@@ -99,7 +99,7 @@ st.subheader('Formulation Design')
 
 API_df = df[(df['Function']=='API')]
 API_list = API_df.index.to_list()
-API_name = st.selectbox('API', API_list, index = 52)
+API_name = st.selectbox('API', API_list, index = 34)
 
 API_pc = principalDf_1.loc[principalDf_1.index == API_name].iloc[:, :].values
 API_class = rf_1.predict(API_pc)
