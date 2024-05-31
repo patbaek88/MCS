@@ -38,7 +38,7 @@ pca_1 = PCA(n_components=6) # 주성분을 몇개로 할지 결정
 principalComponents_1 = pca_1.fit_transform(x1)
 
 col_pc_1 = []
-for i in range(1,6):
+for i in range(1,7):
     col_pc_1.append("pc"+str(i))
     
 principalDf_1 = pd.DataFrame(data=principalComponents_1, columns = col_pc_1, index=df1.index)
