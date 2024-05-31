@@ -106,8 +106,8 @@ API_class = rf_1.predict(API_pc)
 st.write("API only : Class "+API_class[0])
 strength = st.number_input('Strength (mg)', 1, 1000, value = 100)
 tablet_wt = st.number_input('Tablet weight (mg)', 50, 1000, value = 200)
-API_content = strength/tablet_wt*100
-st.write("API content: "+str(API_content))
+API_content = round(strength/tablet_wt*100, 1)
+st.write("API content: "+str(API_content)+" (%)")
 st.write("")
 
 
