@@ -13,6 +13,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 import xgboost as xgb
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.ensemble import GradientBoostingClassifier
+from lightgbm import LGBMClassifier
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 from sklearn.metrics import classification_report
@@ -237,8 +238,8 @@ y = tt2.iloc[:, -1]
 rs = st.number_input('Set a seed for machine learning', 1)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state = rs)
 
-models = ['Random Forest', 'Logistic Regression', 'Support Vector Machine','k-NN', 'GBM' ]  #'Decision Tree', 'XGBoost'
-select = st.selectbox('Please select a model', models)
+models = ['Random Forest', 'Logistic Regression', 'Support Vector Machine','k-NN', 'LightGBM' ]  #'Decision Tree', 'XGBoost'
+#select = st.selectbox('Please select a model', models)
 
 lr = LogisticRegression()
 lr.fit(X_train, y_train)
@@ -266,10 +267,15 @@ knn_pred = knn.predict(X_test)
 knn_acc = accuracy_score(y_test, knn_pred)
 
 
-gbm = GradientBoostingClassifier(n_estimators=100, learning_rate=0.1, max_depth=3, random_state=0)
-gbm.fit(X_train, y_train)
-gbm_pred = gbm.predict(X_test)
-gbm_acc = accuracy_score(y_test, gbm_pred)
+lgbm = LGBMClassifier(n_estimators=4000)
+lgbm.fit(X_train, y_train)
+lgbm_pred = lgbm.predict(X_test)
+lgbm_acc = accuracy_score(y_test, lgbm_pred)
+
+#gbm = GradientBoostingClassifier(n_estimators=100, learning_rate=0.1, max_depth=3, random_state=0)
+#gbm.fit(X_train, y_train)
+#gbm_pred = gbm.predict(X_test)
+#gbm_acc = accuracy_score(y_test, gbm_pred)
 
 
 xgb_model = xgb.XGBClassifier()
@@ -277,7 +283,7 @@ xgb_model = xgb.XGBClassifier()
 #xgb_pred = xgb_model.predict(X_test)
 #xgb_acc = accuracy_score(y_test, xgb_pred)
     
-accuracies = [lr_acc, svc_acc, rf_acc, knn_acc, gbm_acc ]  #dt_acc, xgb_acc
+accuracies = [lr_acc, svc_acc, rf_acc, knn_acc, lgbm_acc ]  #dt_acc, xgb_acc
 
 
 st.subheader(" ")
@@ -334,8 +340,8 @@ if st.button("Predict"):
     pred_svc = svc.predict(mixture_df)
     pred_rf = rf.predict(mixture_df)
     pred_knn = knn.predict(mixture_df)
-    pred_gbm = gbm.predict(mixture_df)
-    pred_all = [pred_lr, pred_svc, pred_rf, pred_knn, pred_gbm ]
+    pred_lgbm = lgbm.predict(mixture_df)
+    pred_all = [pred_lr, pred_svc, pred_rf, pred_knn, pred_lgbm ]
    
     result = pd.DataFrame({'Model': models, 'MCS Class': pred_all, 'Accuracy': accuracies})
     result = result.set_index('Model')
