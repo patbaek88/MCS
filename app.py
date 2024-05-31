@@ -234,56 +234,10 @@ tt2["Class"] = tt["Class"]
 X = tt2.iloc[:, :-1]
 y = tt2.iloc[:, -1]
 
-# train, test 데이터셋 나누기
+
 rs = st.number_input('Set a seed for machine learning', 1)
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state = rs)
-
-models = ['Random Forest', 'Logistic Regression', 'Support Vector Machine','k-NN', 'LightGBM' ]  #'Decision Tree', 'XGBoost'
-#select = st.selectbox('Please select a model', models)
-
-lr = LogisticRegression()
-lr.fit(X_train, y_train)
-lr_pred = lr.predict(X_test)
-lr_acc = accuracy_score(y_test, lr_pred)
-    
-svc = SVC()
-svc.fit(X_train, y_train)
-svc_pred = svc.predict(X_test)
-svc_acc = accuracy_score(y_test, svc_pred)
-
-#dt = DecisionTreeClassifier()
-#dt.fit(X_train, y_train)
-#dt_pred = dt.predict(X_test)
-#dt_acc = accuracy_score(y_test, dt_pred)
-
-rf = RandomForestClassifier()
-rf.fit(X_train, y_train)
-rf_pred = rf.predict(X_test)
-rf_acc = accuracy_score(y_test, rf_pred)
-
-knn = KNeighborsClassifier(n_neighbors=5)
-knn.fit(X_train, y_train)
-knn_pred = knn.predict(X_test)
-knn_acc = accuracy_score(y_test, knn_pred)
 
 
-lgbm = LGBMClassifier(n_estimators=4000)
-lgbm.fit(X_train, y_train)
-lgbm_pred = lgbm.predict(X_test)
-lgbm_acc = accuracy_score(y_test, lgbm_pred)
-
-#gbm = GradientBoostingClassifier(n_estimators=100, learning_rate=0.1, max_depth=3, random_state=0)
-#gbm.fit(X_train, y_train)
-#gbm_pred = gbm.predict(X_test)
-#gbm_acc = accuracy_score(y_test, gbm_pred)
-
-
-xgb_model = xgb.XGBClassifier()
-#xgb_model.fit(X_train, y_train)
-#xgb_pred = xgb_model.predict(X_test)
-#xgb_acc = accuracy_score(y_test, xgb_pred)
-    
-accuracies = [lr_acc, svc_acc, rf_acc, knn_acc, lgbm_acc ]  #dt_acc, xgb_acc
 
 
 st.subheader(" ")
@@ -305,7 +259,55 @@ if st.button("Predict"):
 #    model_acc = round(accuracy_score(y_test, model_pred), 4)
     
 
+    # train, test 데이터셋 나누기
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state = rs)
 
+    models = ['Random Forest', 'Logistic Regression', 'Support Vector Machine','k-NN', 'LightGBM' ]  #'Decision Tree', 'XGBoost'
+    #select = st.selectbox('Please select a model', models)
+
+    lr = LogisticRegression()
+    lr.fit(X_train, y_train)
+    lr_pred = lr.predict(X_test)
+    lr_acc = accuracy_score(y_test, lr_pred)
+    
+    svc = SVC()
+    svc.fit(X_train, y_train)
+    svc_pred = svc.predict(X_test)
+    svc_acc = accuracy_score(y_test, svc_pred)
+
+    #dt = DecisionTreeClassifier()
+    #dt.fit(X_train, y_train)
+    #dt_pred = dt.predict(X_test)
+    #dt_acc = accuracy_score(y_test, dt_pred)
+
+    rf = RandomForestClassifier()
+    rf.fit(X_train, y_train)
+    rf_pred = rf.predict(X_test)
+    rf_acc = accuracy_score(y_test, rf_pred)
+
+    knn = KNeighborsClassifier(n_neighbors=5)
+    knn.fit(X_train, y_train)
+    knn_pred = knn.predict(X_test)
+    knn_acc = accuracy_score(y_test, knn_pred)
+
+
+    lgbm = LGBMClassifier(n_estimators=4000)
+    lgbm.fit(X_train, y_train)
+    lgbm_pred = lgbm.predict(X_test)
+    lgbm_acc = accuracy_score(y_test, lgbm_pred)
+
+    #gbm = GradientBoostingClassifier(n_estimators=100, learning_rate=0.1, max_depth=3, random_state=0)
+    #gbm.fit(X_train, y_train)
+    #gbm_pred = gbm.predict(X_test)
+    #gbm_acc = accuracy_score(y_test, gbm_pred)
+
+
+    #xgb_model = xgb.XGBClassifier()
+    #xgb_model.fit(X_train, y_train)
+    #xgb_pred = xgb_model.predict(X_test)
+    #xgb_acc = accuracy_score(y_test, xgb_pred)
+    
+    accuracies = [lr_acc, svc_acc, rf_acc, knn_acc, lgbm_acc ]  #dt_acc, xgb_acc
 
     
     #if (model == dt or model == rf or model == xgb_model):
