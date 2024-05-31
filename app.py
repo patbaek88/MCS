@@ -236,7 +236,7 @@ y = tt2.iloc[:, -1]
 rs = st.number_input('Set a seed for machine learning', 1)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state = rs)
 
-models = ['Random Forest', 'Logistic Regression', 'Support Vector Machine', 'XGBoost']  #'Decision Tree'
+models = ['Random Forest', 'Logistic Regression', 'Support Vector Machine', 'Ridge', 'Lasso' ]  #'Decision Tree', 'XGBoost'
 select = st.selectbox('Please select a model', models)
 
 lr = LogisticRegression()
@@ -262,7 +262,7 @@ rf_acc = accuracy_score(y_test, rf_pred)
 ridge = Ridge()
 ridge.fit(X_train, y_train)
 ridge_pred = ridge.predict(X_test)
-ridge_acc = accuracy_score(y_test, rigde_pred)
+ridge_acc = accuracy_score(y_test, ridge_pred)
 
 lasso = Lasso()
 lasso.fit(X_train, y_train)
@@ -276,7 +276,7 @@ xgb_model = xgb.XGBClassifier()
 #xgb_pred = xgb_model.predict(X_test)
 #xgb_acc = accuracy_score(y_test, xgb_pred)
     
-#accuracies = [lr_acc, svc_acc, rf_acc, xgb_acc]  #dt_acc
+accuracies = [lr_acc, svc_acc, rf_acc, ridge_acc, lasso_acc ]  #dt_acc, xgb_acc
 
 
 st.subheader(" ")
@@ -327,10 +327,20 @@ if st.button("Predict"):
     mixture_df = mixture_df.transpose()	#행 열 전환
     
     #Best model로 예측하기
-    pred = model.predict(mixture_df)
+    #pred = model.predict(mixture_df)
+
+    pred_lr = lr.predict(mixture_df)
+    pred_svc = svc.predict(mixture_df)
+    pred_rf = rf.predict(mixture_df)
+    pred_ridge = ridge.predict(mixture_df)
+    pred_lass = lasso.predict(mixture_df)
+    pred_all = [pred_lr, pred_svc, pred_rf, pred_ridge, pred_lasso ]
+
+    result = DataFrame(data = pred_all, columns = "Predicted MCS Class", index = models)
+    st.write(result)
     
-    st.write("Predicted Manfacturing Class = " + str(pred[0]))
-    st.write("Model Accuracy : " + str(model_acc))
+    #st.write("Predicted Manfacturing Class = " + str(pred[0]))
+    #st.write("Model Accuracy : " + str(model_acc))
     st.write("Class 1 : Direct Compression")
     st.write("Class 2 : Dry Granulation")
     st.write("Class 3.1 : Wet Granulation (Fluid Bed Granulation)")
