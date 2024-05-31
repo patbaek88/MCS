@@ -107,7 +107,7 @@ st.write("API only : Class "+API_class[0])
 strength = st.number_input('Strength (mg)', 1, 1000, value = 100)
 tablet_wt = st.number_input('Tablet weight (mg)', 50, 1000, value = 200)
 API_content = strength/tablet_wt*100
-st.write("API content: "+API_content)
+st.write("API content: "+float(API_content))
 st.write("")
 
 
