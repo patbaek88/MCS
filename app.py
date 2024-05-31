@@ -218,7 +218,7 @@ for i in range(1,n+1):
     comp.append(str(i))
 
 explained_vraiance_ratio = pd.DataFrame(data= exp_vr, columns = ["Explained Variance Ratio"])
-n_components = pd.DataFrame(data= comp, columns = ["n_components"])
+n_components = pd.DataFrame(data= comp, columns = ["n_comp"])
 evr = pd.concat([explained_vraiance_ratio, n_components], axis = 1)
 evr = evr.set_index('n_components')
 
@@ -233,7 +233,7 @@ for i in range(1,num_pc+1):
     
 principalDf = pd.DataFrame(data=principalComponents, columns = col_pc, index=df1.index)
 
-with st.expander('num_PC vs Explained Variance Ratio'):
+with st.expander('n_comp vs Explained Variance Ratio'):
       st.write(evr)
 
 #fig = plt.figure(constrained_layout=True, figsize=(6,4))
