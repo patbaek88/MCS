@@ -121,7 +121,7 @@ Disintegrant_list = Disintegrant_df.index.to_list()
 
 
 #sample formulations
-sample_f =st.radio(label = 'Select a preset formulation', options = ['Class1 Formulation 1', 'Class1 Formulation 2'])
+sample_f =st.radio(label = 'Select a preset formulation', options = ['Class 1 Formulation 1', 'Class 1 Formulation 2'])
 if sample_f == 'Class 1 Formulation 1':   
     index_ex1 = 22
     value_ex1 = 0
