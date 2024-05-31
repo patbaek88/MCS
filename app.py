@@ -220,7 +220,7 @@ for i in range(1,n+1):
 explained_vraiance_ratio = pd.DataFrame(data= exp_vr, columns = ["Explained Variance Ratio"])
 n_components = pd.DataFrame(data= comp, columns = ["n_comp"])
 evr = pd.concat([explained_vraiance_ratio, n_components], axis = 1)
-evr = evr.set_index('n_components')
+evr = evr.set_index('n_comp')
 
 
 num_pc = st.number_input('Set the number of princial components', 1, 21, value = 6) 
