@@ -116,15 +116,17 @@ Disintegrant_list = Disintegrant_df.index.to_list()
 
 Excipient1_name = st.selectbox(
     'Filler 1',
-    Filler_list, index = 22)
+    Filler_list, index = 23)
 
-Excipient1_content = st.number_input('Filler 1 content (%)',0, 100, value = 30, label_visibility = "collapsed" )
+#Excipient1_content = st.number_input('Filler 1 content (%)',0, 100, value = 30, label_visibility = "collapsed" )
+Excipient1_content = 100-API_content-Excipient2_content-Excipient3_content--Excipient4_content
+st.write("Filler 1 content: "+Excipient1_content)
 st.write("")
 
 
 Excipient2_name = st.selectbox(
     'Filler 2',
-    Filler_list,index = 23)
+    Filler_list,index = 22)
 
 Excipient2_content = st.number_input('Filler 2 content (%)',0, 100, value = 30, label_visibility = "collapsed" )
 st.write("")
