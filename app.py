@@ -336,11 +336,10 @@ if st.button("Predict"):
     pred_knn = knn.predict(mixture_df)
     pred_gbm = gbm.predict(mixture_df)
     pred_all = [pred_lr, pred_svc, pred_rf, pred_knn, pred_gbm ]
-    pred_all_df = pd.DataFrame(data = pred_all, columns = "MCS Class", index = models)
-
-    accuracies_df = pd.DataFrame(data = accuracies, colums = "Accuracy", index = models)
+   
+    result = pd.DataFrame({'Model': models, 'MCS Class': pred_all, 'Accuracy': accuracies})
+    result = result.set_index('Model')
     
-    result = pd.concat([pred_all_df, accuracies_df], axis = 1)
     st.write(result)
    
     #st.write("Predicted Manfacturing Class = " + str(pred[0]))
