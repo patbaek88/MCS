@@ -336,9 +336,17 @@ if st.button("Predict"):
     pred_knn = knn.predict(mixture_df)
     pred_gbm = gbm.predict(mixture_df)
     pred_all = [pred_lr, pred_svc, pred_rf, pred_knn, pred_gbm ]
+    pred_all_df = DataFrame(data = pred_all, columns = "MCS Class", index = models)
 
-    result = DataFrame(data = pred_all, columns = "Predicted MCS Class", index = models)
+    accuracies_df = DataFrame(data = accuracies, colums = "Accuracy", index = models)
+    
+    result = pd.concat([pred_all_df, accuracies_df], axis = 1)
     st.write(result)
+
+    explained_vraiance_ratio = pd.DataFrame(data= exp_vr, columns = ["Explained Variance Ratio of PCA"])
+    n_components = pd.DataFrame(data= comp, columns = ["n_components"])
+    evr = pd.concat([explained_vraiance_ratio, n_components], axis = 1)
+    evr = evr.set_index('n_components')
     
     #st.write("Predicted Manfacturing Class = " + str(pred[0]))
     #st.write("Model Accuracy : " + str(model_acc))
