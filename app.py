@@ -282,7 +282,7 @@ tt2["Class"] = tt["Class"]
 X = tt2.iloc[:, :-1]
 y = tt2.iloc[:, -1]
 
-
+st.write("")
 rs = st.number_input('Set a seed for machine learning', 1)
 
 
