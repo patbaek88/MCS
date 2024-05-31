@@ -106,7 +106,7 @@ API_class = rf_1.predict(API_pc)
 st.write("API only : Class "+API_class[0])
 
 API_content = st.number_input('API_content (%)', 0, 100, value = 30, label_visibility = "collapsed")
-API_content_f = float(API_content)*0.1
+API_content_f = float(API_content)
 st.write("")
 
 
