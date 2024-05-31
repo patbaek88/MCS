@@ -291,7 +291,7 @@ if st.button("Predict"):
     knn_acc = accuracy_score(y_test, knn_pred)
 
 
-    lgbm = LGBMClassifier(n_estimators=100)
+    lgbm = LGBMClassifier(n_estimators=30)
     lgbm.fit(X_train, y_train)
     lgbm_pred = lgbm.predict(X_test)
     lgbm_acc = accuracy_score(y_test, lgbm_pred)
