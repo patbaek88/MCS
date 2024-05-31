@@ -159,7 +159,7 @@ elif sample_f =='WG Formulation 2 (HSG)':
     value_ex1 = 0
     index_ex2 = 22
     index_ex3 = 2
-    value_ex3 = API_content_i*0.1)
+    value_ex3 = API_content_i*0.1
     index_ex4 = 1
     value_ex4 = 5
 
