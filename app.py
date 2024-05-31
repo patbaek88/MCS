@@ -150,17 +150,17 @@ elif sample_f =='WG Formulation 1 (FBG)':
     index_ex1 = 22
     value_ex1 = 0
     index_ex2 = 22
-    index_ex3 = 0
-    value_ex3 = API_content_f
+    index_ex3 = 8
+    value_ex3 = 3
     index_ex4 = 0
-    value_ex4 = 0
+    value_ex4 = 5
 elif sample_f =='WG Formulation 2 (HSG)':
     index_ex1 = 22
     value_ex1 = 0
     index_ex2 = 22
     index_ex3 = 2
-    value_ex3 = API_content_f
-    index_ex4 = 1
+    value_ex3 = 3
+    index_ex4 = 2
     value_ex4 = 5
 
 Excipient3_name = st.selectbox(
