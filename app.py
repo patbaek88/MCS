@@ -196,6 +196,8 @@ Excipient2_name = st.selectbox(
 Excipient2_content_f = 100 -API_content_f -Excipient1_content_f -Excipient3_content_f -Excipient4_content_f
 Excipient2_content = str(Excipient2_content_f)
 st.write("Filler content: "+Excipient2_content)
+if Excipient2_content <0:
+    st.write("Error: Please adjust contents")
 
 st.write("")
 
