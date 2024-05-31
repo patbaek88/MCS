@@ -196,7 +196,7 @@ Excipient2_name = st.selectbox(
 #Excipient2_content = st.number_input('Filler 2 content (%)',0, 100, value = value_ex3, label_visibility = "collapsed" )
 Excipient2_content_f = 100 -API_content -Excipient1_content_f -Excipient3_content_f -Excipient4_content_f
 Excipient2_content = str(Excipient2_content_f)
-st.write("Filler 2 content: "+Excipient2_content+" (%))
+st.write("Filler 2 content: "+Excipient2_content+" (%)")
 if float(Excipient2_content) <0:
     st.write(":red[Error: Please adjust contents (Filler 2 content is negative)]")
 
