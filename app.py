@@ -114,37 +114,24 @@ Binder_list = Binder_df.index.to_list()
 Disintegrant_df =  df[(df['Function']=='Disintegrant')]
 Disintegrant_list = Disintegrant_df.index.to_list()
 
+
+
 Excipient1_name = st.selectbox(
     'Filler 1',
-    Filler_list, index = 23)
+    Filler_list, index = 22)
 
-#Excipient1_content = st.number_input('Filler 1 content (%)',0, 100, value = 30, label_visibility = "collapsed" )
-Excipient1_content = 100-API_content-Excipient2_content-Excipient3_content--Excipient4_content
-st.write("Filler 1 content: "+Excipient1_content)
+Excipient1_content = st.number_input('Filler 1 content (%)',0, 100, value = 30, label_visibility = "collapsed" )
 st.write("")
 
 
 Excipient2_name = st.selectbox(
     'Filler 2',
-    Filler_list,index = 22)
+    Filler_list,index = 23)
 
-Excipient2_content = st.number_input('Filler 2 content (%)',0, 100, value = 30, label_visibility = "collapsed" )
-st.write("")
+#Excipient2_content = st.number_input('Filler 2 content (%)',0, 100, value = 30, label_visibility = "collapsed" )
+Excipient2_content = 100-API_content-Excipient1_content-Excipient3_content-Excipient4_content
+st.write("Filler 2 content: "+Excipient2_content)
 
-
-Excipient3_name = st.selectbox(
-    'Binder',
-    Binder_list, index = 2)
-
-Excipient3_content = st.number_input('Binder content (%)',0, 100, value = 5, label_visibility = "collapsed")
-st.write("")
-
-
-Excipient4_name = st.selectbox(
-    'Disintegrant',
-    Disintegrant_list, index = 3)
-
-Excipient4_content = st.number_input('Disintegrant content (%)',0, 100, value = 5, label_visibility = "collapsed")
 st.write("")
 
 
