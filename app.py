@@ -121,8 +121,8 @@ Disintegrant_list = Disintegrant_df.index.to_list()
 
 
 #sample formulations
-sample_f =st.radio(label = 'Select a preset formulation', options = ['Class 1 Formulation 1', 'Class 1 Formulation 2'])
-if sample_f == 'Class 1 Formulation 1':   
+sample_f =st.radio(label = 'Select a preset formulation', options = ['DC Formulation 1', 'DC Formulation 2','DG Formulation','WG Formulation 1 (FBG)', 'WG Formulation 2 (HSG)'])
+if sample_f == 'DC Formulation 1':   
     index_ex1 = 22
     value_ex1 = 0
     index_ex2 = 23
@@ -130,7 +130,7 @@ if sample_f == 'Class 1 Formulation 1':
     value_ex3 = 0
     index_ex4 = 1
     value_ex4 = 5
-elif sample_f =='Class 1 Formulation 2':
+elif sample_f =='DC Formulation 2':
     index_ex1 = 4
     value_ex1 = 20
     index_ex2 = 33
@@ -138,7 +138,30 @@ elif sample_f =='Class 1 Formulation 2':
     value_ex3 = 0
     index_ex4 = 3
     value_ex4 = 3
-
+elif sample_f =='DG Formulation':
+    index_ex1 = 22
+    value_ex1 = 0
+    index_ex2 = 24
+    index_ex3 = 8
+    value_ex3 = 10
+    index_ex4 = 0
+    value_ex4 = 2
+elif sample_f =='WG Formulation 1 (FBG)':
+    index_ex1 = 22
+    value_ex1 = 0
+    index_ex2 = 22
+    index_ex3 = 0
+    value_ex3 = API_content_f
+    index_ex4 = 0
+    value_ex4 = 0
+elif sample_f =='WG Formulation 2 (HSG)':
+    index_ex1 = 22
+    value_ex1 = 0
+    index_ex2 = 22
+    index_ex3 = 2
+    value_ex3 = 3
+    index_ex4 = 1
+    value_ex4 = 5
 
 Excipient3_name = st.selectbox(
     'Binder',
