@@ -103,6 +103,7 @@ API_class = rf_1.predict(API_pc)
 st.write("API only : Class "+API_class[0])
 
 API_content = st.number_input('API_content (%)', 0, 100, value = 30, label_visibility = "collapsed")
+API_content_f = float(API_content)
 st.write("")
 
 Filler_df =  df[df['Function'].isin(['Filler_DC', 'Filler_WG'])]
@@ -116,9 +117,10 @@ Disintegrant_list = Disintegrant_df.index.to_list()
 
 Excipient3_name = st.selectbox(
     'Binder',
-    Binder_list, index = 1)
+    Binder_list, index = 2)
 
 Excipient3_content = st.number_input('Binder content (%)',0, 100, value = 5, label_visibility = "collapsed" )
+Excipient3_content_f = float(Excipient3_content)
 st.write("")
 
 Excipient4_name = st.selectbox(
@@ -126,6 +128,7 @@ Excipient4_name = st.selectbox(
     Disintegrant_list, index = 1)
 
 Excipient4_content = st.number_input('Disintegrant content (%)',0, 100, value = 5, label_visibility = "collapsed" )
+Excipient4_content_f = float(Excipient4_content)
 st.write("")
 
 Excipient1_name = st.selectbox(
@@ -133,6 +136,7 @@ Excipient1_name = st.selectbox(
     Filler_list, index = 22)
 
 Excipient1_content = st.number_input('Filler 1 content (%)',0, 100, value = 30, label_visibility = "collapsed" )
+Excipient1_content_f = float(Excipient1_content)
 st.write("")
 
 
@@ -141,7 +145,7 @@ Excipient2_name = st.selectbox(
     Filler_list,index = 23)
 
 #Excipient2_content = st.number_input('Filler 2 content (%)',0, 100, value = 30, label_visibility = "collapsed" )
-Excipient2_content = 100-API_content-Excipient1_content-Excipient3_content-Excipient4_content
+Excipient2_content = 100 -API_content_f -Excipient1_content_f -Excipient3_content_f -Excipient4_content_f
 st.write("Filler 2 content: "+Excipient2_content)
 
 st.write("")
