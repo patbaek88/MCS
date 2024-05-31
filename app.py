@@ -168,7 +168,7 @@ Excipient3_name = st.selectbox(
     'Binder',
     Binder_list, index = index_ex3)
 
-Excipient3_content = st.number_input('Binder content (%)',0, 100, value = value_ex3, label_visibility = "collapsed" )
+Excipient3_content = st.number_input('Binder content (%)',0, 100, value = value_ex3 )
 Excipient3_content_f = float(Excipient3_content)
 st.write("")
 
@@ -176,7 +176,7 @@ Excipient4_name = st.selectbox(
     'Disintegrant',
     Disintegrant_list, index = index_ex4)
 
-Excipient4_content = st.number_input('Disintegrant content (%)',0, 100, value = value_ex4, label_visibility = "collapsed" )
+Excipient4_content = st.number_input('Disintegrant content (%)',0, 100, value = value_ex4)
 Excipient4_content_f = float(Excipient4_content)
 st.write("")
 
@@ -184,7 +184,7 @@ Excipient1_name = st.selectbox(
     'Filler 1',
     Filler_list, index = index_ex1)
 
-Excipient1_content = st.number_input('Filler 1 content (%)',0, 100, value = value_ex1, label_visibility = "collapsed" )
+Excipient1_content = st.number_input('Filler 1 content (%)',0, 100, value = value_ex1)
 Excipient1_content_f = float(Excipient1_content)
 st.write("")
 
