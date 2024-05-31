@@ -141,13 +141,13 @@ st.write("")
 
 
 Excipient2_name = st.selectbox(
-    'Filler 2',
+    'Filler',
     Filler_list, index = 23)
 
 #Excipient2_content = st.number_input('Filler 2 content (%)',0, 100, value = 30, label_visibility = "collapsed" )
 Excipient2_content_f = 100 -API_content_f -Excipient1_content_f -Excipient3_content_f -Excipient4_content_f
 Excipient2_content = str(Excipient2_content_f)
-st.write("Filler 2 content: "+Excipient2_content)
+st.write("Filler content: "+Excipient2_content)
 
 st.write("")
 
