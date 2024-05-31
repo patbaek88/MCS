@@ -11,7 +11,8 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix
 import xgboost as xgb
-from sklearn.linear_model import Ridge, Lasso
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.ensemble import GradientBoostingClassifier
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 from sklearn.metrics import classification_report
@@ -236,7 +237,7 @@ y = tt2.iloc[:, -1]
 rs = st.number_input('Set a seed for machine learning', 1)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state = rs)
 
-models = ['Random Forest', 'Logistic Regression', 'Support Vector Machine', 'Ridge', 'Lasso' ]  #'Decision Tree', 'XGBoost'
+models = ['Random Forest', 'Logistic Regression', 'Support Vector Machine','k-NN', 'GBM' ]  #'Decision Tree', 'XGBoost'
 select = st.selectbox('Please select a model', models)
 
 lr = LogisticRegression()
@@ -259,16 +260,16 @@ rf.fit(X_train, y_train)
 rf_pred = rf.predict(X_test)
 rf_acc = accuracy_score(y_test, rf_pred)
 
-ridge = Ridge()
-ridge.fit(X_train, y_train)
-ridge_pred = ridge.predict(X_test)
-ridge_acc = accuracy_score(y_test, ridge_pred)
+knn = KNeighborsClassifier(n_neighbors=5)
+knn.fit(X_train, y_train)
+knn_pred = knn.predict(X_test)
+knn_acc = accuracy_score(y_test, knn_pred)
 
-lasso = Lasso()
-lasso.fit(X_train, y_train)
-lasso_pred = ridge.predict(X_test)
-lasso_acc = accuracy_score(y_test, lasso_pred)
 
+gbm = GradientBoostingClassifier(n_estimators=100, learning_rate=0.1, max_depth=3, random_state=0)
+gbm.fit(X_train, y_train)
+gbm_pred = gbm.predict(X_test)
+gbm_acc = accuracy_score(y_test, gbm_pred)
 
 
 xgb_model = xgb.XGBClassifier()
@@ -276,7 +277,7 @@ xgb_model = xgb.XGBClassifier()
 #xgb_pred = xgb_model.predict(X_test)
 #xgb_acc = accuracy_score(y_test, xgb_pred)
     
-accuracies = [lr_acc, svc_acc, rf_acc, ridge_acc, lasso_acc ]  #dt_acc, xgb_acc
+accuracies = [lr_acc, svc_acc, rf_acc, knn_acc, gbm_acc ]  #dt_acc, xgb_acc
 
 
 st.subheader(" ")
@@ -332,9 +333,9 @@ if st.button("Predict"):
     pred_lr = lr.predict(mixture_df)
     pred_svc = svc.predict(mixture_df)
     pred_rf = rf.predict(mixture_df)
-    pred_ridge = ridge.predict(mixture_df)
-    pred_lass = lasso.predict(mixture_df)
-    pred_all = [pred_lr, pred_svc, pred_rf, pred_ridge, pred_lasso ]
+    pred_knn = knn.predict(mixture_df)
+    pred_gbm = gbm.predict(mixture_df)
+    pred_all = [pred_lr, pred_svc, pred_rf, pred_knn, pred_gbm ]
 
     result = DataFrame(data = pred_all, columns = "Predicted MCS Class", index = models)
     st.write(result)
