@@ -84,9 +84,9 @@ y_1 = tt2_1.iloc[:, -1]
 # train, test 데이터셋 나누기
 X_train_1, X_test_1, y_train_1, y_test_1 = train_test_split(X_1, y_1, test_size=0.2)
 
-rf = RandomForestClassifier()
-rf.fit(X_train_1, y_train_1)
-rf_pred_1 = rf.predict(X_test_1)
+rf_1 = RandomForestClassifier()
+rf_1.fit(X_train_1, y_train_1)
+rf_pred_1 = rf_1.predict(X_test_1)
 rf_acc_1 = accuracy_score(y_test_1, rf_pred_1)
 
 
@@ -97,6 +97,10 @@ st.subheader('Formulation Design')
 API_df = df[(df['Function']=='API')]
 API_list = API_df.index.to_list()
 API_name = st.selectbox('API', API_list, index = 52)
+
+API_pc = principalDf_1.loc[principalDf_1.index == API_name].iloc[:, :].values
+API_class = rf_1.predict(API_pc)
+st.write("API only : class "+APIclass)
 
 API_content = st.number_input('API_content (%)', 0, 100, value = 30, label_visibility = "collapsed")
 st.write("")
