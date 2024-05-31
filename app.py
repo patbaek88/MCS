@@ -106,7 +106,7 @@ API_class = rf_1.predict(API_pc)
 st.write("API only : Class "+API_class[0])
 
 API_content = st.number_input('API_content (%)', 0, 100, value = 30, label_visibility = "collapsed")
-API_content_f = float(API_content)
+API_content_i = int(API_content)
 st.write("")
 
 
@@ -151,7 +151,7 @@ elif sample_f =='WG Formulation 1 (FBG)':
     value_ex1 = 0
     index_ex2 = 22
     index_ex3 = 0
-    value_ex3 = str(API_content_f*0.1)
+    value_ex3 = API_content_i*0.1
     index_ex4 = 0
     value_ex4 = 0
 elif sample_f =='WG Formulation 2 (HSG)':
@@ -159,7 +159,7 @@ elif sample_f =='WG Formulation 2 (HSG)':
     value_ex1 = 0
     index_ex2 = 22
     index_ex3 = 2
-    value_ex3 = str(API_content_f*0.1)
+    value_ex3 = API_content_i*0.1)
     index_ex4 = 1
     value_ex4 = 5
 
