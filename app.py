@@ -136,7 +136,7 @@ elif sample_f =='Class 1 Formulation 2':
     index_ex2 = 33
     index_ex3 = 2
     value_ex3 = 0
-    index_ex4 = 4
+    index_ex4 = 3
     value_ex4 = 3
 
 
