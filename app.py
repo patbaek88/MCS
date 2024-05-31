@@ -198,6 +198,7 @@ Excipient2_content = str(Excipient2_content_f)
 st.write("Filler content: "+Excipient2_content)
 if float(Excipient2_content) <0:
     st.write("Error: Please adjust contents")
+    st.write("This is :blue[test]")
 
 st.write("")
 
