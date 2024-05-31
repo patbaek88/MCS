@@ -130,7 +130,7 @@ if sample_f == 'Class 1 Formulation 1':
     value_ex3 = 0
     index_ex4 = 1
     value_ex4 = 5
-elif smaple_f =='Class 1 Formulation 2':
+elif sample_f =='Class 1 Formulation 2':
     index_ex1 = 4
     value_ex1 = 20
     index_ex2 = 33
