@@ -100,7 +100,7 @@ API_name = st.selectbox('API', API_list, index = 52)
 
 API_pc = principalDf_1.loc[principalDf_1.index == API_name].iloc[:, :].values
 API_class = rf_1.predict(API_pc)
-st.write("API only : class "+API_class[0])
+st.write("API only : Class "+API_class[0])
 
 API_content = st.number_input('API_content (%)', 0, 100, value = 30, label_visibility = "collapsed")
 st.write("")
