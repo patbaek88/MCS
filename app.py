@@ -19,8 +19,6 @@ from mpl_toolkits.mplot3d import axes3d
 
 st.header('Manufacturing Classification System')  # 타이틀명 지정
 
-
-
 #표준화 변환 및 csv로 변환 (MCS_dataset_std_240503_FT4_rawdata.csv 있으면 생략가능)
 
 #loading database and 전처리
@@ -34,6 +32,64 @@ x1 = df1.values  # 독립변인들의 value값만 추출
 x1 = StandardScaler().fit_transform(x1)  # x객체에 x를 표준화한 데이터를 저장
 features = df1.columns
 z1 = pd.DataFrame(x1, columns=features, index=df1.index)
+
+
+pca_1 = PCA(n_components=6) # 주성분을 몇개로 할지 결정
+principalComponents_1 = pca_1.fit_transform(x1)
+
+col_pc_1 = []
+for i in range(1,num_pc+1):
+    col_pc_1.append("pc"+str(i))
+    
+principalDf_1 = pd.DataFrame(data=principalComponents_1, columns = col_pc_1, index=df1.index)
+
+
+# 데이터 불러오기
+tt = pd.read_csv('train_test_set_template_raw.csv', dtype={"Class":object})
+
+# tt 파일에서 material 이름과 함량 추출하기
+materials = tt_1.iloc[:, [0, 2, 4, 6, 8]].values
+amounts = tt.iloc[:, [1, 3, 5, 7, 9]].astype(float).values
+
+# tt 파일에서 Class 값 추출하기
+classes = tt.iloc[:, -1].values
+
+# 각 material에 대해 feature값과 함량을 곱한 뒤 더하기
+features_1 = []
+for i in range(len(materials)):
+    feature_1 = np.zeros(6)
+    for j in range(5):
+        if pd.notnull(materials[i][j]):
+            material_name = materials[i][j]
+            amount = amounts[i][j]
+            material_features_1 = principalDf_1.loc[principalDf_1.index == material_name].iloc[:, :].values
+            if len(material_features_1) > 0:
+                material_feature_1 = material_features_1[0]
+                feature_1 += material_feature_1 * amount
+            else:
+                pass
+            
+    features_1.append(feature_1)
+
+tt2_1 = pd.DataFrame(data = features_1, columns = col_pc_1)
+tt2_1["Class"] = tt["Class"]
+
+
+
+
+# feature와 target 나누기
+X_1 = tt2_1.iloc[:, :-1]
+y_1 = tt2_1.iloc[:, -1]
+
+# train, test 데이터셋 나누기
+X_train_1, X_test_1, y_train_1, y_test_1 = train_test_split(X_1, y_1, test_size=0.2)
+
+rf = RandomForestClassifier()
+rf.fit(X_train_1, y_train_1)
+rf_pred_1 = rf.predict(X_test_1)
+rf_acc_1 = accuracy_score(y_test_1, rf_pred_1)
+
+
 
 st.subheader(" ")
 st.subheader('Formulation Design')
