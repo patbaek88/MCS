@@ -643,7 +643,7 @@ if st.button("Predict"):
         plt.ylabel('pc2')
         
    
-    plt.legend()
+    plt.legend(loc='center')
         
     plt.show()
     st.set_option('deprecation.showPyplotGlobalUse', False)
