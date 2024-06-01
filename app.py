@@ -472,7 +472,7 @@ if st.button("Predict"):
         
         ax.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
         ax.scatter(x2, y2, z2, color = 'g', alpha = 0.5, label = 'Class 2')
-        ax.scatter(x31, y31, z31, color = 'yellow', alpha = 0.5, label = 'Class 3.1')
+        ax.scatter(x31, y31, z31, color = 'gold', alpha = 0.5, label = 'Class 3.1')
         ax.scatter(x32, y32, z32, color = 'orange', alpha = 0.5, label = 'Class 3.2')
         ax.scatter(x33, y33, z33, color = 'firebrick', alpha = 0.5, label = 'Class 3.3')
         ax.scatter(x34, y34, z34, color = 'red', alpha = 0.5, label = 'Class 3.4')
@@ -493,7 +493,7 @@ if st.button("Predict"):
 
         ax_xy.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
         ax_xy.scatter(x2, y2, z2, color = 'g', alpha = 0.5, label = 'Class 2')
-        ax_xy.scatter(x31, y31, z31, color = 'yellow', alpha = 0.5, label = 'Class 3.1')
+        ax_xy.scatter(x31, y31, z31, color = 'gold', alpha = 0.5, label = 'Class 3.1')
         ax_xy.scatter(x32, y32, z32, color = 'orange', alpha = 0.5, label = 'Class 3.2')
         ax_xy.scatter(x33, y33, z33, color = 'firebrick', alpha = 0.5, label = 'Class 3.3')
         ax_xy.scatter(x34, y34, z34, color = 'red', alpha = 0.5, label = 'Class 3.4')
@@ -514,7 +514,7 @@ if st.button("Predict"):
 
         ax_yz.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
         ax_yz.scatter(x2, y2, z2, color = 'g', alpha = 0.5, label = 'Class 2')
-        ax_yz.scatter(x31, y31, z31, color = 'yellow', alpha = 0.5, label = 'Class 3.1')
+        ax_yz.scatter(x31, y31, z31, color = 'gold', alpha = 0.5, label = 'Class 3.1')
         ax_yz.scatter(x32, y32, z32, color = 'orange', alpha = 0.5, label = 'Class 3.2')
         ax_yz.scatter(x33, y33, z33, color = 'firebrick', alpha = 0.5, label = 'Class 3.3')
         ax_yz.scatter(x34, y34, z34, color = 'red', alpha = 0.5, label = 'Class 3.4')
@@ -534,7 +534,7 @@ if st.button("Predict"):
 
         ax_zx.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
         ax_zx.scatter(x2, y2, z2, color = 'g', alpha = 0.5, label = 'Class 2')
-        ax_zx.scatter(x31, y31, z31, color = 'yellow', alpha = 0.5, label = 'Class 3.1')
+        ax_zx.scatter(x31, y31, z31, color = 'gold', alpha = 0.5, label = 'Class 3.1')
         ax_zx.scatter(x32, y32, z32, color = 'orange', alpha = 0.5, label = 'Class 3.2')
         ax_zx.scatter(x33, y33, z33, color = 'firebrick', alpha = 0.5, label = 'Class 3.3')
         ax_zx.scatter(x34, y34, z34, color = 'red', alpha = 0.5, label = 'Class 3.4')
@@ -621,7 +621,7 @@ if st.button("Predict"):
         
         plt.scatter(x1, y1, color = 'b', alpha = 0.5, label = 'Class 1')
         plt.scatter(x2, y2, color = 'g', alpha = 0.5, label = 'Class 2')
-        plt.scatter(x31, y31, z31, color = 'yellow', alpha = 0.5, label = 'Class 3.1')
+        plt.scatter(x31, y31, z31, color = 'gold', alpha = 0.5, label = 'Class 3.1')
         plt.scatter(x32, y32, z32, color = 'orange', alpha = 0.5, label = 'Class 3.2')
         plt.scatter(x33, y33, z33, color = 'firebrick', alpha = 0.5, label = 'Class 3.3')
         plt.scatter(x34, y34, z34, color = 'red', alpha = 0.5, label = 'Class 3.4')
@@ -643,7 +643,7 @@ if st.button("Predict"):
         plt.ylabel('pc2')
         
    
-    plt.legend(loc='center')
+    plt.legend(loc='best')
         
     plt.show()
     st.set_option('deprecation.showPyplotGlobalUse', False)
