@@ -469,6 +469,19 @@ if st.button("Predict"):
         ym_f = round(float(ym), 1)
         zm_f = round(float(zm), 1)
 
+        al_ex1 = 1
+        al_ex2 = 1
+        al_ex3 = 1
+        al_ex4 = 1
+        if Excipient1_content == 0:
+            al_ex1 = 0
+        if Excipient2_content == 0:
+            al_ex2 = 0
+        if Excipient3_content == 0:
+            al_ex3 = 0
+        if Excipient4_content == 0:
+            al_ex4 = 0
+
         
         ax.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
         ax.scatter(x2, y2, z2, color = 'g', alpha = 0.5, label = 'Class 2')
@@ -478,17 +491,17 @@ if st.button("Predict"):
         ax.scatter(x34, y34, z34, color = 'red', alpha = 0.5, label = 'Class 3.4')
         ax.scatter(x4, y4, z4, color = 'magenta', alpha = 0.5, label = 'Class 4')
         ax.scatter(x_api, y_api, z_api, color = 'black', alpha = 1 ,  marker='^' )
-        ax.scatter(x_ex1, y_ex1, z_ex1,color = 'black', alpha = 1, marker='^')
-        ax.scatter(x_ex2, y_ex2, z_ex2, color = 'black', alpha = 1,marker='^' )
-        ax.scatter(x_ex3, y_ex3, z_ex3, color = 'black', alpha = 1, marker='^')
-        ax.scatter(x_ex4, y_ex4, z_ex4,color = 'black', alpha = 1,marker='^' )
+        ax.scatter(x_ex1, y_ex1, z_ex1,color = 'black', alpha = al_ex1, marker='^')
+        ax.scatter(x_ex2, y_ex2, z_ex2, color = 'black', alpha = al_ex2,marker='^' )
+        ax.scatter(x_ex3, y_ex3, z_ex3, color = 'black', alpha = al_ex3, marker='^')
+        ax.scatter(x_ex4, y_ex4, z_ex4,color = 'black', alpha = al_ex4,marker='^' )
         ax.scatter(xm, ym, zm , s=100, color = 'black', alpha = 1,  marker='*', label = 'Mixture')
         ax.text(x_api, y_api, z_api, 'API', color='black')
         ax.text(xm_f, ym_f, zm_f, f'Mixture({xm_f}, {ym_f}, {zm_f})', color='black')
-        ax.text(x_ex1, y_ex1, z_ex1, 'Filler 1', color='black')
-        ax.text(x_ex2, y_ex2, z_ex2, 'Filler 2', color='black')
-        ax.text(x_ex3, y_ex3, z_ex3, 'Binder', color='black')
-        ax.text(x_ex4, y_ex4, z_ex4, 'Disintegrant', color='black')
+        ax.text(x_ex1, y_ex1, z_ex1, 'Filler 1', alpha= al_ex1, color='black')
+        ax.text(x_ex2, y_ex2, z_ex2, 'Filler 2', alpha= al_ex2, color='black')
+        ax.text(x_ex3, y_ex3, z_ex3, 'Binder', alpha= al_ex3, color='black')
+        ax.text(x_ex4, y_ex4, z_ex4, 'Disintegrant',alpha= al_ex4, color='black')
 
 
         ax_xy.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
@@ -506,10 +519,10 @@ if st.button("Predict"):
         ax_xy.scatter(xm, ym, zm , s=100, color = 'black', alpha = 1, marker='*', label = 'Mixture')
         ax_xy.text(xm_f, ym_f, zm_f, f'Mixture({xm_f}, {ym_f}, {zm_f})', color='black')
         ax_xy.text(x_api, y_api, z_api, 'API', color='black')
-        ax_xy.text(x_ex1, y_ex1, z_ex1, 'Filler 1', color='black')
-        ax_xy.text(x_ex2, y_ex2, z_ex2, 'Filler 2', color='black')
-        ax_xy.text(x_ex3, y_ex3, z_ex3, 'Binder', color='black')
-        ax_xy.text(x_ex4, y_ex4, z_ex4, 'Disintegrant', color='black')
+        ax_xy.text(x_ex1, y_ex1, z_ex1, 'Filler 1', alpha=al_ex1, color='black')
+        ax_xy.text(x_ex2, y_ex2, z_ex2, 'Filler 2', alpha=al_ex2,color='black')
+        ax_xy.text(x_ex3, y_ex3, z_ex3, 'Binder', alpha=al_ex3,color='black')
+        ax_xy.text(x_ex4, y_ex4, z_ex4, 'Disintegrant', alpha=al_ex4,color='black')
         
 
         ax_yz.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
@@ -527,10 +540,10 @@ if st.button("Predict"):
         ax_yz.scatter(xm, ym, zm , s=100, color = 'black', alpha = 1, marker='*', label = 'Mixture')
         ax_yz.text(xm_f, ym_f, zm_f, f'Mixture({xm_f}, {ym_f}, {zm_f})', color='black')
         ax_yz.text(x_api, y_api, z_api, 'API', color='black')
-        ax_yz.text(x_ex1, y_ex1, z_ex1, 'Filler 1', color='black')
-        ax_yz.text(x_ex2, y_ex2, z_ex2, 'Filler 2', color='black')
-        ax_yz.text(x_ex3, y_ex3, z_ex3, 'Binder', color='black')
-        ax_yz.text(x_ex4, y_ex4, z_ex4, 'Disintegrant', color='black')
+        ax_yz.text(x_ex1, y_ex1, z_ex1, 'Filler 1', alpha=al_ex1,color='black')
+        ax_yz.text(x_ex2, y_ex2, z_ex2, 'Filler 2', alpha=al_ex1,color='black')
+        ax_yz.text(x_ex3, y_ex3, z_ex3, 'Binder',alpha=al_ex1, color='black')
+        ax_yz.text(x_ex4, y_ex4, z_ex4, 'Disintegrant', alpha=al_ex1,color='black')
 
         ax_zx.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
         ax_zx.scatter(x2, y2, z2, color = 'g', alpha = 0.5, label = 'Class 2')
@@ -547,10 +560,10 @@ if st.button("Predict"):
         ax_zx.scatter(xm, ym, zm , s=100, color = 'black', alpha = 1, marker='*', label = 'Mixture')
         ax_zx.text(x_api, y_api, z_api, 'API', color='black')
         ax_zx.text(xm_f, ym_f, zm_f, f'Mixture({xm_f}, {ym_f}, {zm_f})', color='black')
-        ax_zx.text(x_ex1, y_ex1, z_ex1, 'Filler 1', color='black')
-        ax_zx.text(x_ex2, y_ex2, z_ex2, 'Filler 2', color='black')
-        ax_zx.text(x_ex3, y_ex3, z_ex3, 'Binder', color='black')
-        ax_zx.text(x_ex4, y_ex4, z_ex4, 'Disintegrant', color='black')
+        ax_zx.text(x_ex1, y_ex1, z_ex1, 'Filler 1', alpha=al_ex1,color='black')
+        ax_zx.text(x_ex2, y_ex2, z_ex2, 'Filler 2', alpha=al_ex2,color='black')
+        ax_zx.text(x_ex3, y_ex3, z_ex3, 'Binder', alpha=al_ex3,color='black')
+        ax_zx.text(x_ex4, y_ex4, z_ex4, 'Disintegrant', alpha=al_ex4,color='black')
 
         ax.set_xlabel('pc1')
         ax.set_ylabel('pc2')
@@ -633,10 +646,10 @@ if st.button("Predict"):
         plt.scatter(x_ex4, y_ex4, color = 'black', marker='^',  alpha = 1)
         plt.scatter(xm, ym, s=100, color = 'black', alpha = 1, marker='*', label = 'Mixture')
         plt.text(xm_f, ym_f, f'Mixture({xm_f}, {ym_f})', color='black')
-        plt.text(x_ex1, y_ex1, 'Filler 1', color='black')
-        plt.text(x_ex2, y_ex2, 'Filler 2', color='black')
-        plt.text(x_ex3, y_ex3, 'Binder', color='black')
-        plt.text(x_ex4, y_ex4, 'Disintegrant', color='black')
+        plt.text(x_ex1, y_ex1, 'Filler 1', alpha=al_ex1,color='black')
+        plt.text(x_ex2, y_ex2, 'Filler 2', alpha=al_ex2,color='black')
+        plt.text(x_ex3, y_ex3, 'Binder', alpha=al_ex3,color='black')
+        plt.text(x_ex4, y_ex4, 'Disintegrant', alpha=al_ex4,color='black')
 
 
         plt.xlabel('pc1')
