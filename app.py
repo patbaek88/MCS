@@ -390,17 +390,63 @@ if st.button("Predict"):
     #Best model로 예측하기
     #pred = model.predict(mixture_df)
 
-    pred_lr = lr.predict(mixture_df)
-    pred_svc = svc.predict(mixture_df)
-    pred_rf = rf.predict(mixture_df)
-    pred_knn = knn.predict(mixture_df)
-    pred_lgbm = lgbm.predict(mixture_df)
-    pred_all = [pred_lr, pred_svc, pred_rf, pred_knn, pred_lgbm ]
-   
-    result = pd.DataFrame({'Model': models, 'MCS Class': pred_all, 'Accuracy': accuracies})
-    result = result.set_index('Model')
     
-    st.write(result)
+
+    results = []
+
+    # 각 모델에 대해
+    for model_name, model in models.items():
+        predictions = []
+        accuracies = []
+    
+    # 시드를 1부터 10까지 변경하면서
+    for seed in range(1, 10+1):
+        np.random.seed(seed)
+        
+        # 모델 학습 및 예측
+        model.fit(X_train, y_train)
+        y_pred = model.predict(mixture_df)
+        
+        # 예측 결과 저장
+        predictions.append(y_pred)
+        
+        # 정확도 계산 및 저장
+        accuracy = accuracy_score(mixture_y, y_pred)
+        accuracies.append(accuracy)
+    
+        # 최빈값 계산
+        predictions = np.array(predictions)
+        most_common_predictions = mode(predictions, axis=0).mode[0]
+    
+        # 정확도의 평균 계산
+        mean_accuracy = np.mean(accuracies)
+    
+        # 결과 저장
+        results.append({
+            'Model': model_name,
+            'Most Common Prediction': most_common_predictions,
+            'Mean Accuracy': mean_accuracy
+        })
+
+    # 결과를 데이터프레임으로 변환
+    results_df = pd.DataFrame(results)
+
+
+
+    
+
+    #pred_lr = lr.predict(mixture_df)
+    #pred_svc = svc.predict(mixture_df)
+    #pred_rf = rf.predict(mixture_df)
+    #pred_knn = knn.predict(mixture_df)
+    #pred_lgbm = lgbm.predict(mixture_df)
+    #pred_all = [pred_lr, pred_svc, pred_rf, pred_knn, pred_lgbm ]
+   
+    #result = pd.DataFrame({'Model': models, 'MCS Class': pred_all, 'Accuracy': accuracies})
+    #result = result.set_index('Model')
+    
+    #st.write(result)
+    st.write(results_df)
    
     #st.write("Predicted Manfacturing Class = " + str(pred[0]))
     #st.write("Model Accuracy : " + str(model_acc))
