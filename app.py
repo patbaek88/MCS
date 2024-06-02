@@ -390,7 +390,14 @@ if st.button("Predict"):
     #Best model로 예측하기
     #pred = model.predict(mixture_df)
 
-    
+    # 모델을 정의합니다.
+    models = {
+        'Logistic Regression': LogisticRegression(max_iter=10000),
+        'SVC': SVC(),
+        'Random Forest': RandomForestClassifier(),
+        'K-Nearest Neighbors': KNeighborsClassifier(),
+        'LightGBM': lgbm.LGBMClassifier()
+}
 
     results = []
 
