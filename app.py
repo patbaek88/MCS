@@ -474,13 +474,13 @@ if st.button("Predict"):
         al_ex3 = 1
         al_ex4 = 1
         if Excipient1_content == 0:
-            al_ex1 = 0
+            al_ex1 = 0.1
         if Excipient2_content == 0:
-            al_ex2 = 0
+            al_ex2 = 0.1
         if Excipient3_content == 0:
-            al_ex3 = 0
+            al_ex3 = 0.1
         if Excipient4_content == 0:
-            al_ex4 = 0
+            al_ex4 = 0.1
 
         
         ax.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
@@ -495,7 +495,7 @@ if st.button("Predict"):
         ax.scatter(x_ex2, y_ex2, z_ex2, color = 'black', alpha = al_ex2,marker='^' )
         ax.scatter(x_ex3, y_ex3, z_ex3, color = 'black', alpha = al_ex3, marker='^')
         ax.scatter(x_ex4, y_ex4, z_ex4,color = 'black', alpha = al_ex4,marker='^' )
-        ax.scatter(xm, ym, zm , s=100, color = 'black', alpha = 0.1,  marker='*', label = 'Mixture')
+        ax.scatter(xm, ym, zm , s=100, color = 'black', alpha = 1,  marker='*', label = 'Mixture')
         ax.text(x_api, y_api, z_api, 'API', color='black')
         ax.text(xm_f, ym_f, zm_f, f'Mixture({xm_f}, {ym_f}, {zm_f})', color='black')
         ax.text(x_ex1, y_ex1, z_ex1, 'Filler 1', alpha= al_ex1, color='black')
@@ -512,10 +512,10 @@ if st.button("Predict"):
         ax_xy.scatter(x34, y34, z34, color = 'red', alpha = 0.5, label = 'Class 3.4')
         ax_xy.scatter(x4, y4, z4, color = 'magenta', alpha = 0.5, label = 'Class 4')
         ax_xy.scatter(x_api, y_api, z_api, color = 'black', alpha = 1, marker='^')
-        ax_xy.scatter(x_ex1, y_ex1, z_ex1, color = 'black', alpha = 1, marker='^')
-        ax_xy.scatter(x_ex2, y_ex2, z_ex2, color = 'black', alpha = 1, marker='^')
-        ax_xy.scatter(x_ex3, y_ex3, z_ex3, color = 'black', alpha = 1, marker='^')
-        ax_xy.scatter(x_ex4, y_ex4, z_ex4, color = 'black', alpha = 1, marker='^')
+        ax_xy.scatter(x_ex1, y_ex1, z_ex1, color = 'black', alpha = al_ex1, marker='^')
+        ax_xy.scatter(x_ex2, y_ex2, z_ex2, color = 'black', alpha = al_ex2, marker='^')
+        ax_xy.scatter(x_ex3, y_ex3, z_ex3, color = 'black', alpha = al_ex3, marker='^')
+        ax_xy.scatter(x_ex4, y_ex4, z_ex4, color = 'black', alpha = al_ex4, marker='^')
         ax_xy.scatter(xm, ym, zm , s=100, color = 'black', alpha = 1, marker='*', label = 'Mixture')
         ax_xy.text(xm_f, ym_f, zm_f, f'Mixture({xm_f}, {ym_f}, {zm_f})', color='black')
         ax_xy.text(x_api, y_api, z_api, 'API', color='black')
@@ -533,10 +533,10 @@ if st.button("Predict"):
         ax_yz.scatter(x34, y34, z34, color = 'red', alpha = 0.5, label = 'Class 3.4')
         ax_yz.scatter(x4, y4, z4, color = 'magenta', alpha = 0.5, label = 'Class 4')
         ax_yz.scatter(x_api, y_api, z_api, color = 'black', alpha = 1, marker='^')
-        ax_yz.scatter(x_ex1, y_ex1, z_ex1, color = 'black', alpha = 1, marker='^')
-        ax_yz.scatter(x_ex2, y_ex2, z_ex2, color = 'black', alpha = 1, marker='^')
-        ax_yz.scatter(x_ex3, y_ex3, z_ex3, color = 'black', alpha = 1, marker='^')
-        ax_yz.scatter(x_ex4, y_ex4, z_ex4, color = 'black', alpha = 1, marker='^')
+        ax_yz.scatter(x_ex1, y_ex1, z_ex1, color = 'black', alpha = al_ex1, marker='^')
+        ax_yz.scatter(x_ex2, y_ex2, z_ex2, color = 'black', alpha = al_ex2, marker='^')
+        ax_yz.scatter(x_ex3, y_ex3, z_ex3, color = 'black', alpha = al_ex3, marker='^')
+        ax_yz.scatter(x_ex4, y_ex4, z_ex4, color = 'black', alpha = al_ex4, marker='^')
         ax_yz.scatter(xm, ym, zm , s=100, color = 'black', alpha = 1, marker='*', label = 'Mixture')
         ax_yz.text(xm_f, ym_f, zm_f, f'Mixture({xm_f}, {ym_f}, {zm_f})', color='black')
         ax_yz.text(x_api, y_api, z_api, 'API', color='black')
@@ -553,10 +553,10 @@ if st.button("Predict"):
         ax_zx.scatter(x34, y34, z34, color = 'red', alpha = 0.5, label = 'Class 3.4')
         ax_zx.scatter(x4, y4, z4, color = 'magenta', alpha = 0.5, label = 'Class 4')
         ax_zx.scatter(x_api, y_api, z_api, color = 'black', alpha = 1, marker='^',label = 'Selected Material')
-        ax_zx.scatter(x_ex1, y_ex1, z_ex1, color = 'black', alpha = 1, marker='^')
-        ax_zx.scatter(x_ex2, y_ex2, z_ex2, color = 'black', alpha = 1, marker='^')
-        ax_zx.scatter(x_ex3, y_ex3, z_ex3, color = 'black', alpha = 1, marker='^')
-        ax_zx.scatter(x_ex4, y_ex4, z_ex4, color = 'black', alpha = 1, marker='^')
+        ax_zx.scatter(x_ex1, y_ex1, z_ex1, color = 'black', alpha = al_ex1, marker='^')
+        ax_zx.scatter(x_ex2, y_ex2, z_ex2, color = 'black', alpha = al_ex2, marker='^')
+        ax_zx.scatter(x_ex3, y_ex3, z_ex3, color = 'black', alpha = al_ex3, marker='^')
+        ax_zx.scatter(x_ex4, y_ex4, z_ex4, color = 'black', alpha = al_ex4, marker='^')
         ax_zx.scatter(xm, ym, zm , s=100, color = 'black', alpha = 1, marker='*', label = 'Mixture')
         ax_zx.text(x_api, y_api, z_api, 'API', color='black')
         ax_zx.text(xm_f, ym_f, zm_f, f'Mixture({xm_f}, {ym_f}, {zm_f})', color='black')
@@ -640,10 +640,10 @@ if st.button("Predict"):
         plt.scatter(x34, y34, z34, color = 'red', alpha = 0.5, label = 'Class 3.4')
         plt.scatter(x4, y4, z4, color = 'magenta', alpha = 0.5, label = 'Class 4')
         plt.scatter(x_api, y_api, color = 'black', marker='^', alpha = 1)
-        plt.scatter(x_ex1, y_ex1, color = 'black',  marker='^', alpha = 1)
-        plt.scatter(x_ex2, y_ex2, color = 'black',  marker='^', alpha = 1)
-        plt.scatter(x_ex3, y_ex3, color = 'black', marker='^',  alpha = 1)
-        plt.scatter(x_ex4, y_ex4, color = 'black', marker='^',  alpha = 1)
+        plt.scatter(x_ex1, y_ex1, color = 'black',  marker='^', alpha = al_ex1)
+        plt.scatter(x_ex2, y_ex2, color = 'black',  marker='^', alpha = al_ex2)
+        plt.scatter(x_ex3, y_ex3, color = 'black', marker='^',  alpha = al_ex3)
+        plt.scatter(x_ex4, y_ex4, color = 'black', marker='^',  alpha = al_ex4)
         plt.scatter(xm, ym, s=100, color = 'black', alpha = 1, marker='*', label = 'Mixture')
         plt.text(xm_f, ym_f, f'Mixture({xm_f}, {ym_f})', color='black')
         plt.text(x_ex1, y_ex1, 'Filler 1', alpha=al_ex1,color='black')
