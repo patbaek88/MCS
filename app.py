@@ -418,7 +418,7 @@ if st.button("Predict"):
         predictions.append(y_pred)
         
         # 정확도 계산 및 저장
-        accuracy = accuracy_score(mixture_y, y_pred)
+        accuracy = accuracy_score(mixture_df, y_pred)
         accuracies.append(accuracy)
     
         # 최빈값 계산
