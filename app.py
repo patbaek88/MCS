@@ -516,7 +516,7 @@ if st.button("Predict"):
         ax_xy.scatter(x_ex2, y_ex2, z_ex2, color = 'black', alpha = 1, marker='^')
         ax_xy.scatter(x_ex3, y_ex3, z_ex3, color = 'black', alpha = 1, marker='^')
         ax_xy.scatter(x_ex4, y_ex4, z_ex4, color = 'black', alpha = 1, marker='^')
-        ax_xy.scatter(xm, ym, zm , s=100, color = 'black', alpha = 1, marker='*', label = 'Mixture')
+        ax_xy.scatter(xm, ym, zm , s=100, color = 'black', alpha = 0, marker='*', label = 'Mixture')
         ax_xy.text(xm_f, ym_f, zm_f, f'Mixture({xm_f}, {ym_f}, {zm_f})', color='black')
         ax_xy.text(x_api, y_api, z_api, 'API', color='black')
         ax_xy.text(x_ex1, y_ex1, z_ex1, 'Filler 1', alpha=al_ex1, color='black')
