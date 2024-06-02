@@ -541,9 +541,9 @@ if st.button("Predict"):
         ax_yz.text(xm_f, ym_f, zm_f, f'Mixture({xm_f}, {ym_f}, {zm_f})', color='black')
         ax_yz.text(x_api, y_api, z_api, 'API', color='black')
         ax_yz.text(x_ex1, y_ex1, z_ex1, 'Filler 1', alpha=al_ex1,color='black')
-        ax_yz.text(x_ex2, y_ex2, z_ex2, 'Filler 2', alpha=al_ex1,color='black')
-        ax_yz.text(x_ex3, y_ex3, z_ex3, 'Binder',alpha=al_ex1, color='black')
-        ax_yz.text(x_ex4, y_ex4, z_ex4, 'Disintegrant', alpha=al_ex1,color='black')
+        ax_yz.text(x_ex2, y_ex2, z_ex2, 'Filler 2', alpha=al_ex2,color='black')
+        ax_yz.text(x_ex3, y_ex3, z_ex3, 'Binder',alpha=al_ex3, color='black')
+        ax_yz.text(x_ex4, y_ex4, z_ex4, 'Disintegrant', alpha=al_ex4,color='black')
 
         ax_zx.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
         ax_zx.scatter(x2, y2, z2, color = 'g', alpha = 0.5, label = 'Class 2')
