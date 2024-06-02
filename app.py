@@ -656,7 +656,7 @@ if st.button("Predict"):
         plt.ylabel('pc2')
         
    
-    plt.legend(loc='best', bbox_to_anchor=(1.0,0.5))
+    plt.legend(loc='best', bbox_to_anchor=(1.0,0.75))
         
     plt.show()
     st.set_option('deprecation.showPyplotGlobalUse', False)
