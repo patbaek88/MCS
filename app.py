@@ -396,7 +396,7 @@ if st.button("Predict"):
         'SVC': SVC(),
         'Random Forest': RandomForestClassifier(),
         'K-Nearest Neighbors': KNeighborsClassifier(),
-        'LightGBM': lgbm.LGBMClassifier()
+        'LightGBM': LGBMClassifier(n_estimators=30)
 }
 
     results = []
