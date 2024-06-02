@@ -392,12 +392,12 @@ if st.button("Predict"):
 
     # 모델을 정의합니다.
     models = {
-        'Logistic Regression': LogisticRegression(max_iter=10000),
+        'Logistic Regression': LogisticRegression(),
         'SVC': SVC(),
         'Random Forest': RandomForestClassifier(),
         'K-Nearest Neighbors': KNeighborsClassifier(),
         'LightGBM': LGBMClassifier(n_estimators=30)
-}
+    }
 
     results = []
 
@@ -418,7 +418,7 @@ if st.button("Predict"):
         predictions.append(y_pred)
         
         # 정확도 계산 및 저장
-        accuracy = accuracy_score(mixture_df, y_pred)
+        accuracy = accuracy_score(y_test, y_pred)
         accuracies.append(accuracy)
     
         # 최빈값 계산
