@@ -18,6 +18,7 @@ import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 from sklearn.metrics import classification_report
 from mpl_toolkits.mplot3d import axes3d
+from scipy.stats import mode
 
 
 st.header('Manufacturing Classification System')  # 타이틀명 지정
