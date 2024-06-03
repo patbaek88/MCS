@@ -434,7 +434,7 @@ if st.button("Predict"):
         # 결과 저장
         results.append({
             'Model': model_name,
-            'Most Common Prediction': most_common_predictions,
+            'MCS Class': most_common_predictions,
             'Mean Accuracy': mean_accuracy
         })
 
