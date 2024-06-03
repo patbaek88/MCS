@@ -290,7 +290,7 @@ y = tt2.iloc[:, -1]
 #rs = st.number_input('Set a seed for machine learning', 1)
 
 st.write("")
-trials = st.number_input('Number of prediction attempts', 1, 100, value = 30)
+attempts = st.number_input('Number of prediction attempts', 1, 100, value = 30)
 
 
 st.subheader(" ")
@@ -407,8 +407,8 @@ if st.button("Predict"):
         predictions = []
         accuracies = []
     
-        # 시드를 1부터 trials까지 변경하면서
-        for seed in range(1, trials+1):
+        # 시드를 1부터 attempts까지 변경하면서
+        for seed in range(1, attempts+1):
             np.random.seed(seed)
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state = seed)
         
@@ -458,7 +458,7 @@ if st.button("Predict"):
     #result = result.set_index('Model')
     
     #st.write(result)
-    st.write("Prediction Results (trials=" + str(trials) +")")
+    st.write("Prediction Results (attempts=" + str(attempts) +")")
     st.write(results_df)
    
     #st.write("Predicted Manfacturing Class = " + str(pred[0]))
