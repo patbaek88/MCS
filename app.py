@@ -412,10 +412,11 @@ if st.button("Predict"):
         
         # 모델 학습 및 예측
         model.fit(X_train, y_train)
-        y_pred = model.predict(mixture_df)
+        y_pred = model.predict(X_test)
+        pred = model.predict(mixture_df)
         
         # 예측 결과 저장
-        predictions.append(y_pred)
+        predictions.append(pred)
         
         # 정확도 계산 및 저장
         accuracy = accuracy_score(y_test, y_pred)
