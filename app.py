@@ -60,7 +60,7 @@ classes = tt.iloc[:, -1].values
 # 각 material에 대해 feature값과 함량을 곱한 뒤 더하기
 features_1 = []
 for i in range(len(materials)):
-    feature_1 = np.zeros(6)
+    feature_1 = np.zeros(n_components)
     for j in range(5):
         if pd.notnull(materials[i][j]):
             material_name = materials[i][j]
