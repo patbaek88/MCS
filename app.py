@@ -406,21 +406,21 @@ if st.button("Predict"):
         predictions = []
         accuracies = []
     
-    # 시드를 1부터 10까지 변경하면서
-    for seed in range(1, 10+1):
-        np.random.seed(seed)
+        # 시드를 1부터 10까지 변경하면서
+        for seed in range(1, 10+1):
+            np.random.seed(seed)
         
-        # 모델 학습 및 예측
-        model.fit(X_train, y_train)
-        y_pred = model.predict(X_test)
-        pred = model.predict(mixture_df)
+            # 모델 학습 및 예측
+            model.fit(X_train, y_train)
+            y_pred = model.predict(X_test)
+            pred = model.predict(mixture_df)
         
-        # 예측 결과 저장
-        predictions.append(pred)
+            # 예측 결과 저장
+            predictions.append(pred)
         
-        # 정확도 계산 및 저장
-        accuracy = accuracy_score(y_test, y_pred)
-        accuracies.append(accuracy)
+            # 정확도 계산 및 저장
+            accuracy = accuracy_score(y_test, y_pred)
+            accuracies.append(accuracy)
     
         # 최빈값 계산
         predictions = np.array(predictions)
