@@ -36,8 +36,8 @@ x1 = StandardScaler().fit_transform(x1)  # x객체에 x를 표준화한 데이�
 features = df1.columns
 z1 = pd.DataFrame(x1, columns=features, index=df1.index)
 
-
-pca_1 = PCA(n_components=9) # 주성분을 몇개로 할지 결정
+n_components = 9
+pca_1 = PCA(n_components=n_components) # 주성분을 몇개로 할지 결정
 principalComponents_1 = pca_1.fit_transform(x1)
 
 col_pc_1 = []
