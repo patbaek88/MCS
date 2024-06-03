@@ -394,7 +394,7 @@ if st.button("Predict"):
     # 모델을 정의합니다.
     models = {
         'Logistic Regression': LogisticRegression(),
-        'Support Vector Machine': SVC(),
+        'SVM': SVC(),
         'Random Forest': RandomForestClassifier(),
         'K-Nearest Neighbors': KNeighborsClassifier(),
         'LightGBM': LGBMClassifier(n_estimators=30)
