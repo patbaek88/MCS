@@ -264,6 +264,17 @@ for i in range(loadings_df.shape[1]):
     sorted_pc = loadings_df.iloc[:, i].abs().sort_values(ascending=False)
     st.write(loadings_df.iloc[:, i][sorted_pc.index[:5]])
 
+
+
+# 각 주성분에 대해 로딩값이 0.5 이상인 특징들과 해당 로딩값 출력
+for i in range(loadings_df.shape[1]):
+    pc = loadings_df.iloc[:, i]
+    significant_loadings = pc[pc.abs() >= 0.5]
+    if not significant_loadings.empty:
+        st.write(f"\nSignificant features for PC{i+1}:")
+        st.write(significant_loadings)
+
+
 with st.expander('n_comp vs Explained Variance Ratio'):
       st.write(evr)
 
