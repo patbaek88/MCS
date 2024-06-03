@@ -274,8 +274,8 @@ with st.expander('n_comp vs Explained Variance Ratio'):
 
 # 결과 출력
 with st.expander('Principal Component Loadings'):
-      st.write(loadings_df)
-      st.write("Significant Loadings DataFrame")
+      #st.write(loadings_df)
+      #st.write("Significant Loadings DataFrame")
       st.write(significant_loadings_df)
 
 
