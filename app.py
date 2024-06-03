@@ -257,6 +257,13 @@ st.write(loadings_df)
 st.write("\nTop features for each Principal Component:")
 st.write(top_features)
 
+
+# 각 주성분과 상위 특징들의 로딩값 출력
+for i in range(loadings_df.shape[1]):
+    st.write(f"\nTop features and loadings for PC{i+1}:")
+    sorted_pc = loadings_df.iloc[:, i].abs().sort_values(ascending=False)
+    st.write(loadings_df.iloc[:, i][sorted_pc.index[:5]])
+
 with st.expander('n_comp vs Explained Variance Ratio'):
       st.write(evr)
 
