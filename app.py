@@ -280,7 +280,7 @@ with st.expander('Principal Component Loadings'):
       #st.write(loadings_df)
       #st.write("Significant Loadings DataFrame")
       st.write(significant_loadings_df)
-      st.write('FT4 features')
+      st.write('Features')
       st.write(df_ft4_features)
 
 
