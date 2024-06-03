@@ -440,6 +440,7 @@ if st.button("Predict"):
 
     # 결과를 데이터프레임으로 변환
     results_df = pd.DataFrame(results)
+    results_df = results_df.sort_values(by=["Accuracy"], ascending=[True)
     results_df = results_df.set_index('Model')
 
 
