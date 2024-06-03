@@ -289,7 +289,8 @@ y = tt2.iloc[:, -1]
 #st.write("")
 #rs = st.number_input('Set a seed for machine learning', 1)
 
-
+st.write("")
+trials = st.number_input('Set a number of trials for predictions', 30)
 
 
 st.subheader(" ")
@@ -406,8 +407,8 @@ if st.button("Predict"):
         predictions = []
         accuracies = []
     
-        # 시드를 1부터 30까지 변경하면서
-        for seed in range(1, 30+1):
+        # 시드를 1부터 trials까지 변경하면서
+        for seed in range(1, trials+1):
             np.random.seed(seed)
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state = seed)
         
