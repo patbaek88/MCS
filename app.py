@@ -457,7 +457,7 @@ if st.button("Predict"):
     #result = result.set_index('Model')
     
     #st.write(result)
-    st.write("Prediction Results (trials=" + trials +")")
+    st.write("Prediction Results (trials=" + str(trials) +")")
     st.write(results_df)
    
     #st.write("Predicted Manfacturing Class = " + str(pred[0]))
