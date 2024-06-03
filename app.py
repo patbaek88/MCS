@@ -237,6 +237,26 @@ for i in range(1,num_pc+1):
     
 principalDf = pd.DataFrame(data=principalComponents, columns = col_pc, index=df1.index)
 
+
+# 주성분 로딩 계산 (특징의 상관성)
+loadings = pca.components_.T * np.sqrt(pca.explained_variance_)
+
+# 로딩값을 데이터프레임으로 변환
+loadings_df = pd.DataFrame(loadings, columns=[f'PC{i+1}' for i in range(num_pc)], index=df.columns)
+
+# 각 주성분(PC)과 가장 상관성이 높은 특징을 찾기
+top_features = pd.DataFrame()
+for i in range(loadings_df.shape[1]):
+    pc = loadings_df.iloc[:, i]
+    sorted_pc = pc.abs().sort_values(ascending=False)
+    top_features[f'PC{i+1}'] = sorted_pc.index
+
+# 결과 출력
+st.write("Principal Component Loadings:")
+st.write(loadings_df)
+st.write("\nTop features for each Principal Component:")
+st.writr(top_features)
+
 with st.expander('n_comp vs Explained Variance Ratio'):
       st.write(evr)
 
