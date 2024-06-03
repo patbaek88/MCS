@@ -290,7 +290,7 @@ y = tt2.iloc[:, -1]
 #rs = st.number_input('Set a seed for machine learning', 1)
 
 st.write("")
-trials = st.number_input('Set a number of trials for predictions', 30)
+trials = st.number_input('Set a number of trials for predictions', 1, 100, value = 30)
 
 
 st.subheader(" ")
