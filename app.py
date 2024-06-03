@@ -18,7 +18,6 @@ import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 from sklearn.metrics import classification_report
 from mpl_toolkits.mplot3d import axes3d
-from scipy.stats import mode
 
 
 st.header('Manufacturing Classification System')  # 타이틀명 지정
@@ -425,7 +424,7 @@ if st.button("Predict"):
     
         # 최빈값 계산
         predictions = np.array(predictions)
-        most_common_predictions = mode(predictions, axis=0).mode[0]
+        most_common_predictions = np.apply_along_axis(lambda x: np.bincount(x).argmax(), axis=0, arr=predictions)
     
         # 정확도의 평균 계산
         mean_accuracy = np.mean(accuracies)
