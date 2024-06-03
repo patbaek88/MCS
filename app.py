@@ -312,7 +312,7 @@ if st.button("Predict"):
     
 
     # train, test 데이터셋 나누기
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state = rs)
+    #X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)  #random_state = rs
 
     #models = ['Random Forest', 'Logistic Regression', 'Support Vector Machine','k-NN', 'LightGBM' ]  #'Decision Tree', 'XGBoost'
     #select = st.selectbox('Please select a model', models)
@@ -409,6 +409,7 @@ if st.button("Predict"):
         # 시드를 1부터 30까지 변경하면서
         for seed in range(1, 30+1):
             np.random.seed(seed)
+            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state = seed)
         
             # 모델 학습 및 예측
             model.fit(X_train, y_train)
