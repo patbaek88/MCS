@@ -406,8 +406,8 @@ if st.button("Predict"):
         predictions = []
         accuracies = []
     
-        # 시드를 1부터 10까지 변경하면서
-        for seed in range(1, 10+1):
+        # 시드를 1부터 30까지 변경하면서
+        for seed in range(1, 30+1):
             np.random.seed(seed)
         
             # 모델 학습 및 예측
@@ -438,6 +438,7 @@ if st.button("Predict"):
 
     # 결과를 데이터프레임으로 변환
     results_df = pd.DataFrame(results)
+    results_df = results_df.set_index('Model')
 
 
 
@@ -454,6 +455,7 @@ if st.button("Predict"):
     #result = result.set_index('Model')
     
     #st.write(result)
+    st.write('Prediction Results (trials=30)')
     st.write(results_df)
    
     #st.write("Predicted Manfacturing Class = " + str(pred[0]))
