@@ -242,7 +242,7 @@ principalDf = pd.DataFrame(data=principalComponents, columns = col_pc, index=df1
 loadings = pca.components_.T * np.sqrt(pca.explained_variance_)
 
 # 로딩값을 데이터프레임으로 변환
-loadings_df = pd.DataFrame(loadings, columns=[f'PC{i+1}' for i in range(num_pc)], index=df.columns)
+loadings_df = pd.DataFrame(loadings, columns=[f'PC{i+1}' for i in range(num_pc)], index=df1.columns)
 
 # 각 주성분(PC)과 가장 상관성이 높은 특징을 찾기
 top_features = pd.DataFrame()
