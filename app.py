@@ -266,6 +266,9 @@ for i in range(loadings_df.shape[1]):
     else:
         significant_loadings_df = pd.concat([significant_loadings_df, pc_df], axis=1)
 
+
+ft4_features = 'FT4_features.csv'
+df_ft4_features = pd.read_csv(ft4_features)
 # 결과 출력
 
 
@@ -278,8 +281,6 @@ with st.expander('Principal Component Loadings'):
       #st.write("Significant Loadings DataFrame")
       st.write(significant_loadings_df)
       st.write('FT4 features')
-      ft4_features = 'FT4_features.csv'
-      df_ft4_features = pd.read_csv(ft4_features)
       st.write(df_ft4_features)
 
 
