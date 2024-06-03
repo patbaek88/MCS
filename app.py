@@ -255,7 +255,7 @@ for i in range(loadings_df.shape[1]):
 st.write("Principal Component Loadings:")
 st.write(loadings_df)
 st.write("\nTop features for each Principal Component:")
-st.writr(top_features)
+st.write(top_features)
 
 with st.expander('n_comp vs Explained Variance Ratio'):
       st.write(evr)
