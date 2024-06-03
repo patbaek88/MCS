@@ -251,32 +251,33 @@ for i in range(loadings_df.shape[1]):
     sorted_pc = pc.abs().sort_values(ascending=False)
     top_features[f'PC{i+1}'] = sorted_pc.index
 
-# 결과 출력
-st.write("Principal Component Loadings:")
-st.write(loadings_df)
-st.write("\nTop features for each Principal Component:")
-st.write(top_features)
-
-
-# 각 주성분과 상위 특징들의 로딩값 출력
-for i in range(loadings_df.shape[1]):
-    st.write(f"\nTop features and loadings for PC{i+1}:")
-    sorted_pc = loadings_df.iloc[:, i].abs().sort_values(ascending=False)
-    st.write(loadings_df.iloc[:, i][sorted_pc.index[:5]])
-
-
-
-# 각 주성분에 대해 로딩값이 0.5 이상인 특징들과 해당 로딩값 출력
+# 각 주성분에 대해 로딩값이 0.5 이상인 특징과 해당 로딩값을 데이터프레임으로 정리
+significant_loadings_df = pd.DataFrame()
 for i in range(loadings_df.shape[1]):
     pc = loadings_df.iloc[:, i]
     significant_loadings = pc[pc.abs() >= 0.5]
-    if not significant_loadings.empty:
-        st.write(f"\nSignificant features for PC{i+1}:")
-        st.write(significant_loadings)
+    significant_loadings = significant_loadings.sort_values(key=abs, ascending=False)
+    
+    pc_df = pd.DataFrame(significant_loadings)
+    pc_df.columns = [f'PC{i+1}']
+    
+    if significant_loadings_df.empty:
+        significant_loadings_df = pc_df
+    else:
+        significant_loadings_df = pd.concat([significant_loadings_df, pc_df], axis=1)
+
+# 결과 출력
 
 
 with st.expander('n_comp vs Explained Variance Ratio'):
       st.write(evr)
+
+# 결과 출력
+with st.expander('Principal Component Loadings'):
+      st.write(loadings_df)
+      st.write("Significant Loadings DataFrame")
+      st.write(significant_loadings_df)
+
 
 #fig = plt.figure(constrained_layout=True, figsize=(6,4))
 
