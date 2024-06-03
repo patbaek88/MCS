@@ -424,7 +424,7 @@ if st.button("Predict"):
     
         # 최빈값 계산
         predictions = np.array(predictions)
-        most_common_predictions = np.apply_along_axis(lambda x: np.bicount(x.astype(int)).argmax(), axis=0, arr=predictions.astype(int))
+        most_common_predictions = np.apply_along_axis(lambda x: np.unique(x, return_counts=True)[0][np.argmax(np.unique(x, return_counts=True)[1])], axis=0, arr=predictions)
     
         # 정확도의 평균 계산
         mean_accuracy = np.mean(accuracies)
