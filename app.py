@@ -347,22 +347,25 @@ ax1_zx.view_init(0,100)
 
 
 
+pc_meaning_df = pd.read_csv(pc_meaning)
 
 with st.expander('n_comp vs Explained Variance Ratio'):
       st.write(evr)
 
 # 결과 출력
-with st.expander('Principal Component Loadings'):
+with st.expander('Interpretation of Principal Components'):
       #st.write(loadings_df)
       #st.write("Significant Loadings DataFrame")
-      st.write(significant_loadings_df)
-      st.write('Features')
-      st.write(df_ft4_features)
-      st.write('Raw Materials PCA')
+      #st.write(significant_loadings_df)
+      #st.write('Features')
+      #st.write(df_ft4_features)
+      st.write(pc_meaning_df)
+      st.write('3D Plot of Raw Materials PCA')
       plt.legend(loc='best', bbox_to_anchor=(1.0,0.75))
       plt.show()
       st.set_option('deprecation.showPyplotGlobalUse', False)
       st.pyplot()
+      
 
 
 #fig = plt.figure(constrained_layout=True, figsize=(6,4))
