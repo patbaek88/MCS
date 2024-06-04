@@ -272,6 +272,82 @@ df_ft4_features = pd.read_csv(ft4_features)
 # 결과 출력
 
 
+fig = plt.figure(constrained_layout=True, figsize=(12,9))
+ax = fig.add_subplot(221, projection='3d')
+ax_xy = fig.add_subplot(222, projection='3d')
+ax_yz= fig.add_subplot(223, projection='3d')
+ax_zx = fig.add_subplot(224, projection='3d')
+
+function_df = pd.DataFrame(data = df["Function"])
+principalDf_2 = pd.concat([principalDf, function_df], axis = 1) 
+
+x_apis = principalDf_2[principalDf_2["Function"] == "API"]["pc1"]
+y_apis = principalDf_2[principalDf_2["Function"] == "API"]["pc2"]
+z_apis = principalDf_2[principalDf_2["Function"] == "API"]["pc3"]
+
+x_dc = principalDf_2[principalDf_2["Function"] == "Filler_DC"]["pc1"]
+y_dc = principalDf_2[principalDf_2["Function"] == "Filler_DC"]["pc2"]
+z_dc = principalDf_2[principalDf_2["Function"] == "Filler_DC"]["pc3"]
+
+x_wg = principalDf_2[principalDf_2["Function"] == "Filler_WG"]["pc1"]
+y_wg = principalDf_2[principalDf_2["Function"] == "Filler_WG"]["pc2"]
+z_wg = principalDf_2[principalDf_2["Function"] == "Filler_WG"]["pc3"]
+
+x_binder = principalDf_2[principalDf_2["Function"] == "Binder"]["pc1"]
+y_binder = principalDf_2[principalDf_2["Function"] == "Binder"]["pc2"]
+z_binder = principalDf_2[principalDf_2["Function"] == "Binder"]["pc3"]
+
+x_disint = principalDf_2[principalDf_2["Function"] == "Disintegrant"]["pc1"]
+y_disint = principalDf_2[principalDf_2["Function"] == "Disintegrant"]["pc2"]
+z_disint = principalDf_2[principalDf_2["Function"] == "Disintegrant"]["pc3"]
+
+
+ax1.scatter(x_apis, y_apis, z_apis, color = 'gray', alpha = 0.5, label = 'API')
+ax1.scatter(x_dc, y_dc, z_dc, color = 'b', alpha = 0.5, label = 'Filler_DC')
+ax1.scatter(x_wg, y_wg, z_wg, color = 'r', alpha = 0.5, label = 'Filler_WC')
+ax1.scatter(x_binder, y_binder, z_binder, color = 'gold', alpha = 0.5, label = 'Binder')
+ax1.scatter(x_disint, y_disint, z_disint, color = 'orange', alpha = 0.5, label = 'Disintegrant')
+
+ax1_xy.scatter(x_apis, y_apis, z_apis, color = 'gray', alpha = 0.5, label = 'API')
+ax1_xy.scatter(x_dc, y_dc, z_dc, color = 'b', alpha = 0.5, label = 'Filler_DC')
+ax1_xy.scatter(x_wg, y_wg, z_wg, color = 'r', alpha = 0.5, label = 'Filler_WC')
+ax1_xy.scatter(x_binder, y_binder, z_binder, color = 'gold', alpha = 0.5, label = 'Binder')
+ax1_xy.scatter(x_disint, y_disint, z_disint, color = 'orange', alpha = 0.5, label = 'Disintegrant')
+
+ax1_yz.scatter(x_apis, y_apis, z_apis, color = 'gray', alpha = 0.5, label = 'API')
+ax1_yz.scatter(x_dc, y_dc, z_dc, color = 'b', alpha = 0.5, label = 'Filler_DC')
+ax1_yz.scatter(x_wg, y_wg, z_wg, color = 'r', alpha = 0.5, label = 'Filler_WC')
+ax1_yz.scatter(x_binder, y_binder, z_binder, color = 'gold', alpha = 0.5, label = 'Binder')
+ax1_yz.scatter(x_disint, y_disint, z_disint, color = 'orange', alpha = 0.5, label = 'Disintegrant')
+
+ax1_zx.scatter(x_apis, y_apis, z_apis, color = 'gray', alpha = 0.5, label = 'API')
+ax1_zx.scatter(x_dc, y_dc, z_dc, color = 'b', alpha = 0.5, label = 'Filler_DC')
+ax1_zx.scatter(x_wg, y_wg, z_wg, color = 'r', alpha = 0.5, label = 'Filler_WC')
+ax1_zx.scatter(x_binder, y_binder, z_binder, color = 'gold', alpha = 0.5, label = 'Binder')
+ax1_zx.scatter(x_disint, y_disint, z_disint, color = 'orange', alpha = 0.5, label = 'Disintegrant')
+
+ax1.set_xlabel('pc1')
+ax1.set_ylabel('pc2')
+ax1.set_zlabel('pc3')
+        
+ax1_xy.set_xlabel('pc1')
+ax1_xy.set_ylabel('pc2')
+ax1_xy.set_zlabel('pc3')
+ax1_xy.view_init(100,0)
+
+ax1_yz.set_xlabel('pc1')
+ax1_yz.set_ylabel('pc2')
+ax1_yz.set_zlabel('pc3')
+ax1_yz.view_init(0,0)
+
+ax1_zx.set_xlabel('pc1')
+ax1_zx.set_ylabel('pc2')
+ax1_zx.set_zlabel('pc3')
+ax1_zx.view_init(0,100)
+
+
+
+
 with st.expander('n_comp vs Explained Variance Ratio'):
       st.write(evr)
 
@@ -282,6 +358,10 @@ with st.expander('Principal Component Loadings'):
       st.write(significant_loadings_df)
       st.write('Features')
       st.write(df_ft4_features)
+      plt.legend(loc='best', bbox_to_anchor=(1.0,0.75))
+      plt.show()
+      st.set_option('deprecation.showPyplotGlobalUse', False)
+      st.pyplot()
 
 
 #fig = plt.figure(constrained_layout=True, figsize=(6,4))
