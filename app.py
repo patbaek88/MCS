@@ -348,6 +348,7 @@ ax1_zx.view_init(0,100)
 
 
 pc_meaning_df = pd.read_csv("pc_meaning.csv")
+pc_meaning_df = pc_meaning_df.set_index('PC')
 
 with st.expander('n_comp vs Explained Variance Ratio'):
       st.write(evr)
