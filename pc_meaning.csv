@@ -5,21 +5,9 @@ pc1,9COH,flowability (-),0.8496
 pc1,6COH,flowability (-),0.798
 pc1,SE,flowability (-),0.7558
 pc1,WFA,flowability (-),0.7315
-pc1,6UYS,compressibility (+),0.6902
-pc1,FRI,flowability (-),0.6454
-pc1,6MPS,max compression force (+),0.6318
-pc1,9MPS,max compression force (+),0.6224
-pc1,PD,flowability (-),0.6199
-pc1,CBD,"compressibility (-), flowability(-)",-0.6814
 pc2,9AIF,flowability(-),0.8489
 pc2,6AIF,flowability(-),0.8106
 pc2,BFE,flowability(-),0.7657
 pc2,9MPS,max compression force (+),0.704
-pc2,6MPS,max compression force (+),0.6813
-pc2,6FF,flowability(+),0.5745
 pc3,NAS,flowability improvement by aeration (+),0.8025
-pc3,AR,flowability improvement by aeration (+),0.6066
-pc3,AE,flowability improvement by aeration (-),-0.5713
-pc4,PD,flowability(-),0.5569
 pc5,SI,flowabiltiy(-),0.7085
-pc6,9FF,flowability(+),0.6224
