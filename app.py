@@ -360,8 +360,8 @@ with st.expander('Principal Component Loadings'):
       st.write(df_ft4_features)
       plt.legend(loc='best', bbox_to_anchor=(1.0,0.75))
       plt.show()
-      #st.set_option('deprecation.showPyplotGlobalUse', False)
-      #st.pyplot()
+      st.set_option('deprecation.showPyplotGlobalUse', False)
+      st.pyplot()
 
 
 #fig = plt.figure(constrained_layout=True, figsize=(6,4))
