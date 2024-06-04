@@ -356,9 +356,9 @@ with st.expander('n_comp vs Explained Variance Ratio'):
 # 결과 출력
 with st.expander('Interpretation of Principal Components'):
       #st.write(loadings_df)
-      #st.write("Significant Loadings DataFrame")
-      #st.write(significant_loadings_df)
-      #st.write('Features')
+      st.write("Significant Loadings DataFrame")
+      st.write(significant_loadings_df)
+      st.write('Features')
       #st.write(df_ft4_features)
       st.write(pc_meaning_df)
       st.write('3D Plot of Raw Materials PCA')
