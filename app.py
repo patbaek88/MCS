@@ -273,10 +273,10 @@ df_ft4_features = pd.read_csv(ft4_features)
 
 
 fig = plt.figure(constrained_layout=True, figsize=(12,9))
-ax = fig.add_subplot(221, projection='3d')
-ax_xy = fig.add_subplot(222, projection='3d')
-ax_yz= fig.add_subplot(223, projection='3d')
-ax_zx = fig.add_subplot(224, projection='3d')
+ax1 = fig.add_subplot(221, projection='3d')
+ax1_xy = fig.add_subplot(222, projection='3d')
+ax1_yz= fig.add_subplot(223, projection='3d')
+ax1_zx = fig.add_subplot(224, projection='3d')
 
 function_df = pd.DataFrame(data = df["Function"])
 principalDf_2 = pd.concat([principalDf, function_df], axis = 1) 
@@ -360,8 +360,8 @@ with st.expander('Principal Component Loadings'):
       st.write(df_ft4_features)
       plt.legend(loc='best', bbox_to_anchor=(1.0,0.75))
       plt.show()
-      st.set_option('deprecation.showPyplotGlobalUse', False)
-      st.pyplot()
+      #st.set_option('deprecation.showPyplotGlobalUse', False)
+      #st.pyplot()
 
 
 #fig = plt.figure(constrained_layout=True, figsize=(6,4))
