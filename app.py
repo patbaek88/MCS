@@ -564,12 +564,12 @@ if st.button("Predict"):
             #recalls.append(recall)
             #f1score = f1_score(y_test, y_pred)
             #f1scores.append(f1score)
-            rocauc = roc_auc_score(y_test, y_pred)
-            rocaucs.append(rocauc)
+            #rocauc = roc_auc_score(y_test, y_pred)
+            #rocaucs.append(rocauc)
             #logloss = log_loss(y_test, y_pred)
             #loglosses.append(logloss)
-            #confusionmatrix = confusion_matrix(y_test, y_pred)
-            #confusionmatrixes.append(confusionmatrix)
+            confusionmatrix = confusion_matrix(y_test, y_pred)
+            confusionmatrixes.append(confusionmatrix)
     
         # 최빈값 계산
         predictions = np.array(predictions)
