@@ -87,15 +87,15 @@ y_1 = tt2_1.iloc[:, -1]
 # train, test 데이터셋 나누기
 X_train_1, X_test_1, y_train_1, y_test_1 = train_test_split(X_1, y_1, test_size=0.2)
 
-#rf_1 = RandomForestClassifier()
-#rf_1.fit(X_train_1, y_train_1)
-#rf_pred_1 = rf_1.predict(X_test_1)
-#rf_acc_1 = accuracy_score(y_test_1, rf_pred_1)
+rf_1 = RandomForestClassifier()
+rf_1.fit(X_train_1, y_train_1)
+rf_pred_1 = rf_1.predict(X_test_1)
+rf_acc_1 = accuracy_score(y_test_1, rf_pred_1)
 
-lgbm_1 = LGBMClassifier(n_estimators=30)
-lgbm_1.fit(X_train_1, y_train_1)
-lgbm_pred_1 = lgbm_1.predict(X_test_1)
-lgbm_acc_1 = accuracy_score(y_test_1, lgbm_pred_1)
+#lgbm_1 = LGBMClassifier(n_estimators=30)
+#lgbm_1.fit(X_train_1, y_train_1)
+#lgbm_pred_1 = lgbm_1.predict(X_test_1)
+#lgbm_acc_1 = accuracy_score(y_test_1, lgbm_pred_1)
 
 
 st.subheader(" ")
