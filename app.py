@@ -549,7 +549,7 @@ if st.button("Predict"):
         
             # 모델 학습 및 예측
             model.fit(X_train, y_train)
-            y_pred = model.predict(X_test) if hassattr(model, "predict_proba") else None
+            y_pred = model.predict(X_test) if hasattr(model, "predict_proba") else None
             y_pred_proba = model.predict_proba(X_test)
             pred = model.predict(mixture_df)
         
