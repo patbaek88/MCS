@@ -589,9 +589,9 @@ if st.button("Predict"):
         results.append({
             'Model': model_name,
             'MCS Class': most_common_predictions,
-            'Mean Accuracy': mean_accuracy
-            'Mean Precisiom': mean_precision
-            'Mean Recall': mean_recall
+            'Mean Accuracy': mean_accuracy,
+            'Mean Precision': mean_precision,
+            'Mean Recall': mean_recall,
             'Mean F1 Score': mean_f1score
         })
 
