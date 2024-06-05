@@ -583,7 +583,7 @@ if st.button("Predict"):
         mean_precision = np.mean(precisions)
         mean_recall = np.mean(recalls)
         mean_f1score = np.mean(f1scores)
-        mean_confusiommatrix = np.mean(comfusionmatrixes)
+        mean_confusiommatrix = np.mean(confusionmatrixes)
     
         # 결과 저장
         results.append({
