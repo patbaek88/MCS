@@ -565,7 +565,7 @@ if st.button("Predict"):
             recalls.append(recall)
             f1score = f1_score(y_test, y_pred, average='macro')
             f1scores.append(f1score)
-            rocauc = roc_auc_score(y_test, y_pred_proba, multi_class='ovr')
+            rocauc = roc_auc_score(y_test, y_pred_proba, multi_class='ovr' if len(set(y_test))>2 else 'raise')
             rocaucs.append(rocauc)
             #logloss = log_loss(y_test, y_pred)
             #loglosses.append(logloss)
