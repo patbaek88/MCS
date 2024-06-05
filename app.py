@@ -566,7 +566,7 @@ if st.button("Predict"):
             f1score = f1_score(y_test, y_pred, average='macro')
             f1scores.append(f1score)
             if y_pred_proba is not None:
-                rocauc = roc_auc_score(y_test, y_pred_proba, multi_class='ovr' if len(set(y_test))>2 else 'raise')
+                rocauc = roc_auc_score(y_test, y_pred_proba, multi_class='ovr' if len(np.unique(y_test))>2 else 'raise')
             rocaucs.append(rocauc)
             #logloss = log_loss(y_test, y_pred)
             #loglosses.append(logloss)
