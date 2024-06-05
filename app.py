@@ -617,7 +617,6 @@ if st.button("Predict"):
     #st.write(result)
     st.write("Prediction Results (attempts=" + str(attempts) +")")
     st.write(results_df)
-    st.write(confusionmatrixes)
    
     #st.write("Predicted Manfacturing Class = " + str(pred[0]))
     #st.write("Model Accuracy : " + str(model_acc))
