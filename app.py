@@ -583,18 +583,21 @@ if st.button("Predict"):
         mean_precision = np.mean(precisions)
         mean_recall = np.mean(recalls)
         mean_f1score = np.mean(f1scores)
-        mean_confusiommatrix = np.mean(confusionmatrixes)
+        #mean_confusiommatrix = np.mean(confusionmatrixes)
     
         # 결과 저장
         results.append({
             'Model': model_name,
             'MCS Class': most_common_predictions,
             'Mean Accuracy': mean_accuracy
+            'Mean Precisiom': mean_precision
+            'Mean Recall': mean_recall
+            'Mean F1 Score': mean_f1score
         })
 
     # 결과를 데이터프레임으로 변환
     results_df = pd.DataFrame(results)
-    results_df = results_df.sort_values(by=["Mean Accuracy"], ascending=[False])
+    #results_df = results_df.sort_values(by=["Mean Accuracy"], ascending=[False])
     results_df = results_df.set_index('Model')
 
 
