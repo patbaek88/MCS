@@ -565,14 +565,12 @@ if st.button("Predict"):
             recalls.append(recall)
             f1score = f1_score(y_test, y_pred, average='macro')
             f1scores.append(f1score)
-            if y_pred_proba is not None:
-                if len(np.unique(y_test)) > 2:
-                    rocauc = roc_auc_score(y_test, y_pred_proba, multi_class='ovr')
-                else:
-                    rocauc = roc_auc_score(y_test, y_pred_proba[:, 1])
-            rocaucs.append(rocauc)
-            #logloss = log_loss(y_test, y_pred)
-            #loglosses.append(logloss)
+            #if y_pred_proba is not None:
+            #    if len(np.unique(y_test)) > 2:
+            #        rocauc = roc_auc_score(y_test, y_pred_proba, multi_class='ovr')
+            #    else:
+            #        rocauc = roc_auc_score(y_test, y_pred_proba[:, 1])
+            #rocaucs.append(rocauc)
             confusionmatrix = confusion_matrix(y_test, y_pred)
             confusionmatrixes.append(confusionmatrix)
     
@@ -582,6 +580,10 @@ if st.button("Predict"):
     
         # 정확도의 평균 계산
         mean_accuracy = np.mean(accuracies)
+        mean_precision = np.mean(precisions)
+        mean_recall = np.mean(recalls)
+        mean_f1score = np.mean(f1scores)
+        mean_confusiommatrix = np.mean(comfusionmatrixes)
     
         # 결과 저장
         results.append({
