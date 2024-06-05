@@ -535,6 +535,12 @@ if st.button("Predict"):
     for model_name, model in models.items():
         predictions = []
         accuracies = []
+        precisions = []
+        recalls = []
+        f1scores = []
+        rocaucs = []
+        loglosses = []
+        confusionmatrixes = []
     
         # 시드를 1부터 attempts까지 변경하면서
         for seed in range(1, attempts+1):
@@ -552,6 +558,18 @@ if st.button("Predict"):
             # 정확도 계산 및 저장
             accuracy = accuracy_score(y_test, y_pred)
             accuracies.append(accuracy)
+            precision = precision_score(y_test, y_pred)
+            precisions.append(precision)
+            recall = recall_score(y_test, y_pred)
+            recalls.append(recall)
+            f1score = f1_score(y_test, y_pred)
+            f1scores.append(f1score)
+            rocauc = roc_auc_score(y_test, y_pred)
+            rocaucs.append(rocauc)
+            logloss = log_loss(y_test, y_pred)
+            loglosses.append(logloss)
+            confusionmatrix = confusion_matrix(y_test, y_pred)
+            confusionmatrixes.append(confusionmatrix)
     
         # 최빈값 계산
         predictions = np.array(predictions)
