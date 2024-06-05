@@ -550,6 +550,7 @@ if st.button("Predict"):
             # 모델 학습 및 예측
             model.fit(X_train, y_train)
             y_pred = model.predict(X_test)
+            y_pred_proba = model.predict_proba(X_test)
             pred = model.predict(mixture_df)
         
             # 예측 결과 저장
@@ -564,8 +565,8 @@ if st.button("Predict"):
             recalls.append(recall)
             f1score = f1_score(y_test, y_pred, average='macro')
             f1scores.append(f1score)
-            #rocauc = roc_auc_score(y_test, y_pred)
-            #rocaucs.append(rocauc)
+            rocauc = roc_auc_score(y_test, y_pred_proba, multi_class='ovr')
+            rocaucs.append(rocauc)
             #logloss = log_loss(y_test, y_pred)
             #loglosses.append(logloss)
             confusionmatrix = confusion_matrix(y_test, y_pred)
