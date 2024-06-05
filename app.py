@@ -106,7 +106,7 @@ API_list = API_df.index.to_list()
 API_name = st.selectbox('API', API_list, index = 34)
 
 API_pc = principalDf_1.loc[principalDf_1.index == API_name].iloc[:, :].values
-API_class = lgbm_1.predict(API_pc)
+API_class = rf_1.predict(API_pc)
 st.write("API only : Class "+API_class[0])
 strength = st.number_input('API content (mg)', 1, 1000, value = 100)
 tablet_wt = st.number_input('Tablet weight (mg)', strength, 1000, value = 200)
