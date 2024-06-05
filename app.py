@@ -558,8 +558,8 @@ if st.button("Predict"):
             # 정확도 계산 및 저장
             accuracy = accuracy_score(y_test, y_pred)
             accuracies.append(accuracy)
-            precision = precision_score(y_test, y_pred)
-            precisions.append(precision)
+            #precision = precision_score(y_test, y_pred)
+            #precisions.append(precision)
             recall = recall_score(y_test, y_pred)
             recalls.append(recall)
             f1score = f1_score(y_test, y_pred)
