@@ -566,7 +566,7 @@ if st.button("Predict"):
             f1score = f1_score(y_test, y_pred, average='macro')
             f1scores.append(f1score)
             if y_pred_proba is not None:
-                if len(no.unique(y_test)) > 2:
+                if len(np.unique(y_test)) > 2:
                     rocauc = roc_auc_score(y_test, y_pred_proba, multi_class='ovr')
                 else:
                     rocauc = roc_auc_score(y_test, y_pred_proba[:, 1])
