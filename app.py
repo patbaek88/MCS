@@ -327,17 +327,17 @@ ax1_zx.scatter(x_binder, y_binder, z_binder, color = 'yellow', alpha = 0.5, labe
 ax1_zx.scatter(x_disint, y_disint, z_disint, color = 'orange', alpha = 0.5, label = 'Disintegrant')
 
 ax1.set_xlabel('PC1: compress(+), cohesion(+), flow(-)')
-ax1.set_ylabel('PC2: flow(-), compr. strength(+)')
+ax1.set_ylabel('PC2: cohesion(+), flow(-), compr. strength(+)')
 ax1.set_zlabel('PC3: air sensitivity(+)')
 #ax1.view_init(20,60)
         
 ax1_xy.set_xlabel('PC1: compress(+), cohesion(+), flow(-)')
-ax1_xy.set_ylabel('PC2: flow(-), compr. strength(+)')
+ax1_xy.set_ylabel('PC2: cohesion(+), flow(-), compr. strength(+)')
 ax1_xy.set_zlabel('PC3')
 ax1_xy.view_init(90, 270)
 
 ax1_yz.set_xlabel('PC1')
-ax1_yz.set_ylabel('PC2: flow(-), compr. strength(+)')
+ax1_yz.set_ylabel('PC2: cohesion(+), flow(-), compr. strength(+)')
 ax1_yz.set_zlabel('PC3: air sensitivity(+)')
 ax1_yz.view_init(0,0)
 
@@ -363,7 +363,7 @@ with st.expander('Interpretation of Principal Components'):
       #st.write(df_ft4_features)
       st.write(pc_meaning_df)
       st.write("PC1: compress(+), cohesion(+), flow(-)")
-      st.write("PC2: flow(-), compr. strength(+)")
+      st.write("PC2: cohesion(+), flow(-), compr. strength(+)")
       st.write("PC3: air sensitivity(+)")
       st.write("")
       st.write('3D Plot of Raw Materials PCA')
@@ -791,18 +791,18 @@ if st.button("Predict"):
         ax_zx.text(x_ex4, y_ex4, z_ex4, 'Disintegrant', alpha=al_ex4,color='black')
 
 
-        ax.set_xlabel('PC1: compressibility(+), cohesion(+)')
-        ax.set_ylabel('PC2: flowability(-), compr. strength(+)')
+        ax.set_xlabel('PC1: compress(+), cohesion(+), flow(-)')
+        ax.set_ylabel('PC2: cohesion(+), flow(-), compr. strength(+)')
         ax.set_zlabel('PC3: air sensitivity(+)')
         #ax.view_init(20,60)
         
         ax_xy.set_xlabel('PC1: compress(+), cohesion(+), flow(-)')
-        ax_xy.set_ylabel('PC2: flow(-), compr. strength(+)')
+        ax_xy.set_ylabel('PC2: cohesion(+), flow(-), compr. strength(+)')
         ax_xy.set_zlabel('PC3')
         ax_xy.view_init(90,270)
 
         ax_yz.set_xlabel('PC1')
-        ax_yz.set_ylabel('PC2: flow(-), compr. strength(+)')
+        ax_yz.set_ylabel('PC2: cohesion(+), flow(-), compr. strength(+)')
         ax_yz.set_zlabel('PC3: air sensitivity(+)')
         ax_yz.view_init(0,0)
 
@@ -879,7 +879,7 @@ if st.button("Predict"):
 
 
         plt.xlabel('PC1: compress(+), cohesion(+), flow(-)')
-        plt.ylabel('PC2: flow(-), compr. strength(+)')
+        plt.ylabel('PC2: cohesion(+), flow(-), compr. strength(+)')
         
    
     plt.legend(loc='best', bbox_to_anchor=(1.0,0.75))
