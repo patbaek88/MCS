@@ -344,7 +344,7 @@ ax1_yz.view_init(0,0)
 ax1_zx.set_xlabel('PC1: compressibility(+), cohesion(+)')
 ax1_zx.set_ylabel('PC2')
 ax1_zx.set_zlabel('PC3: air sensitivity(+)')
-ax1_zx.view_init(0,-90)
+ax1_zx.view_init(0,-180)
 
 
 
@@ -799,7 +799,7 @@ if st.button("Predict"):
         ax_xy.set_xlabel('PC1: compressibility(+), cohesion(+)')
         ax_xy.set_ylabel('PC2: flowability(-), compr. strength(+)')
         ax_xy.set_zlabel('PC3')
-        ax_xy.view_init(100,0)
+        ax_xy.view_init(90,270)
 
         ax_yz.set_xlabel('PC1')
         ax_yz.set_ylabel('PC2: flowability(-), compr. strength(+)')
@@ -809,7 +809,7 @@ if st.button("Predict"):
         ax_zx.set_xlabel('PC1: compressibility(+), cohesion(+)')
         ax_zx.set_ylabel('PC2')
         ax_zx.set_zlabel('PC3: air sensitivity(+)')
-        ax_zx.view_init(0,100)
+        ax_zx.view_init(0,-90)
         
 
 
