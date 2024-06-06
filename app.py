@@ -789,24 +789,25 @@ if st.button("Predict"):
         ax_zx.text(x_ex3, y_ex3, z_ex3, 'Binder', alpha=al_ex3,color='black')
         ax_zx.text(x_ex4, y_ex4, z_ex4, 'Disintegrant', alpha=al_ex4,color='black')
 
-        ax.set_xlabel('pc1')
-        ax.set_ylabel('pc2')
-        ax.set_zlabel('pc3')
+
+        ax.set_xlabel('PC1: compressibility(+) and cohesion(+)')
+        ax.set_ylabel('PC2: flowability(-) and compressive strength(+)')
+        ax.set_zlabel('PC3: air sensitivity(+)')
         #ax.view_init(20,60)
         
-        ax_xy.set_xlabel('pc1')
-        ax_xy.set_ylabel('pc2')
-        ax_xy.set_zlabel('pc3')
+        ax_xy.set_xlabel('PC1: compressibility(+) and cohesion(+)')
+        ax_xy.set_ylabel('PC2: flowability(-) and compressive strength(+)')
+        ax_xy.set_zlabel('PC3: air sensitivity(+)')
         ax_xy.view_init(100,0)
 
-        ax_yz.set_xlabel('pc1')
-        ax_yz.set_ylabel('pc2')
-        ax_yz.set_zlabel('pc3')
+        ax_yz.set_xlabel('PC1: compressibility(+) and cohesion(+)')
+        ax_yz.set_ylabel('PC2: flowability(-) and compressive strength(+)')
+        ax_yz.set_zlabel('PC3: air sensitivity(+)')
         ax_yz.view_init(0,0)
 
-        ax_zx.set_xlabel('pc1')
-        ax_zx.set_ylabel('pc2')
-        ax_zx.set_zlabel('pc3')
+        ax_zx.set_xlabel('PC1: compressibility(+) and cohesion(+)')
+        ax_zx.set_ylabel('PC2: flowability(-) and compressive strength(+)')
+        ax_zx.set_zlabel('PC3: air sensitivity(+)')
         ax_zx.view_init(0,100)
         
 
@@ -876,8 +877,8 @@ if st.button("Predict"):
         plt.text(x_ex4, y_ex4, 'Disintegrant', alpha=al_ex4,color='black')
 
 
-        plt.xlabel('pc1')
-        plt.ylabel('pc2')
+        plt.xlabel('PC1: compressibility(+) and cohesion(+)')
+        plt.ylabel('PC2: flowability(-) and compressive strength(+)')
         
    
     plt.legend(loc='best', bbox_to_anchor=(1.0,0.75))
