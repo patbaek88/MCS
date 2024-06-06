@@ -344,7 +344,7 @@ ax1_yz.view_init(0,0)
 ax1_zx.set_xlabel('PC1: compressibility(+), cohesion(+)')
 ax1_zx.set_ylabel('PC2')
 ax1_zx.set_zlabel('PC3: air sensitivity(+)')
-ax1_zx.view_init(180,90)
+ax1_zx.view_init(0-180)
 
 
 
