@@ -363,7 +363,7 @@ with st.expander('Interpretation of Principal Components'):
       st.write(pc_meaning_df)
       st.write("PC1: compressibility(+) and cohesion(+)")
       st.write("PC2: flowability(-) and compressive strength(+)")
-      st.write("PC3: air sensitivity")
+      st.write("PC3: air sensitivity(+)")
       st.write("")
       st.write('3D Plot of Raw Materials PCA')
       plt.legend(loc='best', bbox_to_anchor=(1.0,0.75))
