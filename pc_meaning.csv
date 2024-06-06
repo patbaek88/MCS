@@ -8,6 +8,5 @@ pc1,WFA,greater friction between the powder and the container walls,0.7315
 pc2,9AIF,more friction between the particles,0.8489
 pc2,6AIF,more friction between the particles,0.8106
 pc2,BFE,more energy is needed for the powder to move,0.7657
-pc2,9MPS,the powder can endure higher compressive stress,0.704
-pc3,NAS,the powder is more sensitive to changes,0.8025
-pc5,SI,flowabiltiy(-),0.7085
+pc2,9MPS,the powder can endure higher compressive stress,0.7040
+pc3,NAS,the powder is more sensitive to changes in air velocity,0.8025
