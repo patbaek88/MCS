@@ -1,0 +1,25 @@
+﻿PC,Significant Features,Simple Meaning,Loading
+pc1,9UYS,the powder is more cohesive and less likely to break apart,0.8845
+pc1,CPS,the powder compresses more easily,0.8529
+pc1,9COH,the powder particles stick together more strongly,0.8496
+pc1,6COH,the powder particles stick together more strongly,0.798
+pc1,SE,greater friction and interlocking among particles,0.7558
+pc1,WFA,greater friction between the powder and the container walls,0.7315
+pc1,6UYS,the powder is more cohesive and less likely to break apart,0.6902
+pc1,FRI,poor flow properties and difficult to handle and process,0.6454
+pc1,6MPS,the powder can endure higher compressive stress,0.6318
+pc1,9MPS,the powder can endure higher compressive stress,0.6224
+pc1,PD,poor permeability and may face reisistance to air flow,0.6199
+pc1,CBD,less compressible and less cohesive,-0.6814
+pc2,9AIF,more friction between the particles,0.8489
+pc2,6AIF,more friction between the particles,0.8106
+pc2,BFE,more energy is needed for the powder to move,0.7657
+pc2,9MPS,the powder can endure higher compressive stress,0.704
+pc2,6MPS,the powder can endure higher compressive stress,0.6813
+pc2,6FF,more free-flowing,0.5745
+pc3,NAS,flowability is more sensitive to changes in air flow,0.8025
+pc3,AR,flowability improvement by aeration,0.6066
+pc3,AE,the powder requires more energy to fluidize under aeration,-0.5713
+pc4,PD,poor permeability and may face reisistance to air flow,0.5569
+pc5,SI,"de-aeration, segregation, agglomeration, moisture uptake",0.7085
+pc6,9FF,more free-flowing,0.6224
