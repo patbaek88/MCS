@@ -48,7 +48,7 @@ principalDf_1 = pd.DataFrame(data=principalComponents_1, columns = col_pc_1, ind
 
 
 # 데이터 불러오기
-tt = pd.read_csv('train_test_set_template_240604.csv', dtype={"Class":object})
+tt = pd.read_csv('train_test_set_template_simple.csv', dtype={"Class":object})
 
 # tt 파일에서 material 이름과 함량 추출하기
 materials = tt.iloc[:, [0, 2, 4, 6, 8]].values
