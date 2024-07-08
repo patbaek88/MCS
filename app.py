@@ -532,7 +532,7 @@ if st.button("Predict"):
         'Random Forest': RandomForestClassifier(),
         'K-Nearest Neighbors': KNeighborsClassifier(),
         'LightGBM': LGBMClassifier(n_estimators=30),
-        'SGD': SGDClassifier(class_weight = 'balanced')
+        'SGD': SGDClassifier(loss='log', class_weight = 'balanced')
     }
 
     results = []
