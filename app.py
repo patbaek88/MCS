@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from sklearn.feature_selection import SelectKBest, f_classif
 from sklearn.feature_selection import SelectKBest
-from sklearn.linear_model import LogisticRegression
+from sklearn.linear_model import LogisticRegression, SGDClassifier
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
@@ -48,7 +48,7 @@ principalDf_1 = pd.DataFrame(data=principalComponents_1, columns = col_pc_1, ind
 
 
 # 데이터 불러오기
-tt = pd.read_csv('train_test_set_template_generated.csv', dtype={"Class":object})
+tt = pd.read_csv('train_test_set_template_generated2.csv', dtype={"Class":object})
 
 # tt 파일에서 material 이름과 함량 추출하기
 materials = tt.iloc[:, [0, 2, 4, 6, 8]].values
@@ -384,7 +384,7 @@ with st.expander('Interpretation of Principal Components'):
 #st.pyplot()
 
 # 데이터 불러오기
-tt = pd.read_csv('train_test_set_template_generated.csv', dtype={"Class":object})
+tt = pd.read_csv('train_test_set_template_generated2.csv', dtype={"Class":object})
 
 # tt 파일에서 material 이름과 함량 추출하기
 materials = tt.iloc[:, [0, 2, 4, 6, 8]].values
@@ -531,7 +531,8 @@ if st.button("Predict"):
         'SVM': SVC(probability=True),
         'Random Forest': RandomForestClassifier(),
         'K-Nearest Neighbors': KNeighborsClassifier(),
-        'LightGBM': LGBMClassifier(n_estimators=30)
+        'LightGBM': LGBMClassifier(n_estimators=30),
+        'SGD': SGDClassifier()
     }
 
     results = []
