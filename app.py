@@ -556,7 +556,7 @@ if st.button("Predict"):
             # 모델 학습 및 예측
             model.fit(X_train, y_train)
             y_pred = model.predict(X_test) if hasattr(model, "predict_proba") else None
-            y_pred_proba = model.predict_proba(X_test)
+            y_pred_proba = model.predict_proba(X_test)[:, 1]
             pred = model.predict(mixture_df)
         
             # 예측 결과 저장
@@ -571,6 +571,7 @@ if st.button("Predict"):
             recalls.append(recall)
             f1score = f1_score(y_test, y_pred, average='macro')
             f1scores.append(f1score)
+            rocauc = roc_auc_score(y_test, y_pred_proba)
             #if y_pred_proba is not None:
             #    if len(np.unique(y_test)) > 2:
             #        rocauc = roc_auc_score(y_test, y_pred_proba, multi_class='ovr')
@@ -589,6 +590,7 @@ if st.button("Predict"):
         mean_precision = np.mean(precisions)
         mean_recall = np.mean(recalls)
         mean_f1score = np.mean(f1scores)
+        mean_rocauc = np.mean(rocauc)
         #mean_confusiommatrix = np.mean(confusionmatrixes)
     
         # 결과 저장
@@ -599,6 +601,7 @@ if st.button("Predict"):
             'Mean Precision': mean_precision,
             'Mean Recall': mean_recall,
             'Mean F1 Score': mean_f1score
+            'Mean ROC AUC': mean_rocauc
         })
 
     # 결과를 데이터프레임으로 변환
