@@ -533,8 +533,8 @@ if st.button("Predict"):
         'Logistic Regression': LogisticRegression(multi_class='ovr'),
         'SVM': SVC(probability=True),
         'Random Forest': RandomForestClassifier(),
-        'K-Nearest Neighbors': KNeighborsClassifier(),
-        'LightGBM': LGBMClassifier(n_estimators=30),
+        #'K-Nearest Neighbors': KNeighborsClassifier(),
+        #'LightGBM': LGBMClassifier(n_estimators=30),
         'SGD': SGDClassifier(loss='log_loss', class_weight = 'balanced')
     }
 
@@ -560,7 +560,7 @@ if st.button("Predict"):
             # 모델 학습 및 예측
             model.fit(X_train, y_train)
             y_pred = model.predict(X_test) if hasattr(model, "predict_proba") else None
-            y_pred_proba = model.predict_proba(X_test)[:, 1]
+            y_pred_proba = model.predict_proba(X_test)
             pred = model.predict(mixture_df)
         
             # 예측 결과 저장
