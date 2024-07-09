@@ -600,7 +600,7 @@ if st.button("Predict"):
             'Mean Accuracy': mean_accuracy,
             'Mean Precision': mean_precision,
             'Mean Recall': mean_recall,
-            'Mean F1 Score': mean_f1score
+            'Mean F1 Score': mean_f1score,
             'Mean ROC AUC': mean_rocauc
         })
 
