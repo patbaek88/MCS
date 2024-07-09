@@ -532,89 +532,191 @@ Ler_Y201124042,0.2214,Heweten 101_mean,0.2214,Lactose monohydrate (FLOWLAC 90),0
 Ler_A210729008,0.2214,Heweten 101_mean,0.2214,Lactose monohydrate (FLOWLAC 90),0.2933,Ac-Di-Sol SD-711_mean,0.2214,Hydroxypropylcellulose (L FINE),0.0425,3.1
 Ler_Y210402006,0.2214,Heweten 101_mean,0.2214,Lactose monohydrate (FLOWLAC 90),0.2933,Ac-Di-Sol SD-711_mean,0.2214,Hydroxypropylcellulose (L FINE),0.0425,3.1
 Ler_A210924002,0.2214,Heweten 101_mean,0.2214,Lactose monohydrate (FLOWLAC 90),0.2933,Ac-Di-Sol SD-711_mean,0.2214,Hydroxypropylcellulose (L FINE),0.0425,3.1
-Ler_Y200226018,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Vivasol_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_Y201124042,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Vivasol_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_A210729008,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Vivasol_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_Y210402006,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Vivasol_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_A210924002,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Vivasol_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_Y200226018,0.1250,Heweten 101_mean,0.2500,Lactose #200,0.3312,Vivasol_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_Y201124042,0.1250,Heweten 101_mean,0.2500,Lactose #200,0.3312,Vivasol_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_A210729008,0.1250,Heweten 101_mean,0.2500,Lactose #200,0.3312,Vivasol_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_Y210402006,0.1250,Heweten 101_mean,0.2500,Lactose #200,0.3312,Vivasol_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_A210924002,0.1250,Heweten 101_mean,0.2500,Lactose #200,0.3312,Vivasol_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_Y200226018,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Tablettose 80)_mean,0.3312,Vivasol_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_Y201124042,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Tablettose 80)_mean,0.3312,Vivasol_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_A210729008,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Tablettose 80)_mean,0.3312,Vivasol_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_Y210402006,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Tablettose 80)_mean,0.3312,Vivasol_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_A210924002,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Tablettose 80)_mean,0.3312,Vivasol_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_Y200226018,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (FLOWLAC 90),0.3312,Vivasol_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_Y201124042,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (FLOWLAC 90),0.3312,Vivasol_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_A210729008,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (FLOWLAC 90),0.3312,Vivasol_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_Y210402006,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (FLOWLAC 90),0.3312,Vivasol_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_A210924002,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (FLOWLAC 90),0.3312,Vivasol_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_Y200226018,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_Y201124042,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_A210729008,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_Y210402006,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_A210924002,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_Y200226018,0.1250,Heweten 101_mean,0.2500,Lactose #200,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_Y201124042,0.1250,Heweten 101_mean,0.2500,Lactose #200,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_A210729008,0.1250,Heweten 101_mean,0.2500,Lactose #200,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_Y210402006,0.1250,Heweten 101_mean,0.2500,Lactose #200,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_A210924002,0.1250,Heweten 101_mean,0.2500,Lactose #200,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_Y200226018,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Tablettose 80)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_Y201124042,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Tablettose 80)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_A210729008,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Tablettose 80)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_Y210402006,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Tablettose 80)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_A210924002,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Tablettose 80)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_Y200226018,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (FLOWLAC 90),0.3312,Ac-Di-Sol SD-711_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_Y201124042,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (FLOWLAC 90),0.3312,Ac-Di-Sol SD-711_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_A210729008,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (FLOWLAC 90),0.3312,Ac-Di-Sol SD-711_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_Y210402006,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (FLOWLAC 90),0.3312,Ac-Di-Sol SD-711_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_A210924002,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (FLOWLAC 90),0.3312,Ac-Di-Sol SD-711_mean,0.2500,Klucel EXP PHARMA,0.0438,3.1
-Ler_Y200226018,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Vivasol_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_Y201124042,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Vivasol_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_A210729008,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Vivasol_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_Y210402006,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Vivasol_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_A210924002,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Vivasol_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_Y200226018,0.1250,Heweten 101_mean,0.2500,Lactose #200,0.3312,Vivasol_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_Y201124042,0.1250,Heweten 101_mean,0.2500,Lactose #200,0.3312,Vivasol_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_A210729008,0.1250,Heweten 101_mean,0.2500,Lactose #200,0.3312,Vivasol_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_Y210402006,0.1250,Heweten 101_mean,0.2500,Lactose #200,0.3312,Vivasol_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_A210924002,0.1250,Heweten 101_mean,0.2500,Lactose #200,0.3312,Vivasol_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_Y200226018,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Tablettose 80)_mean,0.3312,Vivasol_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_Y201124042,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Tablettose 80)_mean,0.3312,Vivasol_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_A210729008,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Tablettose 80)_mean,0.3312,Vivasol_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_Y210402006,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Tablettose 80)_mean,0.3312,Vivasol_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_A210924002,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Tablettose 80)_mean,0.3312,Vivasol_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_Y200226018,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (FLOWLAC 90),0.3312,Vivasol_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_Y201124042,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (FLOWLAC 90),0.3312,Vivasol_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_A210729008,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (FLOWLAC 90),0.3312,Vivasol_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_Y210402006,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (FLOWLAC 90),0.3312,Vivasol_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_A210924002,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (FLOWLAC 90),0.3312,Vivasol_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_Y200226018,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_Y201124042,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_A210729008,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_Y210402006,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_A210924002,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_Y200226018,0.1250,Heweten 101_mean,0.2500,Lactose #200,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_Y201124042,0.1250,Heweten 101_mean,0.2500,Lactose #200,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_A210729008,0.1250,Heweten 101_mean,0.2500,Lactose #200,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_Y210402006,0.1250,Heweten 101_mean,0.2500,Lactose #200,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_A210924002,0.1250,Heweten 101_mean,0.2500,Lactose #200,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_Y200226018,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Tablettose 80)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_Y201124042,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Tablettose 80)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_A210729008,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Tablettose 80)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_Y210402006,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Tablettose 80)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_A210924002,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (Tablettose 80)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_Y200226018,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (FLOWLAC 90),0.3312,Ac-Di-Sol SD-711_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_Y201124042,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (FLOWLAC 90),0.3312,Ac-Di-Sol SD-711_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_A210729008,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (FLOWLAC 90),0.3312,Ac-Di-Sol SD-711_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_Y210402006,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (FLOWLAC 90),0.3312,Ac-Di-Sol SD-711_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
-Ler_A210924002,0.1250,Heweten 101_mean,0.2500,Lactose monohydrate (FLOWLAC 90),0.3312,Ac-Di-Sol SD-711_mean,0.2500,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_Y200226018,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Vivasol_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_Y201124042,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Vivasol_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_A210729008,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Vivasol_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_Y210402006,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Vivasol_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_A210924002,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Vivasol_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_Y200226018,0.125,Heweten 101_mean,0.25,Lactose #200,0.3312,Vivasol_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_Y201124042,0.125,Heweten 101_mean,0.25,Lactose #200,0.3312,Vivasol_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_A210729008,0.125,Heweten 101_mean,0.25,Lactose #200,0.3312,Vivasol_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_Y210402006,0.125,Heweten 101_mean,0.25,Lactose #200,0.3312,Vivasol_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_A210924002,0.125,Heweten 101_mean,0.25,Lactose #200,0.3312,Vivasol_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_Y200226018,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Tablettose 80)_mean,0.3312,Vivasol_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_Y201124042,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Tablettose 80)_mean,0.3312,Vivasol_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_A210729008,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Tablettose 80)_mean,0.3312,Vivasol_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_Y210402006,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Tablettose 80)_mean,0.3312,Vivasol_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_A210924002,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Tablettose 80)_mean,0.3312,Vivasol_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_Y200226018,0.125,Heweten 101_mean,0.25,Lactose monohydrate (FLOWLAC 90),0.3312,Vivasol_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_Y201124042,0.125,Heweten 101_mean,0.25,Lactose monohydrate (FLOWLAC 90),0.3312,Vivasol_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_A210729008,0.125,Heweten 101_mean,0.25,Lactose monohydrate (FLOWLAC 90),0.3312,Vivasol_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_Y210402006,0.125,Heweten 101_mean,0.25,Lactose monohydrate (FLOWLAC 90),0.3312,Vivasol_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_A210924002,0.125,Heweten 101_mean,0.25,Lactose monohydrate (FLOWLAC 90),0.3312,Vivasol_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_Y200226018,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_Y201124042,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_A210729008,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_Y210402006,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_A210924002,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_Y200226018,0.125,Heweten 101_mean,0.25,Lactose #200,0.3312,Ac-Di-Sol SD-711_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_Y201124042,0.125,Heweten 101_mean,0.25,Lactose #200,0.3312,Ac-Di-Sol SD-711_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_A210729008,0.125,Heweten 101_mean,0.25,Lactose #200,0.3312,Ac-Di-Sol SD-711_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_Y210402006,0.125,Heweten 101_mean,0.25,Lactose #200,0.3312,Ac-Di-Sol SD-711_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_A210924002,0.125,Heweten 101_mean,0.25,Lactose #200,0.3312,Ac-Di-Sol SD-711_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_Y200226018,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Tablettose 80)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_Y201124042,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Tablettose 80)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_A210729008,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Tablettose 80)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_Y210402006,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Tablettose 80)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_A210924002,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Tablettose 80)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_Y200226018,0.125,Heweten 101_mean,0.25,Lactose monohydrate (FLOWLAC 90),0.3312,Ac-Di-Sol SD-711_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_Y201124042,0.125,Heweten 101_mean,0.25,Lactose monohydrate (FLOWLAC 90),0.3312,Ac-Di-Sol SD-711_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_A210729008,0.125,Heweten 101_mean,0.25,Lactose monohydrate (FLOWLAC 90),0.3312,Ac-Di-Sol SD-711_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_Y210402006,0.125,Heweten 101_mean,0.25,Lactose monohydrate (FLOWLAC 90),0.3312,Ac-Di-Sol SD-711_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_A210924002,0.125,Heweten 101_mean,0.25,Lactose monohydrate (FLOWLAC 90),0.3312,Ac-Di-Sol SD-711_mean,0.25,Klucel EXP PHARMA,0.0438,3.1
+Ler_Y200226018,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Vivasol_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_Y201124042,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Vivasol_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_A210729008,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Vivasol_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_Y210402006,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Vivasol_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_A210924002,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Vivasol_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_Y200226018,0.125,Heweten 101_mean,0.25,Lactose #200,0.3312,Vivasol_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_Y201124042,0.125,Heweten 101_mean,0.25,Lactose #200,0.3312,Vivasol_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_A210729008,0.125,Heweten 101_mean,0.25,Lactose #200,0.3312,Vivasol_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_Y210402006,0.125,Heweten 101_mean,0.25,Lactose #200,0.3312,Vivasol_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_A210924002,0.125,Heweten 101_mean,0.25,Lactose #200,0.3312,Vivasol_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_Y200226018,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Tablettose 80)_mean,0.3312,Vivasol_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_Y201124042,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Tablettose 80)_mean,0.3312,Vivasol_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_A210729008,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Tablettose 80)_mean,0.3312,Vivasol_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_Y210402006,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Tablettose 80)_mean,0.3312,Vivasol_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_A210924002,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Tablettose 80)_mean,0.3312,Vivasol_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_Y200226018,0.125,Heweten 101_mean,0.25,Lactose monohydrate (FLOWLAC 90),0.3312,Vivasol_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_Y201124042,0.125,Heweten 101_mean,0.25,Lactose monohydrate (FLOWLAC 90),0.3312,Vivasol_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_A210729008,0.125,Heweten 101_mean,0.25,Lactose monohydrate (FLOWLAC 90),0.3312,Vivasol_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_Y210402006,0.125,Heweten 101_mean,0.25,Lactose monohydrate (FLOWLAC 90),0.3312,Vivasol_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_A210924002,0.125,Heweten 101_mean,0.25,Lactose monohydrate (FLOWLAC 90),0.3312,Vivasol_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_Y200226018,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_Y201124042,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_A210729008,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_Y210402006,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_A210924002,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Supertab 30GR)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_Y200226018,0.125,Heweten 101_mean,0.25,Lactose #200,0.3312,Ac-Di-Sol SD-711_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_Y201124042,0.125,Heweten 101_mean,0.25,Lactose #200,0.3312,Ac-Di-Sol SD-711_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_A210729008,0.125,Heweten 101_mean,0.25,Lactose #200,0.3312,Ac-Di-Sol SD-711_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_Y210402006,0.125,Heweten 101_mean,0.25,Lactose #200,0.3312,Ac-Di-Sol SD-711_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_A210924002,0.125,Heweten 101_mean,0.25,Lactose #200,0.3312,Ac-Di-Sol SD-711_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_Y200226018,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Tablettose 80)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_Y201124042,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Tablettose 80)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_A210729008,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Tablettose 80)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_Y210402006,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Tablettose 80)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_A210924002,0.125,Heweten 101_mean,0.25,Lactose monohydrate (Tablettose 80)_mean,0.3312,Ac-Di-Sol SD-711_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_Y200226018,0.125,Heweten 101_mean,0.25,Lactose monohydrate (FLOWLAC 90),0.3312,Ac-Di-Sol SD-711_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_Y201124042,0.125,Heweten 101_mean,0.25,Lactose monohydrate (FLOWLAC 90),0.3312,Ac-Di-Sol SD-711_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_A210729008,0.125,Heweten 101_mean,0.25,Lactose monohydrate (FLOWLAC 90),0.3312,Ac-Di-Sol SD-711_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_Y210402006,0.125,Heweten 101_mean,0.25,Lactose monohydrate (FLOWLAC 90),0.3312,Ac-Di-Sol SD-711_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
+Ler_A210924002,0.125,Heweten 101_mean,0.25,Lactose monohydrate (FLOWLAC 90),0.3312,Ac-Di-Sol SD-711_mean,0.25,Hydroxypropylcellulose (L FINE),0.0438,3.1
 Val_B201013042,0.5458,Hydroxypropylcellulose (L FINE),0.1706,Kollidon CL (Crospovidone)_mean,0.1023,Heweten 101_mean,0.1535,Hydroxypropylcellulose (L FINE),0.0278,3.1
 Val_B201217126,0.5458,Hydroxypropylcellulose (L FINE),0.1706,Kollidon CL (Crospovidone)_mean,0.1023,Heweten 101_mean,0.1535,Hydroxypropylcellulose (L FINE),0.0278,3.1
 Val_B201013041,0.5458,Hydroxypropylcellulose (L FINE),0.1706,Kollidon CL (Crospovidone)_mean,0.1023,Heweten 101_mean,0.1535,Hydroxypropylcellulose (L FINE),0.0278,3.1
 Val_B201013042,0.5458,Hydroxypropylcellulose (L FINE),0.1706,Kollidon CL (Crospovidone)_mean,0.1023,Heweten 101_mean,0.1535,Klucel EXP PHARMA,0.0278,3.1
 Val_B201217126,0.5458,Hydroxypropylcellulose (L FINE),0.1706,Kollidon CL (Crospovidone)_mean,0.1023,Heweten 101_mean,0.1535,Klucel EXP PHARMA,0.0278,3.1
 Val_B201013041,0.5458,Hydroxypropylcellulose (L FINE),0.1706,Kollidon CL (Crospovidone)_mean,0.1023,Heweten 101_mean,0.1535,Klucel EXP PHARMA,0.0278,3.1
+Met_Y201127004,0.7519,Avicel PH-102,0.1128,Methocel K100M (Methocel K100M PREMIUM HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201127011,0.7519,Avicel PH-102,0.1128,Methocel K100M (Methocel K100M PREMIUM HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201127010,0.7519,Avicel PH-102,0.1128,Methocel K100M (Methocel K100M PREMIUM HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201127008,0.7519,Avicel PH-102,0.1128,Methocel K100M (Methocel K100M PREMIUM HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201109027,0.7519,Avicel PH-102,0.1128,Methocel K100M (Methocel K100M PREMIUM HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201109028,0.7519,Avicel PH-102,0.1128,Methocel K100M (Methocel K100M PREMIUM HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201109026,0.7519,Avicel PH-102,0.1128,Methocel K100M (Methocel K100M PREMIUM HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_A211109009,0.7519,Avicel PH-102,0.1128,Methocel K100M (Methocel K100M PREMIUM HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_A211204008,0.7519,Avicel PH-102,0.1128,Methocel K100M (Methocel K100M PREMIUM HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201127004,0.7519,Avicel PH-102,0.1128,Methocel K100M (Methocel K100M PREMIUM HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201127011,0.7519,Avicel PH-102,0.1128,Methocel K100M (Methocel K100M PREMIUM HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201127010,0.7519,Avicel PH-102,0.1128,Methocel K100M (Methocel K100M PREMIUM HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201127008,0.7519,Avicel PH-102,0.1128,Methocel K100M (Methocel K100M PREMIUM HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201109027,0.7519,Avicel PH-102,0.1128,Methocel K100M (Methocel K100M PREMIUM HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201109028,0.7519,Avicel PH-102,0.1128,Methocel K100M (Methocel K100M PREMIUM HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201109026,0.7519,Avicel PH-102,0.1128,Methocel K100M (Methocel K100M PREMIUM HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_A211109009,0.7519,Avicel PH-102,0.1128,Methocel K100M (Methocel K100M PREMIUM HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_A211204008,0.7519,Avicel PH-102,0.1128,Methocel K100M (Methocel K100M PREMIUM HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201127004,0.7519,Avicel PH-102,0.1128,Methocel K15M (Methocel E15 PREMIUM CR HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201127011,0.7519,Avicel PH-102,0.1128,Methocel K15M (Methocel E15 PREMIUM CR HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201127010,0.7519,Avicel PH-102,0.1128,Methocel K15M (Methocel E15 PREMIUM CR HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201127008,0.7519,Avicel PH-102,0.1128,Methocel K15M (Methocel E15 PREMIUM CR HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201109027,0.7519,Avicel PH-102,0.1128,Methocel K15M (Methocel E15 PREMIUM CR HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201109028,0.7519,Avicel PH-102,0.1128,Methocel K15M (Methocel E15 PREMIUM CR HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201109026,0.7519,Avicel PH-102,0.1128,Methocel K15M (Methocel E15 PREMIUM CR HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_A211109009,0.7519,Avicel PH-102,0.1128,Methocel K15M (Methocel E15 PREMIUM CR HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_A211204008,0.7519,Avicel PH-102,0.1128,Methocel K15M (Methocel E15 PREMIUM CR HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201127004,0.7519,Avicel PH-102,0.1128,Methocel K15M (Methocel E15 PREMIUM CR HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201127011,0.7519,Avicel PH-102,0.1128,Methocel K15M (Methocel E15 PREMIUM CR HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201127010,0.7519,Avicel PH-102,0.1128,Methocel K15M (Methocel E15 PREMIUM CR HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201127008,0.7519,Avicel PH-102,0.1128,Methocel K15M (Methocel E15 PREMIUM CR HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201109027,0.7519,Avicel PH-102,0.1128,Methocel K15M (Methocel E15 PREMIUM CR HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201109028,0.7519,Avicel PH-102,0.1128,Methocel K15M (Methocel E15 PREMIUM CR HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201109026,0.7519,Avicel PH-102,0.1128,Methocel K15M (Methocel E15 PREMIUM CR HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_A211109009,0.7519,Avicel PH-102,0.1128,Methocel K15M (Methocel E15 PREMIUM CR HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_A211204008,0.7519,Avicel PH-102,0.1128,Methocel K15M (Methocel E15 PREMIUM CR HPMC),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201127004,0.7519,Avicel PH-102,0.1128,HPMC K4M (Hypromellose 2208),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201127011,0.7519,Avicel PH-102,0.1128,HPMC K4M (Hypromellose 2208),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201127010,0.7519,Avicel PH-102,0.1128,HPMC K4M (Hypromellose 2208),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201127008,0.7519,Avicel PH-102,0.1128,HPMC K4M (Hypromellose 2208),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201109027,0.7519,Avicel PH-102,0.1128,HPMC K4M (Hypromellose 2208),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201109028,0.7519,Avicel PH-102,0.1128,HPMC K4M (Hypromellose 2208),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201109026,0.7519,Avicel PH-102,0.1128,HPMC K4M (Hypromellose 2208),0.1128,EXPLOSOL,0.0226,,,2
+Met_A211109009,0.7519,Avicel PH-102,0.1128,HPMC K4M (Hypromellose 2208),0.1128,EXPLOSOL,0.0226,,,2
+Met_A211204008,0.7519,Avicel PH-102,0.1128,HPMC K4M (Hypromellose 2208),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201127004,0.7519,Avicel PH-102,0.1128,HPMC K4M (Hypromellose 2208),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201127011,0.7519,Avicel PH-102,0.1128,HPMC K4M (Hypromellose 2208),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201127010,0.7519,Avicel PH-102,0.1128,HPMC K4M (Hypromellose 2208),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201127008,0.7519,Avicel PH-102,0.1128,HPMC K4M (Hypromellose 2208),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201109027,0.7519,Avicel PH-102,0.1128,HPMC K4M (Hypromellose 2208),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201109028,0.7519,Avicel PH-102,0.1128,HPMC K4M (Hypromellose 2208),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201109026,0.7519,Avicel PH-102,0.1128,HPMC K4M (Hypromellose 2208),0.1128,EXPLOSOL,0.0226,,,2
+Met_A211109009,0.7519,Avicel PH-102,0.1128,HPMC K4M (Hypromellose 2208),0.1128,EXPLOSOL,0.0226,,,2
+Met_A211204008,0.7519,Avicel PH-102,0.1128,HPMC K4M (Hypromellose 2208),0.1128,EXPLOSOL,0.0226,,,2
+Met_Y201127004,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Vivasol_mean,0.0207,,,2
+Met_Y201127011,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Vivasol_mean,0.0207,,,2
+Met_Y201127010,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Vivasol_mean,0.0207,,,2
+Met_Y201127008,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Vivasol_mean,0.0207,,,2
+Met_Y201109027,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Vivasol_mean,0.0207,,,2
+Met_Y201109028,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Vivasol_mean,0.0207,,,2
+Met_Y201109026,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Vivasol_mean,0.0207,,,2
+Met_A211109009,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Vivasol_mean,0.0207,,,2
+Met_A211204008,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Vivasol_mean,0.0207,,,2
+Met_Y201127004,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Vivasol_mean,0.0207,,,2
+Met_Y201127011,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Vivasol_mean,0.0207,,,2
+Met_Y201127010,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Vivasol_mean,0.0207,,,2
+Met_Y201127008,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Vivasol_mean,0.0207,,,2
+Met_Y201109027,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Vivasol_mean,0.0207,,,2
+Met_Y201109028,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Vivasol_mean,0.0207,,,2
+Met_Y201109026,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Vivasol_mean,0.0207,,,2
+Met_A211109009,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Vivasol_mean,0.0207,,,2
+Met_A211204008,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Vivasol_mean,0.0207,,,2
+Met_Y201127004,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Ac-Di-Sol SD-711_mean,0.0207,,,2
+Met_Y201127011,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Ac-Di-Sol SD-711_mean,0.0207,,,2
+Met_Y201127010,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Ac-Di-Sol SD-711_mean,0.0207,,,2
+Met_Y201127008,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Ac-Di-Sol SD-711_mean,0.0207,,,2
+Met_Y201109027,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Ac-Di-Sol SD-711_mean,0.0207,,,2
+Met_Y201109028,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Ac-Di-Sol SD-711_mean,0.0207,,,2
+Met_Y201109026,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Ac-Di-Sol SD-711_mean,0.0207,,,2
+Met_A211109009,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Ac-Di-Sol SD-711_mean,0.0207,,,2
+Met_A211204008,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Ac-Di-Sol SD-711_mean,0.0207,,,2
+Met_Y201127004,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Ac-Di-Sol SD-711_mean,0.0207,,,2
+Met_Y201127011,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Ac-Di-Sol SD-711_mean,0.0207,,,2
+Met_Y201127010,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Ac-Di-Sol SD-711_mean,0.0207,,,2
+Met_Y201127008,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Ac-Di-Sol SD-711_mean,0.0207,,,2
+Met_Y201109027,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Ac-Di-Sol SD-711_mean,0.0207,,,2
+Met_Y201109028,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Ac-Di-Sol SD-711_mean,0.0207,,,2
+Met_Y201109026,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Ac-Di-Sol SD-711_mean,0.0207,,,2
+Met_A211109009,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Ac-Di-Sol SD-711_mean,0.0207,,,2
+Met_A211204008,0.6897,Avicel PH-102,0.2759,Kollidon 30 (Povidone),0.0138,Ac-Di-Sol SD-711_mean,0.0207,,,2
+Gemif_B200519031,0.6250,Avicel PH-102,0.2344,Lactose monohydrate (FLOWLAC 90),0.1172,Vivasol_mean,0.0234,,,2
+Gemif_B210520041,0.6250,Avicel PH-102,0.2344,Lactose monohydrate (FLOWLAC 90),0.1172,Vivasol_mean,0.0234,,,2
+Gemif_B200519031,0.6250,Avicel PH-102,0.2344,Lactose monohydrate (Tablettose 80)_mean,0.1172,Vivasol_mean,0.0234,,,2
+Gemif_B210520041,0.6250,Avicel PH-102,0.2344,Lactose monohydrate (Tablettose 80)_mean,0.1172,Vivasol_mean,0.0234,,,2
+Gemif_B200519031,0.6250,Avicel PH-102,0.2344,Lactose monohydrate (InhaLac 120),0.1172,Vivasol_mean,0.0234,,,2
+Gemif_B210520041,0.6250,Avicel PH-102,0.2344,Lactose monohydrate (InhaLac 120),0.1172,Vivasol_mean,0.0234,,,2
+Gemif_B200519031,0.6250,Avicel PH-102,0.2344,Lactose monohydrate (FLOWLAC 90),0.1172,Ac-Di-Sol SD-711_mean,0.0234,,,2
+Gemif_B210520041,0.6250,Avicel PH-102,0.2344,Lactose monohydrate (FLOWLAC 90),0.1172,Ac-Di-Sol SD-711_mean,0.0234,,,2
+Gemif_B200519031,0.6250,Avicel PH-102,0.2344,Lactose monohydrate (Tablettose 80)_mean,0.1172,Ac-Di-Sol SD-711_mean,0.0234,,,2
+Gemif_B210520041,0.6250,Avicel PH-102,0.2344,Lactose monohydrate (Tablettose 80)_mean,0.1172,Ac-Di-Sol SD-711_mean,0.0234,,,2
+Gemif_B200519031,0.6250,Avicel PH-102,0.2344,Lactose monohydrate (InhaLac 120),0.1172,Ac-Di-Sol SD-711_mean,0.0234,,,2
+Gemif_B210520041,0.6250,Avicel PH-102,0.2344,Lactose monohydrate (InhaLac 120),0.1172,Ac-Di-Sol SD-711_mean,0.0234,,,2
