@@ -715,14 +715,15 @@ if st.button("Predict"):
         if Excipient4_content == 0:
             al_ex4 = 0.1
 
-        
-        ax.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1')
-        ax.scatter(x2, y2, z2, color = 'g', alpha = 0.5, label = 'Class 2')
-        ax.scatter(x31, y31, z31, color = 'gold', alpha = 0.5, label = 'Class 3.1')
-        ax.scatter(x32, y32, z32, color = 'orange', alpha = 0.5, label = 'Class 3.2')
-        ax.scatter(x33, y33, z33, color = 'firebrick', alpha = 0.5, label = 'Class 3.3')
-        ax.scatter(x34, y34, z34, color = 'red', alpha = 0.5, label = 'Class 3.4')
-        ax.scatter(x4, y4, z4, color = 'magenta', alpha = 0.5, label = 'Class 4')
+
+        size = 10
+        ax.scatter(x1, y1, z1, color = 'b', alpha = 0.5, label = 'Class 1', s= size)
+        ax.scatter(x2, y2, z2, color = 'g', alpha = 0.5, label = 'Class 2', s= size)
+        ax.scatter(x31, y31, z31, color = 'gold', alpha = 0.5, label = 'Class 3.1', s= size)
+        ax.scatter(x32, y32, z32, color = 'orange', alpha = 0.5, label = 'Class 3.2', s= size)
+        ax.scatter(x33, y33, z33, color = 'firebrick', alpha = 0.5, label = 'Class 3.3', s= size)
+        ax.scatter(x34, y34, z34, color = 'red', alpha = 0.5, label = 'Class 3.4', s= size)
+        ax.scatter(x4, y4, z4, color = 'magenta', alpha = 0.5, label = 'Class 4', s= size)
         ax.scatter(x_api, y_api, z_api, color = 'black', alpha = 1 ,  marker='^' )
         ax.scatter(x_ex1, y_ex1, z_ex1,color = 'black', alpha = al_ex1, marker='^')
         ax.scatter(x_ex2, y_ex2, z_ex2, color = 'black', alpha = al_ex2,marker='^' )
