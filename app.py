@@ -533,8 +533,8 @@ if st.button("Predict"):
         'Logistic Regression': LogisticRegression(multi_class='ovr'),
         'SVM': SVC(probability=True),
         'Random Forest': RandomForestClassifier(),
-        #'K-Nearest Neighbors': KNeighborsClassifier(),
-        #'LightGBM': LGBMClassifier(n_estimators=30),
+        'K-Nearest Neighbors': KNeighborsClassifier(),
+        'LightGBM': LGBMClassifier(n_estimators=30),
         'SGD': SGDClassifier(loss='log_loss', class_weight = 'balanced')
     }
 
