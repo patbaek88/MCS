@@ -421,7 +421,7 @@ X = tt2.iloc[:, :-1]
 y = tt2.iloc[:, -1]
 
 #다중 클래스 레이블을 바이너리 형식으로 변환 (ROC AUC 계산을 위해)
-y_bin = label_binarize(y, classes = np.unique(y))
+y_test_bin = label_binarize(y, classes = np.unique(y))
 
 #st.write("")
 #rs = st.number_input('Set a seed for machine learning', 1)
