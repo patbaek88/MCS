@@ -167,6 +167,14 @@ if password_input == password:
     #st.subheader(" ")
     ## Buttons
     if st.button("Optimize"):
+        filler_list = [f'Filler_list{i}' for i in range(1, 37)]
+        filler_combinations = []
+        remaining_amount = 100 - API_content_f - Disintegrant_content_f
+        for combination in itertools.product(filler_list, repeat=2):
+        for Filler1_content in range(0, remaining_amount + 1):
+            Filler2_content = remaining_amount - Filler1_content
+            filler_combinations.append((combination, Filler1_content, combination, Filler2_content))
+        
         mixture_data = principalDf.loc[API_name]*API_content_f/100 + principalDf.loc[Filler1_name]*Filler1_content_f/100 + principalDf.loc[Filler2_name]*Filler2_content_f/100 + principalDf.loc[Disintegrant_name]*Disintegrant_content_f/100
         mixture_df = mixture_data.to_frame()
         mixture_df = mixture_df.transpose()	#행 열 전환
