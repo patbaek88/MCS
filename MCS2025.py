@@ -161,39 +161,15 @@ if password_input == password:
     top_combinations = data.iloc[top_5_percent_index]
 
 
-
-    mixture_data = principalDf.loc[API_name]*API_content_f/100 + principalDf.loc[Excipient1_name]*Excipient1_content_f/100 + principalDf.loc[Excipient2_name]*Excipient2_content_f/100 + principalDf.loc[Excipient3_name]*Excipient3_content_f/100 + principalDf.loc[Excipient4_name]*Excipient4_content_f/100
-    mixture_df = mixture_data.to_frame()
-    mixture_df = mixture_df.transpose()	#행 열 전환
-
-
-    material_names = [API_name, Filler1_name, Filler2_name, Disintegrant_name]
-    material_content_p = [API_content, Excipient2_content, Excipient1_content, Excipient3_content, Excipient4_content]
-    material_content_mg = [strength, round(tablet_wt*Excipient2_content_f/100, 1), round(tablet_wt*Excipient1_content_f/100, 1), round(tablet_wt*Excipient3_content_f/100, 1), round(tablet_wt*Excipient4_content_f/100, 1) ]
-    material_function = ["Drug Substance", "Filler", " ", "Binder", "Disintegrant"]
-    formulation_df = pd.DataFrame({'Component': material_names, 'Function': material_function, 'Amount (mg/tablet)': material_content_mg, 'Amount (%/tablet)': material_content_p})
-    formulation_df_cleaned = formulation_df[~(formulation_df ==0).any(axis=1)]
-    st.write("")
-    st.write("**[Components and Composition]**")
-    st.dataframe(formulation_df_cleaned.set_index('Component'))
-    st.write('Total tablet weight : '+str(tablet_wt)+' mg')
-    st.subheader(" ")
-    
+   
         
   
     #st.subheader(" ")
     ## Buttons
     if st.button("Optimize"):
-        API_content_f = float(API_content)
-        Excipient1_content_f = float(Excipient1_content)
-        Excipient2_content_f = float(Excipient2_content)
-        Excipient3_content_f = float(Excipient3_content)
-        Excipient4_content_f = float(Excipient4_content)
-        mixture_data = principalDf.loc[API_name]*API_content_f/100 + principalDf.loc[Excipient1_name]*Excipient1_content_f/100 + principalDf.loc[Excipient2_name]*Excipient2_content_f/100 + principalDf.loc[Excipient3_name]*Excipient3_content_f/100 + principalDf.loc[Excipient4_name]*Excipient4_content_f/100
+        mixture_data = principalDf.loc[API_name]*API_content_f/100 + principalDf.loc[Filler1_name]*Filler1_content_f/100 + principalDf.loc[Filler2_name]*Filler2_content_f/100 + principalDf.loc[Disintegrant_name]*Disintegrant_content_f/100
         mixture_df = mixture_data.to_frame()
-        mixture_df = mixture_df.transpose()	#행 열 전환    
-            
-
+        mixture_df = mixture_df.transpose()	#행 열 전환
 
 
   
