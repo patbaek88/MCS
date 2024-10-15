@@ -120,12 +120,10 @@ if password_input == password:
     
     Filler_df =  df[df['Function'].isin(['Filler_DC', 'Filler_WG', 'Filler'])] #df에서 Filler만 필터
     Filler_list = Filler_df.index.to_list()
-    #Binder_df =  df[(df['Function']=='Binder')] #df에서 Binder만 필터
-    #Binder_list = Binder_df.index.to_list()
+  
     Disintegrant_df =  df[(df['Function']=='Disintegrant')] #df에서 Disintegrant만 필터
     Disintegrant_list = Disintegrant_df.index.to_list()
-    All_exp_df = df[df['Function'] != 'API']
-    All_exp_list = All_exp_df.index.to_list()
+    
     
     Disintegrant_name = st.selectbox(
         '**Disintegrant**',
@@ -139,26 +137,9 @@ if password_input == password:
     API_content_f = float(API_content)
 
 
-    # Filler 조합과 함량을 생성하는 함수
-    filler_combinations = []
-    for combination in itertools.combinations_with_replacement(Filler_list, 2):
-        for Filler1_content in range(0, 101 - API_content - Disintegrant_content_f):
-            Filler2_content = 100 - API_content - Disintegrant_content_f - f1_amount
-            if Filler2_content >= 0:
-                filler_combinations.append((combination, Filler1_content, combination, Filler2_content))
+    
+    
 
-
-    data = pd.DataFrame(combinations, columns=['Filler1', 'Filler1_Amount', 'Filler2', 'Filler2_Amount'])
-    
-    # 범주형 데이터를 수치형으로 변환
-    data = pd.get_dummies(data, columns=['Filler1', 'Filler2'])
-    
-    # RandomForest 모델을 사용하여 확률 예측
-    probabilities = gbt_1.predict_proba(data)[:, 1]
-    
-    # 상위 5% 조합 선택
-    top_5_percent_index = np.argsort(probabilities)[-int(0.05 * len(probabilities)):]
-    top_combinations = data.iloc[top_5_percent_index]
 
 
    
@@ -167,22 +148,37 @@ if password_input == password:
     #st.subheader(" ")
     ## Buttons
     if st.button("Optimize"):
+        
         filler_list = [f'Filler_list{i}' for i in range(1, 37)]
         filler_combinations = []
         remaining_amount = 100 - API_content_f - Disintegrant_content_f
-        for combination in itertools.product(filler_list, repeat=2):
-        for Filler1_content in range(0, remaining_amount + 1):
-            Filler2_content = remaining_amount - Filler1_content
-            filler_combinations.append((combination, Filler1_content, combination, Filler2_content))
-        
-        mixture_data = principalDf.loc[API_name]*API_content_f/100 + principalDf.loc[Filler1_name]*Filler1_content_f/100 + principalDf.loc[Filler2_name]*Filler2_content_f/100 + principalDf.loc[Disintegrant_name]*Disintegrant_content_f/100
-        mixture_df = mixture_data.to_frame()
-        mixture_df = mixture_df.transpose()	#행 열 전환
+
+        for i in range(0, 36):
+            Filler1_name = Filler_list{i}
+            Filler1_content = remaining_amount
+               
+            mixture_data = principalDf.loc[API_name]*API_content_f/100 + principalDf.loc[Filler1_name]*Filler1_content_f/100 + principalDf.loc[Disintegrant_name]*Disintegrant_content_f/100
+            mixture_df = mixture_data.to_frame()
+            mixture_df = mixture_df.transpose()	#행 열 전환
+
+            mixture_class = gbt_1.predict(mixture_df)
+            if mixture_Class == 1
+                pred_prob_1 = gbt_1.predict_proba(mixture_df)
+                pred_prob_max_1  = float(pred_prob_1.max(axis=1))
+            
+
+
+    
 
 
   
                         
-
+    # RandomForest 모델을 사용하여 확률 예측
+    probabilities = gbt_1.predict_proba(data)[:, 1]
+    
+    # 상위 5% 조합 선택
+    top_5_percent_index = np.argsort(probabilities)[-int(0.05 * len(probabilities)):]
+    top_combinations = data.iloc[top_5_percent_index]
         
                   
 
