@@ -326,95 +326,16 @@ if password_input == password:
         Excipient4_content_f = float(Excipient4_content)
         mixture_data = principalDf.loc[API_name]*API_content_f/100 + principalDf.loc[Excipient1_name]*Excipient1_content_f/100 + principalDf.loc[Excipient2_name]*Excipient2_content_f/100 + principalDf.loc[Excipient3_name]*Excipient3_content_f/100 + principalDf.loc[Excipient4_name]*Excipient4_content_f/100
         mixture_df = mixture_data.to_frame()
-        mixture_df = mixture_df.transpose()	#행 열 전환
-        
+        mixture_df = mixture_df.transpose()	#행 열 전환    
             
-        # 모델을 정의
-        models = {
-            #'Logistic Regression': LogisticRegression(multi_class='ovr'),
-            'SVM': SVC(probability=True),
-            'Random Forest': RandomForestClassifier(),
-            'Extra Trees': ExtraTreesClassifier(),
-            'Gradient Boosted Trees': GradientBoostingClassifier(),
-            #'XGBoost': xgb.XGBClassifier(),
-            'LightGBM': LGBMClassifier(n_estimators=30)         
-        }
-    
-        results = []
 
-        feature_importances = {
-            #'Logistic Regression': np.zeros(num_pc),
-            'SVM': np.zeros(num_pc),
-            'Random Forest': np.zeros(num_pc),
-            'Extra Trees': np.zeros(num_pc),
-            'Gradient Boosted Trees': np.zeros(num_pc),
-            #'XGBoost': np.zeros(num_pc),
-            'LightGBM': np.zeros(num_pc)
-                                   
-        }
-    
-        # 각 모델에 대해
-        for model_name, model in models.items():
-            predictions = []
-            pred_proba = []
-            accuracies = []
-            precisions = []
-            recalls = []
-            f1scores = []
-            rocaucs = []            
+
+
+  
                         
-        
-            # 시드를 attempts 만큼 생성
-            random_states = np.random.randint(0, 10000, attempts)
-            
-            for state in random_states:
-                if model_name == 'XGBoost':
-                    y = y.astype(str)
-                    label_encoder = LabelEncoder()
-                    y_encoded = label_encoder.fit_transform(y)
 
-                    X_train, X_test, y_train, y_test = train_test_split(X, y_encoded, test_size=0.2, random_state = state)
-                    y_test_bin = label_binarize(y_test, classes=np.unique(y_encoded))
-                
-                    # 모델 학습 및 예측
-                    model.fit(X_train, y_train)
-                    y_pred = model.predict(X_test)
-                    y_pred_proba = model.predict_proba(X_test)
-                    pred = model.predict(mixture_df)
-                    pred = label_encoder.inverse_transform(pred)
-                    
-                    pred_prob = model.predict_proba(mixture_df)
-                    pred_prob_max  = pred_prob.max(axis=1)
-                    
-                    feature_importances['XGBoost'] += np.abs(model.feature_importances_)
-                
-                else:    
-                    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state = state)
-                    y_test_bin = label_binarize(y_test, classes=np.unique(y))
-                    
-                    # 모델 학습 및 예측
-                    model.fit(X_train, y_train)
-                    y_pred = model.predict(X_test)
-                    y_pred_proba = model.predict_proba(X_test)
-                    pred = model.predict(mixture_df)
-                    pred_prob = model.predict_proba(mixture_df)
-                    pred_prob_max  = pred_prob.max(axis=1)
         
-                    #if model_name == 'Logistic Regression':
-                    #    feature_importances['Logistic Regression'] += np.abs(model.coef_[0])
-                    if model_name == 'SVM':
-                        permutation = permutation_importance(model, X_test, y_test, n_repeats=30, random_state=state)
-                        importance_svm = permutation.importances_mean
-                        feature_importances['SVM'] += np.abs(importance_svm)
-                    elif model_name == 'Random Forest':
-                        feature_importances['Random Forest'] += np.abs(model.feature_importances_)
-                    elif model_name == 'Extra Trees':
-                        feature_importances['Extra Trees'] += np.abs(model.feature_importances_)
-                    elif model_name == 'Gradient Boosted Trees':
-                        feature_importances['Gradient Boosted Trees'] += np.abs(model.feature_importances_)             
-                    elif model_name == 'LightGBM':
-                        feature_importances['LightGBM'] += np.abs(model.feature_importances_)
-
+                  
 
 
                 
